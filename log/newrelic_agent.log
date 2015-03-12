@@ -1,0 +1,927 @@
+# Logfile created on 2015-02-27 10:19:25 -0800 by logger.rb/41954
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : Environment: development
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : No known dispatcher detected.
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : Application: development
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : Installing Net instrumentation
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : Installing deferred Rack instrumentation
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 10:19:25 -0800 Jeffreys-Air-2 (1256)] INFO : Finished instrumentation
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : Environment: development
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : No known dispatcher detected.
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : Application: development
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : Installing Net instrumentation
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : Installing deferred Rack instrumentation
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 10:24:49 -0800 Jeffreys-Air-2 (1267)] INFO : Finished instrumentation
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : Environment: development
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : No known dispatcher detected.
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : Application: development
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : Installing Net instrumentation
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : Installing deferred Rack instrumentation
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 10:25:06 -0800 Jeffreys-Air-2 (1270)] INFO : Finished instrumentation
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : Environment: development
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : No known dispatcher detected.
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : Application: development
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : Installing Net instrumentation
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : Installing deferred Rack instrumentation
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 10:34:44 -0800 Jeffreys-Air-2 (1272)] INFO : Finished instrumentation
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Environment: development
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Dispatcher: webrick
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Application: development
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Installing Net instrumentation
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Installing deferred Rack instrumentation
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 11:12:57 -0800 Jeffreys-Air-2 (1405)] INFO : Finished instrumentation
+[02/27/15 11:12:58 -0800 Jeffreys-Air-2 (1405)] INFO : Doing deferred dependency-detection before Rack startup
+[02/27/15 11:13:06 -0800 Jeffreys-Air-2 (1405)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/27/15 11:13:06 -0800 Jeffreys-Air-2 (1405)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[02/27/15 12:33:25 -0800 Jeffreys-Air-2 (1405)] INFO : Starting Agent shutdown
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Environment: development
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Dispatcher: webrick
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Application: development
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Installing Net instrumentation
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Installing deferred Rack instrumentation
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Finished instrumentation
+[02/27/15 12:33:30 -0800 Jeffreys-Air-2 (1607)] INFO : Doing deferred dependency-detection before Rack startup
+[02/27/15 12:33:54 -0800 Jeffreys-Air-2 (1607)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/27/15 12:33:54 -0800 Jeffreys-Air-2 (1607)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : Environment: development
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : No known dispatcher detected.
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : Application: development
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : Installing Net instrumentation
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : Installing deferred Rack instrumentation
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 12:49:58 -0800 Jeffreys-Air-2 (1670)] INFO : Finished instrumentation
+[02/27/15 12:50:15 -0800 Jeffreys-Air-2 (1607)] INFO : Starting Agent shutdown
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Environment: development
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Dispatcher: webrick
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Application: development
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Installing Net instrumentation
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Installing deferred Rack instrumentation
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Finished instrumentation
+[02/27/15 12:50:22 -0800 Jeffreys-Air-2 (1672)] INFO : Doing deferred dependency-detection before Rack startup
+[02/27/15 12:50:27 -0800 Jeffreys-Air-2 (1672)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/27/15 12:50:27 -0800 Jeffreys-Air-2 (1672)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : Environment: development
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : No known dispatcher detected.
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : Application: development
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : Installing Net instrumentation
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : Installing deferred Rack instrumentation
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 12:52:15 -0800 Jeffreys-Air-2 (1684)] INFO : Finished instrumentation
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : Environment: development
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : No known dispatcher detected.
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : Application: development
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : Installing Net instrumentation
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : Installing deferred Rack instrumentation
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 12:52:20 -0800 Jeffreys-Air-2 (1686)] INFO : Finished instrumentation
+[02/27/15 12:53:42 -0800 Jeffreys-Air-2 (1672)] INFO : Starting Agent shutdown
+[02/27/15 12:53:46 -0800 Jeffreys-Air-2 (1689)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 12:53:46 -0800 Jeffreys-Air-2 (1689)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 12:53:46 -0800 Jeffreys-Air-2 (1689)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 12:53:46 -0800 Jeffreys-Air-2 (1689)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 12:53:46 -0800 Jeffreys-Air-2 (1689)] INFO : Environment: development
+[02/27/15 12:53:46 -0800 Jeffreys-Air-2 (1689)] INFO : Dispatcher: webrick
+[02/27/15 12:53:46 -0800 Jeffreys-Air-2 (1689)] INFO : Application: development
+[02/27/15 12:53:46 -0800 Jeffreys-Air-2 (1689)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 12:53:46 -0800 Jeffreys-Air-2 (1689)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 12:53:46 -0800 Jeffreys-Air-2 (1689)] INFO : Installing Net instrumentation
+[02/27/15 12:53:47 -0800 Jeffreys-Air-2 (1689)] INFO : Installing deferred Rack instrumentation
+[02/27/15 12:53:47 -0800 Jeffreys-Air-2 (1689)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 12:53:47 -0800 Jeffreys-Air-2 (1689)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 12:53:47 -0800 Jeffreys-Air-2 (1689)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 12:53:47 -0800 Jeffreys-Air-2 (1689)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 12:53:47 -0800 Jeffreys-Air-2 (1689)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 12:53:47 -0800 Jeffreys-Air-2 (1689)] INFO : Finished instrumentation
+[02/27/15 12:53:47 -0800 Jeffreys-Air-2 (1689)] INFO : Doing deferred dependency-detection before Rack startup
+[02/27/15 12:53:58 -0800 Jeffreys-Air-2 (1689)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/27/15 12:53:58 -0800 Jeffreys-Air-2 (1689)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : Environment: development
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : No known dispatcher detected.
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : Application: development
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : Installing Net instrumentation
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : Installing deferred Rack instrumentation
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 12:59:49 -0800 Jeffreys-Air-2 (1718)] INFO : Finished instrumentation
+[02/27/15 12:59:56 -0800 Jeffreys-Air-2 (1689)] INFO : Starting Agent shutdown
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Environment: development
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Dispatcher: webrick
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Application: development
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Installing Net instrumentation
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Installing deferred Rack instrumentation
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Finished instrumentation
+[02/27/15 13:00:05 -0800 Jeffreys-Air-2 (1719)] INFO : Doing deferred dependency-detection before Rack startup
+[02/27/15 13:00:13 -0800 Jeffreys-Air-2 (1719)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/27/15 13:00:13 -0800 Jeffreys-Air-2 (1719)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : Environment: development
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : No known dispatcher detected.
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : Application: development
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : Installing Net instrumentation
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : Installing deferred Rack instrumentation
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 13:01:09 -0800 Jeffreys-Air-2 (1730)] INFO : Finished instrumentation
+[02/27/15 13:04:17 -0800 Jeffreys-Air-2 (1719)] INFO : Starting Agent shutdown
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Environment: development
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Dispatcher: webrick
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Application: development
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Installing Net instrumentation
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Installing deferred Rack instrumentation
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Finished instrumentation
+[02/27/15 13:04:22 -0800 Jeffreys-Air-2 (1743)] INFO : Doing deferred dependency-detection before Rack startup
+[02/27/15 13:04:27 -0800 Jeffreys-Air-2 (1743)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/27/15 13:04:27 -0800 Jeffreys-Air-2 (1743)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[02/27/15 13:41:47 -0800 Jeffreys-Air-2 (1743)] INFO : Starting Agent shutdown
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Starting the New Relic agent in "development" environment.
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Environment: development
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Dispatcher: webrick
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Application: development
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Installing ActiveRecord 4 instrumentation
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Installing Net instrumentation
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Installing deferred Rack instrumentation
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Installing Rack::Builder middleware instrumentation
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Installing Rails 3+ middleware instrumentation
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Installing Rails 4 Controller instrumentation
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Installing Rails 4 view instrumentation
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Installing Rails 4 Error instrumentation
+[02/27/15 13:41:51 -0800 Jeffreys-Air-2 (1825)] INFO : Finished instrumentation
+[02/27/15 13:41:52 -0800 Jeffreys-Air-2 (1825)] INFO : Doing deferred dependency-detection before Rack startup
+[02/27/15 13:42:38 -0800 Jeffreys-Air-2 (1825)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/27/15 13:42:38 -0800 Jeffreys-Air-2 (1825)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/02/15 11:04:04 -0800 Jeffreys-Air-2 (1825)] INFO : Starting Agent shutdown
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Starting the New Relic agent in "development" environment.
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Environment: development
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Dispatcher: webrick
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Application: development
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Installing ActiveRecord 4 instrumentation
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Installing Net instrumentation
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Installing deferred Rack instrumentation
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Installing Rack::Builder middleware instrumentation
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Installing Rails 3+ middleware instrumentation
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Installing Rails 4 Controller instrumentation
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Installing Rails 4 view instrumentation
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Installing Rails 4 Error instrumentation
+[03/04/15 15:45:43 -0800 Jeffreys-Air-2 (8985)] INFO : Finished instrumentation
+[03/04/15 15:45:44 -0800 Jeffreys-Air-2 (8985)] INFO : Doing deferred dependency-detection before Rack startup
+[03/04/15 15:45:51 -0800 Jeffreys-Air-2 (8985)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/04/15 15:45:51 -0800 Jeffreys-Air-2 (8985)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : Starting the New Relic agent in "development" environment.
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : Environment: development
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : No known dispatcher detected.
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : Application: development
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : Installing ActiveRecord 4 instrumentation
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : Installing Net instrumentation
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : Installing deferred Rack instrumentation
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : Installing Rack::Builder middleware instrumentation
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : Installing Rails 3+ middleware instrumentation
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : Installing Rails 4 Controller instrumentation
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : Installing Rails 4 view instrumentation
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : Installing Rails 4 Error instrumentation
+[03/04/15 16:45:22 -0800 Jeffreys-Air-2 (11601)] INFO : Finished instrumentation
+[03/05/15 11:20:31 -0800 Jeffreys-Air-2 (8985)] INFO : Starting Agent shutdown
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Starting the New Relic agent in "development" environment.
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Environment: development
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Dispatcher: webrick
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Application: development
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Installing ActiveRecord 4 instrumentation
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Installing Net instrumentation
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Installing deferred Rack instrumentation
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Installing Rack::Builder middleware instrumentation
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Installing Rails 3+ middleware instrumentation
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Installing Rails 4 Controller instrumentation
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Installing Rails 4 view instrumentation
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Installing Rails 4 Error instrumentation
+[03/05/15 17:17:42 -0800 Jeffreys-Air-2 (12604)] INFO : Finished instrumentation
+[03/05/15 17:17:43 -0800 Jeffreys-Air-2 (12604)] INFO : Doing deferred dependency-detection before Rack startup
+[03/05/15 17:20:05 -0800 Jeffreys-Air-2 (12604)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/05/15 17:20:05 -0800 Jeffreys-Air-2 (12604)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : Starting the New Relic agent in "development" environment.
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : Environment: development
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : No known dispatcher detected.
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : Application: development
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : Installing ActiveRecord 4 instrumentation
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : Installing Net instrumentation
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : Installing deferred Rack instrumentation
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : Installing Rack::Builder middleware instrumentation
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : Installing Rails 3+ middleware instrumentation
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : Installing Rails 4 Controller instrumentation
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : Installing Rails 4 view instrumentation
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : Installing Rails 4 Error instrumentation
+[03/05/15 17:38:02 -0800 Jeffreys-Air-2 (12692)] INFO : Finished instrumentation
+[03/05/15 17:38:28 -0800 Jeffreys-Air-2 (12604)] INFO : Starting Agent shutdown
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : Starting the New Relic agent in "development" environment.
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : Environment: development
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : No known dispatcher detected.
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : Application: development
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : Installing ActiveRecord 4 instrumentation
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : Installing Net instrumentation
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : Installing deferred Rack instrumentation
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : Installing Rack::Builder middleware instrumentation
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : Installing Rails 3+ middleware instrumentation
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : Installing Rails 4 Controller instrumentation
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : Installing Rails 4 view instrumentation
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : Installing Rails 4 Error instrumentation
+[03/05/15 17:38:34 -0800 Jeffreys-Air-2 (12702)] INFO : Finished instrumentation
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Starting the New Relic agent in "development" environment.
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Environment: development
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Dispatcher: webrick
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Application: development
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Installing ActiveRecord 4 instrumentation
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Installing Net instrumentation
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Installing deferred Rack instrumentation
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Installing Rack::Builder middleware instrumentation
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Installing Rails 3+ middleware instrumentation
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Installing Rails 4 Controller instrumentation
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Installing Rails 4 view instrumentation
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Installing Rails 4 Error instrumentation
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Finished instrumentation
+[03/05/15 17:38:53 -0800 Jeffreys-Air-2 (12711)] INFO : Doing deferred dependency-detection before Rack startup
+[03/05/15 17:38:58 -0800 Jeffreys-Air-2 (12711)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/05/15 17:38:58 -0800 Jeffreys-Air-2 (12711)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/05/15 18:40:51 -0800 Jeffreys-Air-2 (12856)] INFO : Starting the New Relic agent in "development" environment.
+[03/05/15 18:40:51 -0800 Jeffreys-Air-2 (12856)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/05/15 18:40:51 -0800 Jeffreys-Air-2 (12856)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/05/15 18:40:51 -0800 Jeffreys-Air-2 (12856)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/05/15 18:40:51 -0800 Jeffreys-Air-2 (12856)] INFO : Environment: development
+[03/05/15 18:40:51 -0800 Jeffreys-Air-2 (12856)] INFO : No known dispatcher detected.
+[03/05/15 18:40:51 -0800 Jeffreys-Air-2 (12856)] INFO : Application: development
+[03/05/15 18:40:51 -0800 Jeffreys-Air-2 (12856)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/05/15 18:40:52 -0800 Jeffreys-Air-2 (12856)] INFO : Installing ActiveRecord 4 instrumentation
+[03/05/15 18:40:52 -0800 Jeffreys-Air-2 (12856)] INFO : Installing Net instrumentation
+[03/05/15 18:40:52 -0800 Jeffreys-Air-2 (12856)] INFO : Installing deferred Rack instrumentation
+[03/05/15 18:40:52 -0800 Jeffreys-Air-2 (12856)] INFO : Installing Rack::Builder middleware instrumentation
+[03/05/15 18:40:52 -0800 Jeffreys-Air-2 (12856)] INFO : Installing Rails 3+ middleware instrumentation
+[03/05/15 18:40:52 -0800 Jeffreys-Air-2 (12856)] INFO : Installing Rails 4 Controller instrumentation
+[03/05/15 18:40:52 -0800 Jeffreys-Air-2 (12856)] INFO : Installing Rails 4 view instrumentation
+[03/05/15 18:40:52 -0800 Jeffreys-Air-2 (12856)] INFO : Installing Rails 4 Error instrumentation
+[03/05/15 18:40:52 -0800 Jeffreys-Air-2 (12856)] INFO : Finished instrumentation
+[03/05/15 18:41:15 -0800 Jeffreys-Air-2 (12711)] INFO : Starting Agent shutdown
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : Starting the New Relic agent in "development" environment.
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : Environment: development
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : No known dispatcher detected.
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : Application: development
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : Installing ActiveRecord 4 instrumentation
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : Installing Net instrumentation
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : Installing deferred Rack instrumentation
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : Installing Rack::Builder middleware instrumentation
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : Installing Rails 3+ middleware instrumentation
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : Installing Rails 4 Controller instrumentation
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : Installing Rails 4 view instrumentation
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : Installing Rails 4 Error instrumentation
+[03/05/15 18:41:25 -0800 Jeffreys-Air-2 (12864)] INFO : Finished instrumentation
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : Starting the New Relic agent in "development" environment.
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : Environment: development
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : No known dispatcher detected.
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : Application: development
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : Installing ActiveRecord 4 instrumentation
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : Installing Net instrumentation
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : Installing deferred Rack instrumentation
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : Installing Rack::Builder middleware instrumentation
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : Installing Rails 3+ middleware instrumentation
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : Installing Rails 4 Controller instrumentation
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : Installing Rails 4 view instrumentation
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : Installing Rails 4 Error instrumentation
+[03/05/15 18:42:01 -0800 Jeffreys-Air-2 (12872)] INFO : Finished instrumentation
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Starting the New Relic agent in "development" environment.
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Environment: development
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Dispatcher: webrick
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Application: development
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Installing ActiveRecord 4 instrumentation
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Installing Net instrumentation
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Installing deferred Rack instrumentation
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Installing Rack::Builder middleware instrumentation
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Installing Rails 3+ middleware instrumentation
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Installing Rails 4 Controller instrumentation
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Installing Rails 4 view instrumentation
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Installing Rails 4 Error instrumentation
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Finished instrumentation
+[03/05/15 18:42:16 -0800 Jeffreys-Air-2 (12881)] INFO : Doing deferred dependency-detection before Rack startup
+[03/05/15 18:42:22 -0800 Jeffreys-Air-2 (12881)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/05/15 18:42:22 -0800 Jeffreys-Air-2 (12881)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/06/15 11:07:10 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: wrong number of arguments (1 for 2)
+[03/06/15 11:13:46 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template patient_data/destroy, application/destroy with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jmorc/Documents/polished repos/CyberHospital/app/views"
+  * "/Users/jmorc/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/devise-3.4.1/app/views"
+
+[03/06/15 11:14:47 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `persisted?' for nil:NilClass
+[03/06/15 11:16:54 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 
+[03/06/15 11:20:44 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 
+[03/06/15 11:21:55 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 
+[03/06/15 11:23:11 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 
+[03/06/15 11:25:22 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find Patient without an ID
+[03/06/15 11:26:20 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `patient_data' for #<Patient:0x007fa4717e11a8>
+[03/06/15 11:31:36 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find PatientData with 'id'=1
+[03/06/15 11:33:02 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find PatientData with 'id'=1
+[03/06/15 15:30:53 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"show", :controller=>"clinics", :id=>nil} missing required keys: [:id]
+[03/06/15 15:31:13 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"show", :controller=>"clinics", :id=>nil} missing required keys: [:id]
+[03/06/15 15:33:02 -0800 Jeffreys-Air-2 (12881)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"show", :controller=>"clinics", :id=>nil} missing required keys: [:id]
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : Starting the New Relic agent in "development" environment.
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : Environment: development
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : No known dispatcher detected.
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : Application: development
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : Installing ActiveRecord 4 instrumentation
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : Installing Net instrumentation
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : Installing deferred Rack instrumentation
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : Installing Rack::Builder middleware instrumentation
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : Installing Rails 3+ middleware instrumentation
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : Installing Rails 4 Controller instrumentation
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : Installing Rails 4 view instrumentation
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : Installing Rails 4 Error instrumentation
+[03/06/15 16:14:54 -0800 Jeffreys-Air-2 (14661)] INFO : Finished instrumentation
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : Starting the New Relic agent in "development" environment.
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : Environment: development
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : No known dispatcher detected.
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : Application: development
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : Installing ActiveRecord 4 instrumentation
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : Installing Net instrumentation
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : Installing deferred Rack instrumentation
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : Installing Rack::Builder middleware instrumentation
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : Installing Rails 3+ middleware instrumentation
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : Installing Rails 4 Controller instrumentation
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : Installing Rails 4 view instrumentation
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : Installing Rails 4 Error instrumentation
+[03/06/15 16:17:53 -0800 Jeffreys-Air-2 (15064)] INFO : Finished instrumentation
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : Starting the New Relic agent in "development" environment.
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : Environment: development
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : No known dispatcher detected.
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : Application: development
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : Installing ActiveRecord 4 instrumentation
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : Installing Net instrumentation
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : Installing deferred Rack instrumentation
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : Installing Rack::Builder middleware instrumentation
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : Installing Rails 3+ middleware instrumentation
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : Installing Rails 4 Controller instrumentation
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : Installing Rails 4 view instrumentation
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : Installing Rails 4 Error instrumentation
+[03/06/15 16:22:14 -0800 Jeffreys-Air-2 (15078)] INFO : Finished instrumentation
+[03/06/15 16:29:04 -0800 Jeffreys-Air-2 (12881)] INFO : Starting Agent shutdown
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Starting the New Relic agent in "development" environment.
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Environment: development
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Dispatcher: webrick
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Application: development
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Installing ActiveRecord 4 instrumentation
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Installing Net instrumentation
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Installing deferred Rack instrumentation
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Installing Rack::Builder middleware instrumentation
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Installing Rails 3+ middleware instrumentation
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Installing Rails 4 Controller instrumentation
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Installing Rails 4 view instrumentation
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Installing Rails 4 Error instrumentation
+[03/06/15 16:32:53 -0800 Jeffreys-Air-2 (15193)] INFO : Finished instrumentation
+[03/06/15 16:32:54 -0800 Jeffreys-Air-2 (15193)] INFO : Doing deferred dependency-detection before Rack startup
+[03/06/15 16:33:04 -0800 Jeffreys-Air-2 (15193)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/06/15 16:33:04 -0800 Jeffreys-Air-2 (15193)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : Starting the New Relic agent in "development" environment.
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : Environment: development
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : No known dispatcher detected.
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : Application: development
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : Installing ActiveRecord 4 instrumentation
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : Installing Net instrumentation
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : Installing deferred Rack instrumentation
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : Installing Rack::Builder middleware instrumentation
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : Installing Rails 3+ middleware instrumentation
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : Installing Rails 4 Controller instrumentation
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : Installing Rails 4 view instrumentation
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : Installing Rails 4 Error instrumentation
+[03/06/15 16:36:37 -0800 Jeffreys-Air-2 (15214)] INFO : Finished instrumentation
+[03/06/15 16:36:45 -0800 Jeffreys-Air-2 (15193)] INFO : Starting Agent shutdown
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Starting the New Relic agent in "development" environment.
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Environment: development
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Dispatcher: webrick
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Application: development
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Installing ActiveRecord 4 instrumentation
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Installing Net instrumentation
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Installing deferred Rack instrumentation
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Installing Rack::Builder middleware instrumentation
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Installing Rails 3+ middleware instrumentation
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Installing Rails 4 Controller instrumentation
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Installing Rails 4 view instrumentation
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Installing Rails 4 Error instrumentation
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Finished instrumentation
+[03/06/15 16:37:02 -0800 Jeffreys-Air-2 (15218)] INFO : Doing deferred dependency-detection before Rack startup
+[03/06/15 16:37:09 -0800 Jeffreys-Air-2 (15218)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/06/15 16:37:09 -0800 Jeffreys-Air-2 (15218)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/07/15 12:32:13 -0800 Jeffreys-Air-2 (15218)] INFO : Starting Agent shutdown
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Starting the New Relic agent in "development" environment.
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Environment: development
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Dispatcher: webrick
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Application: development
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Installing ActiveRecord 4 instrumentation
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Installing Net instrumentation
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Installing deferred Rack instrumentation
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Installing Rack::Builder middleware instrumentation
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Installing Rails 3+ middleware instrumentation
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Installing Rails 4 Controller instrumentation
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Installing Rails 4 view instrumentation
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Installing Rails 4 Error instrumentation
+[03/08/15 19:40:46 -0700 Jeffreys-Air-2 (16610)] INFO : Finished instrumentation
+[03/08/15 19:40:47 -0700 Jeffreys-Air-2 (16610)] INFO : Doing deferred dependency-detection before Rack startup
+[03/08/15 19:41:01 -0700 Jeffreys-Air-2 (16610)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/08/15 19:41:01 -0700 Jeffreys-Air-2 (16610)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : Starting the New Relic agent in "development" environment.
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : Environment: development
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : No known dispatcher detected.
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : Application: development
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : Installing ActiveRecord 4 instrumentation
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : Installing Net instrumentation
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : Installing deferred Rack instrumentation
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : Installing Rack::Builder middleware instrumentation
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : Installing Rails 3+ middleware instrumentation
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : Installing Rails 4 Controller instrumentation
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : Installing Rails 4 view instrumentation
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : Installing Rails 4 Error instrumentation
+[03/09/15 14:30:25 -0700 Jeffreys-Air-2 (17836)] INFO : Finished instrumentation
+[03/09/15 17:56:08 -0700 Jeffreys-Air-2 (16610)] INFO : Starting Agent shutdown
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Starting the New Relic agent in "development" environment.
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Environment: development
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Dispatcher: webrick
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Application: development
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Installing ActiveRecord 4 instrumentation
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Installing Net instrumentation
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Installing deferred Rack instrumentation
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Installing Rack::Builder middleware instrumentation
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Installing Rails 3+ middleware instrumentation
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Installing Rails 4 Controller instrumentation
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Installing Rails 4 view instrumentation
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Installing Rails 4 Error instrumentation
+[03/09/15 17:56:51 -0700 Jeffreys-Air-2 (18115)] INFO : Finished instrumentation
+[03/09/15 17:56:52 -0700 Jeffreys-Air-2 (18115)] INFO : Doing deferred dependency-detection before Rack startup
+[03/09/15 17:56:53 -0700 Jeffreys-Air-2 (18115)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/09/15 17:56:53 -0700 Jeffreys-Air-2 (18115)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/09/15 19:20:36 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `to_date' for nil:NilClass
+[03/09/15 19:22:20 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ActiveModel::ForbiddenAttributesError
+[03/09/15 19:22:36 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ActiveModel::ForbiddenAttributesError
+[03/09/15 19:24:07 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ActiveModel::ForbiddenAttributesError
+[03/09/15 19:24:15 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ActiveModel::ForbiddenAttributesError
+[03/09/15 19:24:47 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `load_and_authorize_resource' for #<PatientDataController:0x007ffbe898bed0>
+[03/09/15 19:25:33 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant PatientDatum
+[03/09/15 19:25:41 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant PatientDatum
+[03/09/15 19:26:52 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant PatientDatum
+[03/09/15 19:27:51 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant PatientDatum
+[03/09/15 19:33:10 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `patient_datas' for #<Patient:0x007ffbe8878340>
+[03/09/15 19:34:05 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant Patient::PatientDatum
+[03/09/15 19:36:29 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant PatientDatum
+[03/09/15 19:40:51 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant PatientDataController::PatientData
+[03/09/15 19:42:12 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant Patient::PatientData
+[03/09/15 19:42:51 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `patient_data' for #<Patient:0x007ffbe8923128>
+[03/09/15 19:43:24 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: param is missing or the value is empty: patient_datum
+[03/09/15 19:44:04 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ActiveModel::ForbiddenAttributesError
+[03/09/15 19:45:10 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ActiveModel::ForbiddenAttributesError
+[03/09/15 19:56:55 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ActiveModel::ForbiddenAttributesError
+[03/09/15 19:57:00 -0700 Jeffreys-Air-2 (18115)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ActiveModel::ForbiddenAttributesError
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : Starting the New Relic agent in "development" environment.
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : Environment: development
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : No known dispatcher detected.
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : Application: development
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : Installing ActiveRecord 4 instrumentation
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : Installing Net instrumentation
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : Installing deferred Rack instrumentation
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : Installing Rack::Builder middleware instrumentation
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : Installing Rails 3+ middleware instrumentation
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : Installing Rails 4 Controller instrumentation
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : Installing Rails 4 view instrumentation
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : Installing Rails 4 Error instrumentation
+[03/09/15 20:16:35 -0700 Jeffreys-Air-2 (18642)] INFO : Finished instrumentation
+[03/09/15 20:16:53 -0700 Jeffreys-Air-2 (18115)] INFO : Starting Agent shutdown
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : Starting the New Relic agent in "development" environment.
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : Environment: development
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : No known dispatcher detected.
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : Application: development
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : Installing ActiveRecord 4 instrumentation
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : Installing Net instrumentation
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : Installing deferred Rack instrumentation
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : Installing Rack::Builder middleware instrumentation
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : Installing Rails 3+ middleware instrumentation
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : Installing Rails 4 Controller instrumentation
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : Installing Rails 4 view instrumentation
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : Installing Rails 4 Error instrumentation
+[03/09/15 20:16:58 -0700 Jeffreys-Air-2 (18651)] INFO : Finished instrumentation
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Starting the New Relic agent in "development" environment.
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Environment: development
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Dispatcher: webrick
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Application: development
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Installing ActiveRecord 4 instrumentation
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Installing Net instrumentation
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Installing deferred Rack instrumentation
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Installing Rack::Builder middleware instrumentation
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Installing Rails 3+ middleware instrumentation
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Installing Rails 4 Controller instrumentation
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Installing Rails 4 view instrumentation
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Installing Rails 4 Error instrumentation
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Finished instrumentation
+[03/09/15 20:18:05 -0700 Jeffreys-Air-2 (18664)] INFO : Doing deferred dependency-detection before Rack startup
+[03/09/15 20:18:17 -0700 Jeffreys-Air-2 (18664)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/09/15 20:18:17 -0700 Jeffreys-Air-2 (18664)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/09/15 20:42:40 -0700 Jeffreys-Air-2 (18767)] INFO : Starting the New Relic agent in "development" environment.
+[03/09/15 20:42:40 -0700 Jeffreys-Air-2 (18767)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/09/15 20:42:40 -0700 Jeffreys-Air-2 (18767)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/09/15 20:42:40 -0700 Jeffreys-Air-2 (18767)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/09/15 20:42:40 -0700 Jeffreys-Air-2 (18767)] INFO : Environment: development
+[03/09/15 20:42:40 -0700 Jeffreys-Air-2 (18767)] INFO : No known dispatcher detected.
+[03/09/15 20:42:40 -0700 Jeffreys-Air-2 (18767)] INFO : Application: development
+[03/09/15 20:42:40 -0700 Jeffreys-Air-2 (18767)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/09/15 20:42:41 -0700 Jeffreys-Air-2 (18767)] INFO : Installing ActiveRecord 4 instrumentation
+[03/09/15 20:42:41 -0700 Jeffreys-Air-2 (18767)] INFO : Installing Net instrumentation
+[03/09/15 20:42:41 -0700 Jeffreys-Air-2 (18767)] INFO : Installing deferred Rack instrumentation
+[03/09/15 20:42:41 -0700 Jeffreys-Air-2 (18767)] INFO : Installing Rack::Builder middleware instrumentation
+[03/09/15 20:42:41 -0700 Jeffreys-Air-2 (18767)] INFO : Installing Rails 3+ middleware instrumentation
+[03/09/15 20:42:41 -0700 Jeffreys-Air-2 (18767)] INFO : Installing Rails 4 Controller instrumentation
+[03/09/15 20:42:41 -0700 Jeffreys-Air-2 (18767)] INFO : Installing Rails 4 view instrumentation
+[03/09/15 20:42:41 -0700 Jeffreys-Air-2 (18767)] INFO : Installing Rails 4 Error instrumentation
+[03/09/15 20:42:41 -0700 Jeffreys-Air-2 (18767)] INFO : Finished instrumentation
+[03/09/15 20:42:50 -0700 Jeffreys-Air-2 (18664)] INFO : Starting Agent shutdown
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Starting the New Relic agent in "development" environment.
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Environment: development
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Dispatcher: webrick
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Application: development
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Installing ActiveRecord 4 instrumentation
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Installing Net instrumentation
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Installing deferred Rack instrumentation
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Installing Rack::Builder middleware instrumentation
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Installing Rails 3+ middleware instrumentation
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Installing Rails 4 Controller instrumentation
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Installing Rails 4 view instrumentation
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Installing Rails 4 Error instrumentation
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Finished instrumentation
+[03/09/15 20:42:55 -0700 Jeffreys-Air-2 (18768)] INFO : Doing deferred dependency-detection before Rack startup
+[03/09/15 20:42:58 -0700 Jeffreys-Air-2 (18768)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/09/15 20:42:58 -0700 Jeffreys-Air-2 (18768)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/10/15 09:54:53 -0700 Jeffreys-Air-2 (18768)] INFO : Starting Agent shutdown
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Starting the New Relic agent in "development" environment.
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Environment: development
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Dispatcher: webrick
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Application: development
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Installing ActiveRecord 4 instrumentation
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Installing Net instrumentation
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Installing deferred Rack instrumentation
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Installing Rack::Builder middleware instrumentation
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Installing Rails 3+ middleware instrumentation
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Installing Rails 4 Controller instrumentation
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Installing Rails 4 view instrumentation
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Installing Rails 4 Error instrumentation
+[03/10/15 10:05:27 -0700 Jeffreys-Air-2 (19720)] INFO : Finished instrumentation
+[03/10/15 10:05:28 -0700 Jeffreys-Air-2 (19720)] INFO : Doing deferred dependency-detection before Rack startup
+[03/10/15 10:05:34 -0700 Jeffreys-Air-2 (19720)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/10/15 10:05:34 -0700 Jeffreys-Air-2 (19720)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/10/15 10:13:25 -0700 Jeffreys-Air-2 (19720)] INFO : Starting Agent shutdown
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Starting the New Relic agent in "development" environment.
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Environment: development
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Dispatcher: webrick
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Application: development
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Installing ActiveRecord 4 instrumentation
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Installing Net instrumentation
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Installing deferred Rack instrumentation
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Installing Rack::Builder middleware instrumentation
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Installing Rails 3+ middleware instrumentation
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Installing Rails 4 Controller instrumentation
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Installing Rails 4 view instrumentation
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Installing Rails 4 Error instrumentation
+[03/10/15 10:13:29 -0700 Jeffreys-Air-2 (19768)] INFO : Finished instrumentation
+[03/10/15 10:13:30 -0700 Jeffreys-Air-2 (19768)] INFO : Doing deferred dependency-detection before Rack startup
+[03/10/15 10:13:35 -0700 Jeffreys-Air-2 (19768)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/10/15 10:13:35 -0700 Jeffreys-Air-2 (19768)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/10/15 11:19:40 -0700 Jeffreys-Air-2 (19768)] INFO : Starting Agent shutdown
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Starting the New Relic agent in "development" environment.
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Environment: development
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Dispatcher: webrick
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Application: development
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Installing ActiveRecord 4 instrumentation
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Installing Net instrumentation
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Installing deferred Rack instrumentation
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Installing Rack::Builder middleware instrumentation
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Installing Rails 3+ middleware instrumentation
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Installing Rails 4 Controller instrumentation
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Installing Rails 4 view instrumentation
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Installing Rails 4 Error instrumentation
+[03/10/15 11:19:45 -0700 Jeffreys-Air-2 (20127)] INFO : Finished instrumentation
+[03/10/15 11:19:46 -0700 Jeffreys-Air-2 (20127)] INFO : Doing deferred dependency-detection before Rack startup
+[03/10/15 11:19:59 -0700 Jeffreys-Air-2 (20127)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/10/15 11:19:59 -0700 Jeffreys-Air-2 (20127)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/10/15 11:46:03 -0700 Jeffreys-Air-2 (20127)] INFO : Starting Agent shutdown
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Starting the New Relic agent in "development" environment.
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/CyberHospital
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/config/newrelic.yml, /Users/jmorc/Documents/polished repos/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Environment: development
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Dispatcher: webrick
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Application: development
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Installing ActiveRecord 4 instrumentation
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Installing Net instrumentation
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Installing deferred Rack instrumentation
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Installing Rack::Builder middleware instrumentation
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Installing Rails 3+ middleware instrumentation
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Installing Rails 4 Controller instrumentation
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Installing Rails 4 view instrumentation
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Installing Rails 4 Error instrumentation
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Finished instrumentation
+[03/11/15 15:44:13 -0700 Jeffreys-Air-2 (25789)] INFO : Doing deferred dependency-detection before Rack startup
+[03/11/15 15:44:32 -0700 Jeffreys-Air-2 (25789)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/11/15 15:44:32 -0700 Jeffreys-Air-2 (25789)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Starting the New Relic agent in "development" environment.
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] WARN : No configuration file found. Working directory = /Users/jmorc/Desktop/CyberHospital
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Desktop/CyberHospital/config/newrelic.yml, /Users/jmorc/Desktop/CyberHospital/newrelic.yml, /Users/jmorc/Desktop/CyberHospital/config/newrelic.yml, /Users/jmorc/Desktop/CyberHospital/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Environment: development
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Dispatcher: webrick
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Application: development
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Installing ActiveRecord 4 instrumentation
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Installing Net instrumentation
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Installing deferred Rack instrumentation
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Installing Rack::Builder middleware instrumentation
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Installing Rails 3+ middleware instrumentation
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Installing Rails 4 Controller instrumentation
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Installing Rails 4 view instrumentation
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Installing Rails 4 Error instrumentation
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Finished instrumentation
+[03/12/15 11:36:48 -0700 Jeffreys-Air-2 (28687)] INFO : Doing deferred dependency-detection before Rack startup
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Starting the New Relic agent in "development" environment.
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] WARN : No configuration file found. Working directory = /Users/jmorc/Desktop/Rehearsable
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Desktop/Rehearsable/config/newrelic.yml, /Users/jmorc/Desktop/Rehearsable/newrelic.yml, /Users/jmorc/Desktop/Rehearsable/config/newrelic.yml, /Users/jmorc/Desktop/Rehearsable/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Environment: development
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Dispatcher: webrick
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Application: development
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Installing ActiveRecord 4 instrumentation
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Installing Net instrumentation
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Installing deferred Rack instrumentation
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Installing Rack::Builder middleware instrumentation
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Installing Rails 3+ middleware instrumentation
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Installing Rails 4 Controller instrumentation
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Installing Rails 4 view instrumentation
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Installing Rails 4 Error instrumentation
+[03/12/15 11:37:51 -0700 Jeffreys-Air-2 (28791)] INFO : Finished instrumentation
+[03/12/15 11:37:52 -0700 Jeffreys-Air-2 (28791)] INFO : Doing deferred dependency-detection before Rack startup
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Starting the New Relic agent in "development" environment.
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] WARN : No configuration file found. Working directory = /Users/jmorc/Desktop/Rehearsable
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Desktop/Rehearsable/config/newrelic.yml, /Users/jmorc/Desktop/Rehearsable/newrelic.yml, /Users/jmorc/Desktop/Rehearsable/config/newrelic.yml, /Users/jmorc/Desktop/Rehearsable/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Environment: development
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Dispatcher: webrick
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Application: development
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Installing ActiveRecord 4 instrumentation
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Installing Net instrumentation
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Installing deferred Rack instrumentation
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Installing Rack::Builder middleware instrumentation
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Installing Rails 3+ middleware instrumentation
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Installing Rails 4 Controller instrumentation
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Installing Rails 4 view instrumentation
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Installing Rails 4 Error instrumentation
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Finished instrumentation
+[03/12/15 11:40:08 -0700 Jeffreys-Air-2 (28899)] INFO : Doing deferred dependency-detection before Rack startup
+[03/12/15 11:40:16 -0700 Jeffreys-Air-2 (28899)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/12/15 11:40:16 -0700 Jeffreys-Air-2 (28899)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/12/15 11:40:55 -0700 Jeffreys-Air-2 (28899)] INFO : Starting Agent shutdown

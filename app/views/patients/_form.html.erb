@@ -1,0 +1,37 @@
+<% form_method = @patient.persisted? ? "PATCH" : "POST" %>
+<% form_action = @patient.persisted? ? patient_url(@patient) : patients_url %>
+<% viewable_time = @patient.persisted? ? @patient.viewable_time : "" %>
+
+<form class="form-group" action="<%= form_action %>" method="POST">
+  <input type="hidden" name="_method" value="<%= form_method %>">
+  <input type="hidden" name="clinic_id" value="<%= @clinic.id %>">
+  
+  <input type="hidden" name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+
+  <label>Patient name:
+    <input class="form-control" type="text" 
+           name="patient[name]" value="<%= @patient.name %>">
+  </label><br>
+
+  <label>Summary:
+    <textarea class="form-control" 
+              name="patient[summary]"><%= @patient.summary %></textarea>
+  </label><br>
+
+  <label>Select a day when students can view patient data:
+    <input class="form-control" type="date" 
+           value="<%= @patient.viewable_time %>" name="patient[viewable_time]">
+  </label><br>
+
+  <input class="btn btn-default" type="submit">
+</form><br>
+
+  <% if @patient.persisted? %>
+    <%= render "item" %>
+  <% end %>
+
+  
+
+
+

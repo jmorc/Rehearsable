@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table">
+<tr>
+  <th>Patient name</th>
+  <th>Summary</th>
+  <th>Students may view patient data on:</th>
+</tr>
+<tr>
+  <td><%= @patient.name %></td>
+
+  <% if (@patient.viewable? || can?(:update, @patient)) %>
+    <td><%= @patient.summary  %></td>
+  <% else %>
+    <td>Patient data not yet viewable</td>
+  <% end %>
+
+  <td><%= @patient.viewable_time %></td>
+</tr>
+</table>
+
+<% if (@patient.viewable? || can?(:update, @patient)) %>
+  <%= render "item" %>
+<% end %>
+
+<p>
+
+<hr>
+<% if can? :update, @patient %>
+  <br>
+  <%= link_to 'Edit this patient', 
+      edit_clinic_patient_url(@patient.clinic, @patient) %> |
+<% end %>
+<%= link_to 'See all clinic patients', clinic_url(@patient.clinic) %>
+</p>

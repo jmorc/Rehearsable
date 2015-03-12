@@ -1,0 +1,26 @@
+<h1>Select a Clinic</h1>
+
+<table class="table">
+    <% @clinics.each do |clinic| %>
+      <tr>
+        <td><%= clinic.name %></td>
+        <td><%= button_to 'Show Patients', clinic,
+                method: :get, class: "btn btn-default" %></td>
+        <% if can? :update, @clinic %>
+          <td><%= button_to 'Edit', edit_clinic_url(clinic), 
+                method: :get, class: "btn btn-default" %></td>
+          <td><%= button_to 'Delete', clinic, 
+                method: :delete, data: { confirm: 'Are you sure?' },
+                class: "btn btn-default" %></td>
+        <% end %>
+      </tr>
+    <% end %>
+</table>
+
+<br>
+
+<% if can? :create, @clinic %>
+  <hr>
+  <%= button_to 'Add a new clinic', new_clinic_url, 
+      method: :get, class: "btn btn-default"   %>
+<% end %>

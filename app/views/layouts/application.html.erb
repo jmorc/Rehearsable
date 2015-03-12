@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rehearsable</title>
+  <%= stylesheet_link_tag     "application", media: "all" %>
+  <%= javascript_include_tag  "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id="user_nav">
+  	<% if user_signed_in? %>
+  	  Logged in as <strong><%= current_user.email%></strong>. | 
+      <% role = current_user.instructor ? "Instructor" : "Student" %>
+      Role: <%= role %> |  
+  	  <%= link_to 'Edit profile', edit_user_registration_url %> | 
+  	  <%= link_to 'Logout', destroy_user_session_url, method: :delete %>
+  	<% else %>
+  	  <%= link_to 'Sign up', new_user_registration_url %> | 
+  	  <%= link_to 'Login', new_user_session_url %> 
+  	<% end %>
+  </div>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+</body>
+</html>
