@@ -22,7 +22,8 @@ class QuizzesController < ApplicationController
   end
 
   def create
-    @quiz = Quiz.new(quiz_params)
+    @user = current_user
+    @quiz = current_user.quizzes.new(quiz_params)
     @quiz.save
     respond_with(@quiz)
   end
@@ -43,6 +44,6 @@ class QuizzesController < ApplicationController
     end
 
     def quiz_params
-      params[:quiz]
+      params.require(:quiz).permit(:title, :description, :viewable_time)
     end
 end
