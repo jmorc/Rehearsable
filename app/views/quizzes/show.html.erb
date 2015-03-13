@@ -1,4 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<h3>Quiz Title: </h3><%= @quiz.title %>
+<br><br>
+<p><strong>Quiz description: </strong><br><%= @quiz.description %></p>
+<br>
+<p>Quiz viewable after: <%= @quiz.viewable_time %></p>
+<br>
 <%= link_to 'Edit', edit_quiz_path(@quiz) %> |
 <%= link_to 'Back', quizzes_path %>
