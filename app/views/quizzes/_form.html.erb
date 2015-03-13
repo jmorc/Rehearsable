@@ -1,17 +1,27 @@
-<%= form_for(@quiz) do |f| %>
-  <% if @quiz.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@quiz.errors.count, "error") %> prohibited this quiz from being saved:</h2>
+<% form_method = @quiz.persisted? ? "PATCH" : "POST" %>
+<% form_action = @quiz.persisted? ? quiz_url(@quiz) : quizzes_url %>
+<% submit_text = @quiz.persisted? ? "Save changes" : "Create quiz" %>
 
-      <ul>
-      <% @quiz.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<form action="<%= form_action %>" method="POST" class="form-group">
+  <input type="hidden" name="_method" value="<%= form_method %>">
+  
+  <input type="hidden" name="authenticity_token"
+       value="<%= form_authenticity_token %>"> 
+  
+  <label>Quiz Title: 
+  <input type="text" name="quiz[title]" 
+         class="form-control" value="<%= @quiz.title %>">
+  </label><br>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  <label>Description: 
+  <textarea name="quiz[description]" class="form-control"><%= @quiz.description %></textarea>
+  </label><br>
+
+  <label>Students may view quiz after: 
+  <input type="datetime" name="quiz[viewable_time]" 
+         class="form-control" value="<%= @quiz.viewable_time %>">
+  </label><br>
+
+  <input type="submit" value="<%= submit_text %>" class="btn btn-default">
+
+</form>

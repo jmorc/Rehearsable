@@ -31706,3 +31706,51 @@ Processing by QuizzesController#new as HTML
   Rendered quizzes/_form.html.erb (7.2ms)
   Rendered quizzes/new.html.erb within layouts/application (8.7ms)
 Completed 200 OK in 272ms (Views: 261.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2015-03-13 16:25:30 -0700
+Processing by QuizzesController#new as HTML
+  [1m[35mUser Load (25.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered quizzes/_form.html.erb (1.2ms)
+  Rendered quizzes/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 263ms (Views: 228.8ms | ActiveRecord: 25.2ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2015-03-13 16:25:47 -0700
+Processing by QuizzesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered quizzes/_form.html.erb (1.1ms)
+  Rendered quizzes/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 260ms (Views: 254.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2015-03-13 16:26:40 -0700
+Processing by QuizzesController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered quizzes/_form.html.erb (1.1ms)
+  Rendered quizzes/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 260ms (Views: 254.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2015-03-13 16:26:44 -0700
+Processing by QuizzesController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered quizzes/_form.html.erb (0.4ms)
+  Rendered quizzes/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 260ms (Views: 253.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2015-03-13 16:26:55 -0700
+Processing by QuizzesController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered quizzes/_form.html.erb (1.0ms)
+  Rendered quizzes/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 271ms (Views: 264.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2015-03-13 16:27:31 -0700
+Processing by QuizzesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered quizzes/_form.html.erb (1.0ms)
+  Rendered quizzes/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 258ms (Views: 252.8ms | ActiveRecord: 0.7ms)
