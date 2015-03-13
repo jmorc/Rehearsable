@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :quizzes
+
   resources :items, except: [:new, :edit, :index]
 
   resources :patients, except: [:new, :edit, :index] do
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
     resources :patients, only: [:new, :edit]
   end
 
-  root to: "clinics#index"
+  root to: "quizzes#index"
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 
