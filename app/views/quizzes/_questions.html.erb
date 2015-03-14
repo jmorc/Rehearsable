@@ -1,0 +1,21 @@
+<% if !@quiz.questions.empty? %>
+  <p><strong>Questions:</strong></p>
+
+    <% @quiz.questions.each do |question| %>
+      <p><%= question.body %></p>
+        <% if can? :update, @question %>
+        <%= button_to "Edit Question", 
+                edit_quiz_question_url(@quiz, question),
+                method: :get, class: "btn btn-default" %>
+        <%= button_to "Delete", 
+                question_url(question), method: :delete,
+                class: "btn btn-default" %>
+        <% end %>  
+    <% end %>
+<% end %>
+
+<% if can? :update, @quiz %>
+  <%= button_to "Add a question to this quiz", 
+              new_quiz_question_url(@quiz),
+              method: :get, class: "btn btn-default" %>
+<% end %>

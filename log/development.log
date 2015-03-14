@@ -32636,3 +32636,19 @@ Processing by QuizzesController#show as HTML
   [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
   Rendered quizzes/show.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 217ms (Views: 212.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2015-03-13 16:42:47 -0700
+Processing by QuizzesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuiz Load (0.4ms)[0m  [1mSELECT "quizzes".* FROM "quizzes"  WHERE "quizzes"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered quizzes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 216ms (Views: 210.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2015-03-13 16:43:24 -0700
+Processing by QuizzesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuiz Load (0.4ms)[0m  [1mSELECT "quizzes".* FROM "quizzes"  WHERE "quizzes"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered quizzes/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 224ms (Views: 218.2ms | ActiveRecord: 1.0ms)
