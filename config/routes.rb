@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :answers, except: [:new, :edit, :index]
+
   resources :quizzes do
     resources :questions, only: [:new, :edit] 
   end
 
-  resources :questions, except: [:new, :edit, :index]  
+  resources :questions, except: [:new, :edit, :index] do 
+    resources :answers, only: [:new, :edit]
+  end 
 
   resources :items, except: [:new, :edit, :index]
 

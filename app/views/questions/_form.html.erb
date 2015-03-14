@@ -1,7 +1,11 @@
 <% form_method = @question.persisted? ? "PATCH" : "POST" %>
-<% form_action = @question.persisted? ? edit_quiz_question_url(@question) :  
-                 questions_url %>
-<% submit_text = @question.persisted? ? "Save changes" : "Create question" %>
+<% if @question.persisted? %>
+  <% form_method, submit_text = "PATCH", "Save changes"  %> 
+  <% form_action = question_url(@question) %>
+<% else %>
+  <% form_method, submit_text  = "POST", "Create question" %> 
+  <% form_action = questions_url %>
+<% end %>
 
 <form action="<%= form_action %>" method="POST" class="form-group">
   <input type="hidden" name="_method" value="<%= form_method %>">
@@ -31,11 +35,7 @@
          id="radio_choice" value="radio">
   <label for="radio_choice">Short answer</label><br>  
   
-      
-  
-
   <input type="submit" value="<%= submit_text %>" class="btn btn-default">
-
 </form>
 
 

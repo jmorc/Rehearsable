@@ -19,23 +19,25 @@ class QuestionsController < ApplicationController
   end
 
   def edit
+    @quiz = @question.quiz
+    respond_with(@question)
   end
 
   def create
     @quiz = Quiz.find(params[:question][:quiz_id])
     @question = @quiz.questions.new(question_params)
     @question.save
-    respond_with(@question)
+    redirect_to @question.quiz
   end
 
   def update
     @question.update(question_params)
-    respond_with(@question)
+    redirect_to @question.quiz
   end
 
   def destroy
     @question.destroy
-    respond_with(@question)
+    redirect_to @question.quiz
   end
 
   private
