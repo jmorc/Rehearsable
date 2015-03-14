@@ -1,25 +1,42 @@
-<%= form_for(@question) do |f| %>
-  <% if @question.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+<% form_method = @question.persisted? ? "PATCH" : "POST" %>
+<% form_action = @question.persisted? ? edit_quiz_question_url(@question) :  
+                 questions_url %>
+<% submit_text = @question.persisted? ? "Save changes" : "Create question" %>
 
-      <ul>
-      <% @question.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<form action="<%= form_action %>" method="POST" class="form-group">
+  <input type="hidden" name="_method" value="<%= form_method %>">
+  
+  <input type="hidden" name="authenticity_token"
+       value="<%= form_authenticity_token %>"> 
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :type %><br>
-    <%= f.text_field :type %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  <input type="hidden" name="question[quiz_id]"
+       value="<%= @quiz.id %>"> 
+  
+  <label>Question: 
+  <input type="text" name="question[body]" 
+         class="form-control" value="<%= @question.body %>">
+  </label><br>
+
+  <label>Type:</label><br>
+  <input type="radio" name="question[question_type]" 
+         id="radio_choice" value="radio">
+  <label for="radio_choice">Multiple Choice (one correct answer)</label><br>  
+
+  <input type="radio" name="question[question_type]" 
+         id="checkbox_choice" value="checkbox">
+  <label for="checkbox_choice">Checkbox (more than one correct answer)</label>
+  <br>  
+
+  <input type="radio" name="question[question_type]" 
+         id="radio_choice" value="radio">
+  <label for="radio_choice">Short answer</label><br>  
+  
+      
+  
+
+  <input type="submit" value="<%= submit_text %>" class="btn btn-default">
+
+</form>
+
+
+

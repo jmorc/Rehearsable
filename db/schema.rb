@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150313014537) do
+ActiveRecord::Schema.define(version: 20150314213136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,17 @@ ActiveRecord::Schema.define(version: 20150313014537) do
   end
 
   add_index "patients", ["clinic_id"], name: "index_patients_on_clinic_id", using: :btree
+
+  create_table "questions", force: true do |t|
+    t.text     "body",          null: false
+    t.integer  "ord"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "quiz_id"
+    t.string   "question_type"
+  end
+
+  add_index "questions", ["quiz_id"], name: "index_questions_on_quiz_id", using: :btree
 
   create_table "quizzes", force: true do |t|
     t.string   "title",         null: false

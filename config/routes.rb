@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :questions, only: [:new, :edit] 
   end
 
-  resources :quizzes, except: [:new, :edit, :index]  
+  resources :questions, except: [:new, :edit, :index]  
 
   resources :items, except: [:new, :edit, :index]
 
