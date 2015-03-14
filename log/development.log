@@ -37461,3 +37461,185 @@ ActionController::RoutingError (No route matches [GET] "/questions"):
   Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (45.2ms)
   Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.7ms)
   Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (86.0ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2015-03-14 14:40:14 -0700
+Processing by QuizzesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mQuiz Load (0.5ms)[0m  SELECT "quizzes".* FROM "quizzes"  WHERE "quizzes"."user_id" = $1  [["user_id", 1]]
+  Rendered quizzes/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 296ms (Views: 289.6ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/quizzes/1" for 127.0.0.1 at 2015-03-14 14:40:21 -0700
+Processing by QuizzesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gjJIfnRD9Gdw7jCbUAtabW6Lwyy0HKIUYMWOzeKQYU4=", "id"=>"1"}
+  [1m[36mQuiz Load (0.4ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "quizzes" WHERE "quizzes"."id" = $1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/quizzes
+Completed 302 Found in 15ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2015-03-14 14:40:21 -0700
+Processing by QuizzesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuiz Load (0.4ms)[0m  [1mSELECT "quizzes".* FROM "quizzes"  WHERE "quizzes"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered quizzes/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 244ms (Views: 235.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/quizzes/2/edit" for 127.0.0.1 at 2015-03-14 14:40:26 -0700
+Processing by QuizzesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuiz Load (0.3ms)[0m  SELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered quizzes/_form.html.erb (0.9ms)
+  Rendered quizzes/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 241ms (Views: 235.7ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/quizzes/2" for 127.0.0.1 at 2015-03-14 14:40:47 -0700
+Processing by QuizzesController#update as HTML
+  Parameters: {"authenticity_token"=>"gjJIfnRD9Gdw7jCbUAtabW6Lwyy0HKIUYMWOzeKQYU4=", "quiz"=>{"title"=>"Sweet Potato", "description"=>"Test your knowledge on cooking sweet potatoes", "viewable_time"=>"2015-03-19T01:01"}, "id"=>"2"}
+  [1m[35mQuiz Load (0.3ms)[0m  SELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "quizzes" SET "updated_at" = $1, "viewable_time" = $2 WHERE "quizzes"."id" = 2[0m  [["updated_at", "2015-03-14 21:40:47.568589"], ["viewable_time", "2015-03-19 01:01:00.000000"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/quizzes/2
+Completed 302 Found in 17ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/quizzes/2" for 127.0.0.1 at 2015-03-14 14:40:47 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "questions"  WHERE "questions"."quiz_id" = $1 LIMIT 1[0m  [["quiz_id", 2]]
+  Rendered quizzes/_questions.html.erb (2.5ms)
+  Rendered quizzes/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 284ms (Views: 279.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/quizzes/2/questions/new" for 127.0.0.1 at 2015-03-14 14:40:53 -0700
+Processing by QuestionsController#new as HTML
+  Parameters: {"quiz_id"=>"2"}
+  [1m[35mQuiz Load (0.3ms)[0m  SELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered questions/_form.html.erb (0.9ms)
+  Rendered questions/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 286ms (Views: 283.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2015-03-14 14:41:12 -0700
+Processing by QuestionsController#create as HTML
+  Parameters: {"authenticity_token"=>"gjJIfnRD9Gdw7jCbUAtabW6Lwyy0HKIUYMWOzeKQYU4=", "question"=>{"quiz_id"=>"2", "body"=>"How much do you like sweet potatoes?", "question_type"=>"radio"}}
+  [1m[35mQuiz Load (0.3ms)[0m  SELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "questions" ("body", "created_at", "question_type", "quiz_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "How much do you like sweet potatoes?"], ["created_at", "2015-03-14 21:41:12.858140"], ["question_type", "radio"], ["quiz_id", 2], ["updated_at", "2015-03-14 21:41:12.858140"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions/5
+Completed 302 Found in 14ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/questions/5" for 127.0.0.1 at 2015-03-14 14:41:12 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mQuiz Load (0.3ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered questions/show.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 273ms (Views: 270.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2015-03-14 14:41:16 -0700
+
+ActionController::RoutingError (No route matches [GET] "/questions"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.4ms)
+  Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.1ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2015-03-14 14:41:29 -0700
+Processing by QuizzesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mQuiz Load (0.5ms)[0m  SELECT "quizzes".* FROM "quizzes"  WHERE "quizzes"."user_id" = $1  [["user_id", 1]]
+  Rendered quizzes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 232ms (Views: 225.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/quizzes/3" for 127.0.0.1 at 2015-03-14 14:41:33 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuiz Load (0.4ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "questions"  WHERE "questions"."quiz_id" = $1 LIMIT 1[0m  [["quiz_id", 3]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1  [["quiz_id", 3]]
+  Rendered quizzes/_questions.html.erb (3.6ms)
+  Rendered quizzes/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 243ms (Views: 235.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/quizzes/3" for 127.0.0.1 at 2015-03-14 14:45:10 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "questions"  WHERE "questions"."quiz_id" = $1 LIMIT 1[0m  [["quiz_id", 3]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1  [["quiz_id", 3]]
+  Rendered quizzes/_questions.html.erb (5.5ms)
+  Rendered quizzes/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 296ms (Views: 289.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/quizzes/3" for 127.0.0.1 at 2015-03-14 14:45:57 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "questions"  WHERE "questions"."quiz_id" = $1 LIMIT 1[0m  [["quiz_id", 3]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1  [["quiz_id", 3]]
+  Rendered quizzes/_questions.html.erb (5.1ms)
+  Rendered quizzes/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 292ms (Views: 285.5ms | ActiveRecord: 1.4ms)
