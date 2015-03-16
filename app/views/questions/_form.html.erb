@@ -38,5 +38,9 @@
   <input type="submit" value="<%= submit_text %>" class="btn btn-default">
 </form>
 
+<%= button_to "Create answers to this question",  
+              new_question_answer_url(@question), 
+              class: "btn btn-default", method: :get %>
+
 
 

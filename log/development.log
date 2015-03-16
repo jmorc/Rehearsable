@@ -38385,3 +38385,984 @@ Processing by QuestionsController#edit as HTML
   Rendered questions/edit.html.erb within layouts/application (1.7ms)
   [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
 Completed 200 OK in 255ms (Views: 250.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-15 17:25:22 -0700
+Processing by QuizzesController#index as HTML
+  [1m[36mUser Load (21.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mQuiz Load (1.1ms)[0m  SELECT "quizzes".* FROM "quizzes"  WHERE "quizzes"."user_id" = $1  [["user_id", 1]]
+  Rendered quizzes/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 523ms (Views: 422.8ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/quizzes/3" for 127.0.0.1 at 2015-03-15 17:25:30 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "questions"  WHERE "questions"."quiz_id" = $1 LIMIT 1[0m  [["quiz_id", 3]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1  [["quiz_id", 3]]
+  Rendered quizzes/_questions.html.erb (6.2ms)
+  Rendered quizzes/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 300ms (Views: 293.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/quizzes/3" for 127.0.0.1 at 2015-03-15 17:36:35 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuiz Load (0.4ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "questions"  WHERE "questions"."quiz_id" = $1 LIMIT 1[0m  [["quiz_id", 3]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1  [["quiz_id", 3]]
+  Rendered quizzes/_questions.html.erb (17.3ms)
+  Rendered quizzes/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 321ms (Views: 311.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/quizzes/3" for 127.0.0.1 at 2015-03-15 17:36:38 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuiz Load (0.4ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (4.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "questions"  WHERE "questions"."quiz_id" = $1 LIMIT 1[0m  [["quiz_id", 3]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1  [["quiz_id", 3]]
+  Rendered quizzes/_questions.html.erb (3.5ms)
+  Rendered quizzes/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 258ms (Views: 247.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/quizzes/3/questions/new" for 127.0.0.1 at 2015-03-15 17:36:45 -0700
+Processing by QuestionsController#new as HTML
+  Parameters: {"quiz_id"=>"3"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered questions/_form.html.erb (1.0ms)
+  Rendered questions/new.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 263ms (Views: 260.6ms | ActiveRecord: 0.8ms)
+  [1m[36mQuestion Load (4.7ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+
+
+Started GET "/quizzes/3" for 127.0.0.1 at 2015-03-15 17:38:10 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "questions"  WHERE "questions"."quiz_id" = $1 LIMIT 1[0m  [["quiz_id", 3]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1  [["quiz_id", 3]]
+  Rendered quizzes/_questions.html.erb (5.3ms)
+  Rendered quizzes/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 322ms (Views: 313.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/quizzes/3/questions/4/edit" for 127.0.0.1 at 2015-03-15 17:38:50 -0700
+Processing by QuestionsController#edit as HTML
+  Parameters: {"quiz_id"=>"3", "id"=>"4"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mQuiz Load (0.2ms)[0m  SELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered questions/_form.html.erb (1.7ms)
+  Rendered questions/edit.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 310ms (Views: 306.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/quizzes/3/questions/4/edit" for 127.0.0.1 at 2015-03-15 21:45:00 -0700
+Processing by QuestionsController#edit as HTML
+  Parameters: {"quiz_id"=>"3", "id"=>"4"}
+  [1m[35mQuestion Load (7.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mQuiz Load (0.5ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered questions/_form.html.erb (343.4ms)
+  Rendered questions/edit.html.erb within layouts/application (345.5ms)
+Completed 500 Internal Server Error in 382ms
+
+NoMethodError - undefined method `new_question_answer' for #<#<Class:0x007fb1351b4818>:0x007fb138be9c90>:
+  app/views/questions/_form.html.erb:42:in `_app_views_questions__form_html_erb___3437251764866168089_70199568943720'
+  actionview (4.1.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.6) lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+  actionview (4.1.6) lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/partial_renderer.rb:278:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (4.1.6) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/questions/edit.html.erb:3:in `_app_views_questions_edit_html_erb___4083235267145846760_70199568991700'
+  actionview (4.1.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:238:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:165:in `to_html'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:158:in `respond'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:151:in `call'
+  actionpack (4.1.6) lib/action_controller/metal/mime_responds.rb:400:in `respond_with'
+  app/controllers/questions_controller.rb:23:in `edit'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/rack/agent_hooks.rb:30:in `traced_call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/rack/browser_monitoring.rb:23:in `traced_call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/90288a63f404a84c/variables" for 127.0.0.1 at 2015-03-15 21:45:01 -0700
+
+
+Started GET "/quizzes/3/questions/4/edit" for 127.0.0.1 at 2015-03-15 21:45:24 -0700
+Processing by QuestionsController#edit as HTML
+  Parameters: {"quiz_id"=>"3", "id"=>"4"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mQuiz Load (0.2ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered questions/_form.html.erb (2.1ms)
+  Rendered questions/edit.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (12.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 317ms (Views: 300.6ms | ActiveRecord: 13.2ms)
+
+
+Started POST "/questions/4/answers/new" for 127.0.0.1 at 2015-03-15 21:45:28 -0700
+
+ActionController::RoutingError (No route matches [POST] "/questions/4/answers/new"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.6ms)
+  Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.6ms)
+  Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (55.5ms)
+
+
+Started POST "/questions/4/answers/new" for 127.0.0.1 at 2015-03-15 21:46:01 -0700
+
+ActionController::RoutingError (No route matches [POST] "/questions/4/answers/new"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.1ms)
+  Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (52.7ms)
+  Rendered /Users/jmorc/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.4ms)
+
+
+Started GET "/quizzes/3/questions/4/edit" for 127.0.0.1 at 2015-03-15 21:46:06 -0700
+Processing by QuestionsController#edit as HTML
+  Parameters: {"quiz_id"=>"3", "id"=>"4"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mQuiz Load (0.5ms)[0m  SELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered questions/_form.html.erb (1.8ms)
+  Rendered questions/edit.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 246ms (Views: 241.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/questions/4/answers/new" for 127.0.0.1 at 2015-03-15 21:46:09 -0700
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>"4"}
+  Rendered answers/_form.html.erb (11.8ms)
+  Rendered answers/new.html.erb within layouts/application (13.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 337ms (Views: 311.2ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/quizzes/3/questions/4/edit" for 127.0.0.1 at 2015-03-15 21:46:52 -0700
+Processing by QuestionsController#edit as HTML
+  Parameters: {"quiz_id"=>"3", "id"=>"4"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mQuiz Load (0.3ms)[0m  SELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered questions/_form.html.erb (2.2ms)
+  Rendered questions/edit.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 9ms
+
+SyntaxError - syntax error, unexpected ',', expecting ')'
+...question_answer_url(@question), method: :get );@output_buffe...
+...                               ^:
+  app/views/questions/_form.html.erb:42:in `'
+  actionview (4.1.6) lib/action_view/template.rb:297:in `compile'
+  actionview (4.1.6) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.1.6) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.1.6) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.1.6) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.6) lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+  actionview (4.1.6) lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/partial_renderer.rb:278:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (4.1.6) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/questions/edit.html.erb:3:in `_app_views_questions_edit_html_erb___4083235267145846760_70199568991700'
+  actionview (4.1.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:238:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:165:in `to_html'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:158:in `respond'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:151:in `call'
+  actionpack (4.1.6) lib/action_controller/metal/mime_responds.rb:400:in `respond_with'
+  app/controllers/questions_controller.rb:23:in `edit'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/rack/agent_hooks.rb:30:in `traced_call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/rack/browser_monitoring.rb:23:in `traced_call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/f513e2950ec6343f/variables" for 127.0.0.1 at 2015-03-15 21:46:52 -0700
+
+
+Started GET "/quizzes/3/questions/4/edit" for 127.0.0.1 at 2015-03-15 21:47:04 -0700
+Processing by QuestionsController#edit as HTML
+  Parameters: {"quiz_id"=>"3", "id"=>"4"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mQuiz Load (0.2ms)[0m  SELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered questions/_form.html.erb (1.6ms)
+  Rendered questions/edit.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 8ms
+
+SyntaxError - syntax error, unexpected ',', expecting =>
+...question_answer_url(@question), method: :get );@output_buffe...
+...                               ^:
+  app/views/questions/_form.html.erb:42:in `'
+  actionview (4.1.6) lib/action_view/template.rb:297:in `compile'
+  actionview (4.1.6) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.1.6) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.1.6) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.1.6) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.6) lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+  actionview (4.1.6) lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/partial_renderer.rb:278:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (4.1.6) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/questions/edit.html.erb:3:in `_app_views_questions_edit_html_erb___4083235267145846760_70199568991700'
+  actionview (4.1.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:238:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:165:in `to_html'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:158:in `respond'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:151:in `call'
+  actionpack (4.1.6) lib/action_controller/metal/mime_responds.rb:400:in `respond_with'
+  app/controllers/questions_controller.rb:23:in `edit'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/rack/agent_hooks.rb:30:in `traced_call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/rack/browser_monitoring.rb:23:in `traced_call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/d6e6ee4b7486c65e/variables" for 127.0.0.1 at 2015-03-15 21:47:04 -0700
+
+
+Started GET "/quizzes/3" for 127.0.0.1 at 2015-03-15 21:47:07 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "questions"  WHERE "questions"."quiz_id" = $1 LIMIT 1[0m  [["quiz_id", 3]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1  [["quiz_id", 3]]
+  Rendered quizzes/_questions.html.erb (3.5ms)
+  Rendered quizzes/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 287ms (Views: 281.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/quizzes/3/questions/4/edit" for 127.0.0.1 at 2015-03-15 21:47:11 -0700
+Processing by QuestionsController#edit as HTML
+  Parameters: {"quiz_id"=>"3", "id"=>"4"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mQuiz Load (0.7ms)[0m  SELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered questions/_form.html.erb (1.6ms)
+  Rendered questions/edit.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError - syntax error, unexpected ',', expecting =>
+...question_answer_url(@question), method: :get );@output_buffe...
+...                               ^:
+  app/views/questions/_form.html.erb:42:in `'
+  actionview (4.1.6) lib/action_view/template.rb:297:in `compile'
+  actionview (4.1.6) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.1.6) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.1.6) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.1.6) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.6) lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+  actionview (4.1.6) lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/partial_renderer.rb:278:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (4.1.6) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/questions/edit.html.erb:3:in `_app_views_questions_edit_html_erb___4083235267145846760_70199568991700'
+  actionview (4.1.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:238:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:165:in `to_html'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:158:in `respond'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:151:in `call'
+  actionpack (4.1.6) lib/action_controller/metal/mime_responds.rb:400:in `respond_with'
+  app/controllers/questions_controller.rb:23:in `edit'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/rack/agent_hooks.rb:30:in `traced_call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/rack/browser_monitoring.rb:23:in `traced_call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+   () Users/jmorc/.rvm/gems/ruby-2.0.0-p481@global/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jmorc/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/dd1544cdd691a291/variables" for 127.0.0.1 at 2015-03-15 21:47:11 -0700
+
+
+Started GET "/quizzes/3" for 127.0.0.1 at 2015-03-15 21:47:42 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "questions"  WHERE "questions"."quiz_id" = $1 LIMIT 1[0m  [["quiz_id", 3]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1  [["quiz_id", 3]]
+  Rendered quizzes/_questions.html.erb (3.2ms)
+  Rendered quizzes/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 305ms (Views: 298.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/quizzes/3/questions/4/edit" for 127.0.0.1 at 2015-03-15 21:47:44 -0700
+Processing by QuestionsController#edit as HTML
+  Parameters: {"quiz_id"=>"3", "id"=>"4"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mQuiz Load (0.2ms)[0m  SELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered questions/_form.html.erb (2.4ms)
+  Rendered questions/edit.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 295ms (Views: 291.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/questions/4/answers/new" for 127.0.0.1 at 2015-03-15 21:47:53 -0700
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>"4"}
+  Rendered answers/_form.html.erb (2.7ms)
+  Rendered answers/new.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 301ms (Views: 300.0ms | ActiveRecord: 0.6ms)

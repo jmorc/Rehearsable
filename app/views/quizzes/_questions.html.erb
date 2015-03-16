@@ -3,6 +3,14 @@
 
     <% @quiz.questions.each do |question| %>
       <p><%= question.body %></p>
+      <% if question.question_type == "radio" %>
+        <% question.answer.each do |answer| %>
+        <input type="radio" name="question[answer]"
+               id="<%=answer%>">
+        <label for="<%=answer%>"><%=answer%></label>       
+      <% end %>
+    <% end %>
+
         <% if can? :update, @question %>
         <table class='table'>
           <tr>
