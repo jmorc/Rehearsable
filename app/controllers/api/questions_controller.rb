@@ -1,7 +1,7 @@
-class API::QuestionsController < ApplicationController
+class Api::QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
-  respond_to :html
+  respond_to :json
 
   def index
     @questions = Question.all

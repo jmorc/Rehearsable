@@ -5,11 +5,11 @@ class Api::AnswersController < ApplicationController
 
   def index
     @answers = Answer.all
-    render json: @answers
+    respond_with(@answers)
   end
 
   def show
-    render json: @answer
+    respond_with(@answer)
   end
 
   def new

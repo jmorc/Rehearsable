@@ -1,8 +1,8 @@
-class API::QuizzesController < ApplicationController
+class Api::QuizzesController < ApplicationController
   before_action :set_quiz, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   load_and_authorize_resource
-  respond_to :html
+  respond_to :json
 
   def index
     @quizzes = current_user.quizzes
