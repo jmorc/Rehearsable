@@ -1,36 +1,26 @@
 class Api::AnswersController < ApplicationController
-  before_action :set_answer, only: [:show, :edit, :update, :destroy]
+  before_action :set_answer, only: [:show, :update, :destroy]
 
   respond_to :json
 
-  def index
-    @answers = Answer.all
-    respond_with(@answers)
+  def create
+    @answer = Answer.new(answer_params)
+    if @answer.save
+      render json: @answer
+    else
+      render @answer.error, status: :unprocessable_entity
+    end
   end
 
   def show
-    respond_with(@answer)
+    render json: @answer
   end
-
-  def new
-    @answer = Answer.new
-    respond_with(@answer)
-  end
-
-  def edit
-  end
-
-  def create
-    @answer = Answer.new(answer_params)
-    @answer.save
-    respond_with(@answer)
-  end
-
+  
   def update
     @answer.update(answer_params)
     respond_with(@answer)
   end
-
+ 
   def destroy
     @answer.destroy
     respond_with(@answer)
