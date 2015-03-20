@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :api do
+  namespace :api, defaults: { format: :json } do
     resources :answers, except: [:new, :edit, :index]
 
     resources :quizzes do

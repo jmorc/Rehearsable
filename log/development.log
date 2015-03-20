@@ -39397,3 +39397,32 @@ Migrating to DropPatients (20150319021820)
   [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-19 21:22:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#root as HTML
+Completed 500 Internal Server Error in 1ms
+
+SystemStackError - stack level too deep:
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:75:in `'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-19 21:22:16 -0700
+Processing by SiteController#root as HTML
+Completed 500 Internal Server Error in 1ms
+
+SystemStackError - stack level too deep:
+  newrelic_rpm (3.10.0.279) lib/new_relic/agent/instrumentation/middleware_tracing.rb:75:in `'
+
+
+
+Started POST "/__better_errors/213c76f97576e897/variables" for 127.0.0.1 at 2015-03-19 21:22:16 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-19 21:23:30 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (2.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 581ms (Views: 573.6ms | ActiveRecord: 6.9ms)
