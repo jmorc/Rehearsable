@@ -1,4 +1,4 @@
-class QuestionsController < ApplicationController
+class API::QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
