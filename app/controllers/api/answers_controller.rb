@@ -18,12 +18,12 @@ class Api::AnswersController < ApplicationController
   
   def update
     @answer.update(answer_params)
-    respond_with(@answer)
+    render json: @answer
   end
  
   def destroy
     @answer.destroy
-    respond_with(@answer)
+    render json: @answer
   end
 
   private
