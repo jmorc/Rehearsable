@@ -8,7 +8,7 @@ class Api::AnswersController < ApplicationController
     if @answer.save
       render json: @answer
     else
-      render @answer.error, status: :unprocessable_entity
+      render @answer.errors.full_messages, status: :unprocessable_entity
     end
   end
 

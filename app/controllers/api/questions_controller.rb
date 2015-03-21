@@ -1,43 +1,35 @@
 class Api::QuestionsController < ApplicationController
-  before_action :set_question, only: [:show, :edit, :update, :destroy]
+  before_action :set_question, only: [:show :update, :destroy]
 
   respond_to :json
 
   def index
     @questions = Question.all
-    respond_with(@questions)
+    render json: @questions
   end
 
   def show
-    respond_with(@question)
-  end
-
-  def new
-    @quiz = Quiz.find(params[:quiz_id])
-    @question = Question.new
-    respond_with(@question)
-  end
-
-  def edit
-    @quiz = @question.quiz
-    respond_with(@question)
+    render json: @question
   end
 
   def create
     @quiz = Quiz.find(params[:question][:quiz_id])
     @question = @quiz.questions.new(question_params)
-    @question.save
-    redirect_to @question.quiz
+    if @question.save
+      render json: @question
+    else
+      render @question.errors.full_messages, status: :unprocessable_entity
+    end
   end
 
   def update
     @question.update(question_params)
-    redirect_to @question.quiz
+    render json: @question
   end
 
   def destroy
     @question.destroy
-    redirect_to @question.quiz
+    render json: @question
   end
 
   private

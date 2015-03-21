@@ -1,41 +1,37 @@
 class Api::QuizzesController < ApplicationController
-  before_action :set_quiz, only: [:show, :edit, :update, :destroy]
+  before_action :set_quiz, only: [:show :update, :destroy]
   before_action :authenticate_user!
   load_and_authorize_resource
   respond_to :json
 
   def index
     @quizzes = current_user.quizzes
-    respond_with(@quizzes)
+    render json: @quizzes
   end
 
   def show
-    respond_with(@quiz)
-  end
-
-  def new
-    @quiz = Quiz.new
-    respond_with(@quiz)
-  end
-
-  def edit
+    render json: @quiz
   end
 
   def create
     @user = current_user
     @quiz = current_user.quizzes.new(quiz_params)
-    @quiz.save
-    respond_with(@quiz)
+    if @quiz.save
+      render json: @quiz
+    else 
+      render @quiz.errors.full_messages, status: :unprocessable_entity
+    end
+
   end
 
   def update
     @quiz.update(quiz_params)
-    respond_with(@quiz)
+    render json: @quiz
   end
 
   def destroy
     @quiz.destroy
-    respond_with(@quiz)
+    render json: @quiz
   end
 
   private
