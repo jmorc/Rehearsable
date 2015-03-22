@@ -16,4 +16,7 @@
 //= require underscore
 //= require backbone
 //= require rehearsable
+//= require_tree ./models
+//= require_tree ./collections
+
 //= require_tree .

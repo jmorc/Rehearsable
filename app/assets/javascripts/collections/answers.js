@@ -1,4 +1,9 @@
 Rehearsable.Collections.Answers = Backbone.Collection.extend({
     model: Rehearsable.Models.Answer,
-	url = Rehearsable.Models.Answer.urlRoot + " "
+	
+	url: this.question.url() + "/answers"
+
+	initialize: function (models, options) {
+		this.question = options.question
+	}
 })
