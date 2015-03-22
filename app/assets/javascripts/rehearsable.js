@@ -4,9 +4,9 @@ window.Rehearsable = {
   Views: {},
   Router: {},
   initialize: function (options) {
-  	new Rehearsable.Routers.Router({
-  		$rootEl = $("main")
-  	});
+  	// new Rehearsable.Routers.Router({
+  	// 	$rootEl: $("main")
+  	// });
   	Backbone.history.start();
   }
 };

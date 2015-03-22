@@ -1,7 +1,9 @@
-Rehearsable.Collections.Questions = Backbone.Colletion.extend({
+Rehearsable.Collections.Questions = Backbone.Collection.extend({
 	model: Rehearsable.Models.Question,
 
-	url: this.quiz.url() + '/questions', 
+	url: function() {
+		return this.quiz.url() + '/questions';
+	},
 
 	initialize: function (models, options) {
       this.quiz = options.quiz;
