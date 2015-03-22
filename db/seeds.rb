@@ -6,55 +6,43 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-cardiology = Clinic.create({ name: 'Cardiology' })
-surgery = Clinic.create({ name: 'Surgery' })
-psychiatry = Clinic.create({ name: 'Psychiatry' })
+instructor1 = User.new(email: "instructor1@gmail.com", 
+	                      instructor: true, password: "instructor1")
 
-bob = psychiatry.patients.create(name: "Bob Knuth", 
-	summary: "Bob was admitted for confusion.  He appeared normal this morning",
-	viewable_time: "2015-03-04")
+instructor1.save!
 
-bob.items.create([{ name: "Blood Pressure", value: "124/82" },
-                          { name: "Temperature", value: "102.6", comment: "Uh-oh" },
-						  { name: "Heart Rate", value: "68 BPM", comment: "Wow!" }])
+student1 = User.create(email: "student1@gmail.com", 
+	                      instructor: false, password: "student1")
 
-mary = psychiatry.patients.create(name: "Mary Geraldo", 
-	summary: "Mary was admitted for manic behavior.  Her episode has not improved.",
-	viewable_time: "2015-03-06")
+wildMed = instructor1.quizzes.create(title: "Wilderness Med: Poionous plants",
+	      description: "Test your knowledge on first aid for poison ivy")
 
-mary.items.create([{ name: "Blood Pressure", value: "124/82" },
-                           { name: "Temperature", value: "99.5" },
-                           { name: "Heart Rate", value: "104 BPM", comment: "Wow!" }])
+poison1 = wildMed.questions.create(body: "What is first step in treating poison ivy / oak?",
+	                              question_type: "radio", ord: 1)
+poison2 = wildMed.questions.create(body: "What portion of the population is susceptible to poison ivy / oak?",
+	                              question_type: "radio", ord: 2)
+poison3 = wildMed.questions.create(body: "How can you treat poison ivy / oak? (Check all that apply)",
+	                              question_type: "checkbox", ord: 2)
 
+poison1.answers.create(body: "Apply hydrocortisone cream", correct: false)
+poison1.answers.create(body: "Wash with soapy, lukewarm water", correct: true)
+poison1.answers.create(body: "Apply a cool compress", correct: false)
 
+poison2.answers.create(body: "99 %", correct: false)
+poison2.answers.create(body: "85 %", correct: true)
+poison2.answers.create(body: "60 %", correct: false)
 
-cardiology.patients.create(name: "Francis Farken", 
-	summary: "Francis was admitted for chest pains.  She is awaiting angioplasty.",
-	viewable_time: "2015-03-04")
+poison3.answers.create(body: "Apply hydrocortisone cream", correct: true)
+poison3.answers.create(body: "Wash with soapy, lukewarm water", correct: true)
+poison3.answers.create(body: "Apply a cool compress", correct: true)
+poison3.answers.create(body: "Scratch or rub the itchy skin", correct: false)
+poison3.answers.create(body: "Puncture blisters to relieve pressure", correct: false)
+poison3.answers.create(body: "Consider bathing the dog", correct: true)
+poison3.answers.create(body: "Apply an antihistamine to the skin", correct: false)
+poison3.answers.create(body: "Consider an antihistamine pill", correct: true)
+poison3.answers.create(body: "Wash the clothing you were wearing", correct: true)
+poison3.answers.create(body: "Apply diluted bleach to the rash", correct: false)
 
-cardiology.patients.create(name: "Marto Mathilda", 
-	summary: "Marto was admitted after a fainting spell.",
-	viewable_time: "2015-03-06")
-
-cardiology.patients.create(name: "Peter Pinkerton", 
-	summary: "Peter was admitted for atrial fibrillation.  He appeared normal this afternoon.",
-	viewable_time: "2015-03-12")
-
-cardiology.patients.create(name: "Christopher Canery", 
-	summary: "Christopher was admitted for heart failure.",
-	viewable_time: "2015-03-10")
-
-surgery.patients.create(name: "Fred Mathilda", 
-	summary: "Fred was admitted after breaking his toe.",
-	viewable_time: "2015-03-06")
-
-surgery.patients.create(name: "Jane Pinkerton", 
-	summary: "Jane was admitted for a hip replacement.",
-	viewable_time: "2015-03-16")
-
-surgery.patients.create(name: "Suzie Canery", 
-	summary: "Suzie was admitted for a heart transplant.",
-	viewable_time: "2015-03-11")
 
 
 

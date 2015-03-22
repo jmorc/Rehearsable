@@ -44054,3 +44054,304 @@ Processing by Api::QuizzesController#index as JSON
   [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
   [1m[35mQuiz Load (0.5ms)[0m  SELECT "quizzes".* FROM "quizzes"  WHERE "quizzes"."user_id" = $1  [["user_id", 1]]
 Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 1.1ms)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (3.9ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jeffcaves@gmail.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "instructor", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-03-22 18:49:40.380357"], ["email", "jeffcaves@gmail.com"], ["encrypted_password", "$2a$10$DzcHhBeJcVF2.G/5BkHfH.qtcaamnRuh4CGY0rdTustzFyhgMvL4q"], ["instructor", "t"], ["updated_at", "2015-03-22 18:49:40.380357"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (5030.8ms)[0m  [1mDROP DATABASE IF EXISTS "CyberHospital_development"[0m
+PG::ObjectInUse: ERROR:  database "CyberHospital_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+: DROP DATABASE IF EXISTS "CyberHospital_development"
+  [1m[35m (128.1ms)[0m  DROP DATABASE IF EXISTS "CyberHospital_test"
+  [1m[36m (0.7ms)[0m  [1mCREATE DATABASE "CyberHospital_development" ENCODING = 'unicode'[0m
+PG::DuplicateDatabase: ERROR:  database "CyberHospital_development" already exists
+: CREATE DATABASE "CyberHospital_development" ENCODING = 'unicode'
+  [1m[35m (431.8ms)[0m  CREATE DATABASE "CyberHospital_test" ENCODING = 'unicode'
+  [1m[36mSQL (2.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.1ms)[0m  DROP TABLE "answers"
+  [1m[36m (19.1ms)[0m  [1mCREATE TABLE "answers" ("id" serial primary key, "body" character varying(255) NOT NULL, "question_id" integer NOT NULL, "correct" boolean NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.0ms)[0m  CREATE  INDEX  "index_answers_on_question_id" ON "answers" USING btree ("question_id")
+  [1m[36m (5.6ms)[0m  [1mDROP TABLE "questions"[0m
+  [1m[35m (6.8ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "body" text NOT NULL, "ord" integer, "created_at" timestamp, "updated_at" timestamp, "quiz_id" integer, "question_type" character varying(255)) 
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX  "index_questions_on_quiz_id" ON "questions" USING btree ("quiz_id")[0m
+  [1m[35m (2.8ms)[0m  DROP TABLE "quizzes"
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "quizzes" ("id" serial primary key, "title" character varying(255) NOT NULL, "description" text, "viewable_time" timestamp, "user_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.7ms)[0m  CREATE  INDEX  "index_quizzes_on_user_id" ON "quizzes" USING btree ("user_id")
+  [1m[36m (3.3ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (7.5ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp, "instructor" boolean) 
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (121.0ms)[0m  [1mDROP DATABASE IF EXISTS "CyberHospital_development"[0m
+  [1m[35m (118.6ms)[0m  DROP DATABASE IF EXISTS "CyberHospital_test"
+  [1m[36m (246.1ms)[0m  [1mCREATE DATABASE "CyberHospital_development" ENCODING = 'unicode'[0m
+  [1m[35m (251.6ms)[0m  CREATE DATABASE "CyberHospital_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.1ms)[0m  CREATE TABLE "answers" ("id" serial primary key, "body" character varying(255) NOT NULL, "question_id" integer NOT NULL, "correct" boolean NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.9ms)[0m  [1mCREATE  INDEX  "index_answers_on_question_id" ON "answers" USING btree ("question_id")[0m
+  [1m[35m (4.7ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "body" text NOT NULL, "ord" integer, "created_at" timestamp, "updated_at" timestamp, "quiz_id" integer, "question_type" character varying(255)) 
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX  "index_questions_on_quiz_id" ON "questions" USING btree ("quiz_id")[0m
+  [1m[35m (6.5ms)[0m  CREATE TABLE "quizzes" ("id" serial primary key, "title" character varying(255) NOT NULL, "description" text, "viewable_time" timestamp, "user_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX  "index_quizzes_on_user_id" ON "quizzes" USING btree ("user_id")[0m
+  [1m[35m (7.2ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp, "instructor" boolean) 
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150319021820')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150227185147')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150227212952')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150227222126')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150227222844')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150305004523')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150306015121')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150309035544')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150310005417')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150310031055')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150310031211')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150313014537')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150313234805')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150314173454')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150314174039')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150314213136')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150314214846')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'instructor1@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "instructor", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-03-22 19:25:20.712374"], ["email", "instructor1@gmail.com"], ["encrypted_password", "$2a$10$AqD5wBUugsvKlKGj3ZV2E.hle3EqgABY3RkLrNk8M7Y..F5X8jw7O"], ["instructor", "t"], ["updated_at", "2015-03-22 19:25:20.712374"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'student1@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "instructor", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-03-22 19:25:20.787504"], ["email", "student1@gmail.com"], ["encrypted_password", "$2a$10$qX.hcBZ4K1iv9xlXj7.h8uy13VjDD0DOCYtdVekfCAKmq8yaxAtiW"], ["instructor", "f"], ["updated_at", "2015-03-22 19:25:20.787504"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "quizzes" ("created_at", "description", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-03-22 19:25:20.805338"], ["description", "Test your knowledge on first aid for poison ivy"], ["title", "Wilderness Med: Poionous plants"], ["updated_at", "2015-03-22 19:25:20.805338"]]
+PG::NotNullViolation: ERROR:  null value in column "user_id" violates not-null constraint
+DETAIL:  Failing row contains (1, Wilderness Med: Poionous plants, Test your knowledge on first aid for poison ivy, null, null, 2015-03-22 19:25:20.805338, 2015-03-22 19:25:20.805338).
+: INSERT INTO "quizzes" ("created_at", "description", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (122.1ms)[0m  [1mDROP DATABASE IF EXISTS "CyberHospital_development"[0m
+  [1m[35m (120.0ms)[0m  DROP DATABASE IF EXISTS "CyberHospital_test"
+  [1m[36m (239.3ms)[0m  [1mCREATE DATABASE "CyberHospital_development" ENCODING = 'unicode'[0m
+  [1m[35m (241.0ms)[0m  CREATE DATABASE "CyberHospital_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.9ms)[0m  CREATE TABLE "answers" ("id" serial primary key, "body" character varying(255) NOT NULL, "question_id" integer NOT NULL, "correct" boolean NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_answers_on_question_id" ON "answers" USING btree ("question_id")[0m
+  [1m[35m (6.7ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "body" text NOT NULL, "ord" integer, "created_at" timestamp, "updated_at" timestamp, "quiz_id" integer, "question_type" character varying(255)) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_questions_on_quiz_id" ON "questions" USING btree ("quiz_id")[0m
+  [1m[35m (4.4ms)[0m  CREATE TABLE "quizzes" ("id" serial primary key, "title" character varying(255) NOT NULL, "description" text, "viewable_time" timestamp, "user_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX  "index_quizzes_on_user_id" ON "quizzes" USING btree ("user_id")[0m
+  [1m[35m (7.8ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp, "instructor" boolean) 
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150319021820')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150227185147')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150227212952')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150227222126')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150227222844')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150305004523')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150306015121')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150309035544')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150310005417')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150310031055')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150310031211')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150313014537')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150313234805')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150314173454')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150314174039')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150314213136')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150314214846')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'instructor1@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "instructor", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-03-22 19:26:21.221239"], ["email", "instructor1@gmail.com"], ["encrypted_password", "$2a$10$iSt./9PXtvVB8QvHuWbpoOGE.p4XahApDmkOBXotYEasJIB0W7DsO"], ["instructor", "t"], ["updated_at", "2015-03-22 19:26:21.221239"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'student1@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "instructor", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-03-22 19:26:21.300915"], ["email", "student1@gmail.com"], ["encrypted_password", "$2a$10$Yct18I2dzuKrxR7SPr/cVuxUnTGRFnqUn1ZTGRtdah0QEVlzcafEa"], ["instructor", "f"], ["updated_at", "2015-03-22 19:26:21.300915"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "quizzes" ("created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-03-22 19:26:21.332050"], ["description", "Test your knowledge on first aid for poison ivy"], ["title", "Wilderness Med: Poionous plants"], ["updated_at", "2015-03-22 19:26:21.332050"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("body", "created_at", "ord", "question_type", "quiz_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["body", "What is first step in treating poison ivy / oak?"], ["created_at", "2015-03-22 19:26:21.349173"], ["ord", 1], ["question_type", "radio"], ["quiz_id", 1], ["updated_at", "2015-03-22 19:26:21.349173"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("body", "created_at", "ord", "question_type", "quiz_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "What portion of the population is susceptible to poison ivy / oak?"], ["created_at", "2015-03-22 19:26:21.354414"], ["ord", 2], ["question_type", "radio"], ["quiz_id", 1], ["updated_at", "2015-03-22 19:26:21.354414"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("body", "created_at", "ord", "question_type", "quiz_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["body", "How can you treat poison ivy / oak? (Check all that apply)"], ["created_at", "2015-03-22 19:26:21.357719"], ["ord", 2], ["question_type", "checkbox"], ["quiz_id", 1], ["updated_at", "2015-03-22 19:26:21.357719"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Apply hydrocortisone cream"], ["correct", "f"], ["created_at", "2015-03-22 19:26:21.369447"], ["question_id", 1], ["updated_at", "2015-03-22 19:26:21.369447"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "Wash with soapy, lukewarm water"], ["correct", "t"], ["created_at", "2015-03-22 19:26:21.373709"], ["question_id", 1], ["updated_at", "2015-03-22 19:26:21.373709"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Apply a cool compress"], ["correct", "f"], ["created_at", "2015-03-22 19:26:21.375799"], ["question_id", 1], ["updated_at", "2015-03-22 19:26:21.375799"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "99 %"], ["correct", "f"], ["created_at", "2015-03-22 19:26:21.378037"], ["question_id", 2], ["updated_at", "2015-03-22 19:26:21.378037"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "85 %"], ["correct", "t"], ["created_at", "2015-03-22 19:26:21.379901"], ["question_id", 2], ["updated_at", "2015-03-22 19:26:21.379901"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "60 %"], ["correct", "f"], ["created_at", "2015-03-22 19:26:21.381852"], ["question_id", 2], ["updated_at", "2015-03-22 19:26:21.381852"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Apply hydrocortisone cream"], ["correct", "t"], ["created_at", "2015-03-22 19:26:21.383924"], ["question_id", 3], ["updated_at", "2015-03-22 19:26:21.383924"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "Wash with soapy, lukewarm water"], ["correct", "t"], ["created_at", "2015-03-22 19:26:21.385922"], ["question_id", 3], ["updated_at", "2015-03-22 19:26:21.385922"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Apply a cool compress"], ["correct", "t"], ["created_at", "2015-03-22 19:26:21.387831"], ["question_id", 3], ["updated_at", "2015-03-22 19:26:21.387831"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "Scratch or rub the itchy skin"], ["correct", "f"], ["created_at", "2015-03-22 19:26:21.389671"], ["question_id", 3], ["updated_at", "2015-03-22 19:26:21.389671"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Puncture blisters to relieve pressure"], ["correct", "f"], ["created_at", "2015-03-22 19:26:21.391579"], ["question_id", 3], ["updated_at", "2015-03-22 19:26:21.391579"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "Consider bathing the dog"], ["correct", "t"], ["created_at", "2015-03-22 19:26:21.393510"], ["question_id", 3], ["updated_at", "2015-03-22 19:26:21.393510"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Apply an antihistamine to the skin"], ["correct", "f"], ["created_at", "2015-03-22 19:26:21.395371"], ["question_id", 3], ["updated_at", "2015-03-22 19:26:21.395371"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "Consider an antihistamine pill"], ["correct", "t"], ["created_at", "2015-03-22 19:26:21.397150"], ["question_id", 3], ["updated_at", "2015-03-22 19:26:21.397150"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Wash the clothing you were wearing"], ["correct", "t"], ["created_at", "2015-03-22 19:26:21.398934"], ["question_id", 3], ["updated_at", "2015-03-22 19:26:21.398934"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "Apply diluted bleach to the rash"], ["correct", "f"], ["created_at", "2015-03-22 19:26:21.400762"], ["question_id", 3], ["updated_at", "2015-03-22 19:26:21.400762"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "quizzes" ("created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-03-22 19:28:28.704806"], ["description", "asdfadsf"], ["title", "Wilderness Med: Poionous plants"], ["updated_at", "2015-03-22 19:28:28.704806"], ["user_id", 1]]
+  [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'instructor1@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'student1@gmail.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (1.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'instructor1@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (122.0ms)[0m  [1mDROP DATABASE IF EXISTS "CyberHospital_development"[0m
+  [1m[35m (120.4ms)[0m  DROP DATABASE IF EXISTS "CyberHospital_test"
+  [1m[36m (242.5ms)[0m  [1mCREATE DATABASE "CyberHospital_development" ENCODING = 'unicode'[0m
+  [1m[35m (240.2ms)[0m  CREATE DATABASE "CyberHospital_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.3ms)[0m  CREATE TABLE "answers" ("id" serial primary key, "body" character varying(255) NOT NULL, "question_id" integer NOT NULL, "correct" boolean NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.8ms)[0m  [1mCREATE  INDEX  "index_answers_on_question_id" ON "answers" USING btree ("question_id")[0m
+  [1m[35m (7.2ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "body" text NOT NULL, "ord" integer, "created_at" timestamp, "updated_at" timestamp, "quiz_id" integer, "question_type" character varying(255)) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_questions_on_quiz_id" ON "questions" USING btree ("quiz_id")[0m
+  [1m[35m (6.6ms)[0m  CREATE TABLE "quizzes" ("id" serial primary key, "title" character varying(255) NOT NULL, "description" text, "viewable_time" timestamp, "user_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX  "index_quizzes_on_user_id" ON "quizzes" USING btree ("user_id")[0m
+  [1m[35m (6.5ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp, "instructor" boolean) 
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.7ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150319021820')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150227185147')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150227212952')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150227222126')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150227222844')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150305004523')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150306015121')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150309035544')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150310005417')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150310031055')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150310031211')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150313014537')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150313234805')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150314173454')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150314174039')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150314213136')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150314214846')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (1.8ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'instructor1@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "instructor", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-03-22 19:30:45.705210"], ["email", "instructor1@gmail.com"], ["encrypted_password", "$2a$10$mFCcfeAADOsDNShdDpJureNbeQl.O.dyl1xx9PvzkYZLckL1NSeNq"], ["instructor", "t"], ["updated_at", "2015-03-22 19:30:45.705210"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'student1@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "instructor", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-03-22 19:30:45.785904"], ["email", "student1@gmail.com"], ["encrypted_password", "$2a$10$Fvc0I0H6pezWYOwQaTatoeSyyenAO4KbR8HBgYXVM15mhmzJdy5Wi"], ["instructor", "f"], ["updated_at", "2015-03-22 19:30:45.785904"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "quizzes" ("created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-03-22 19:30:45.810329"], ["description", "Test your knowledge on first aid for poison ivy"], ["title", "Wilderness Med: Poionous plants"], ["updated_at", "2015-03-22 19:30:45.810329"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("body", "created_at", "ord", "question_type", "quiz_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["body", "What is first step in treating poison ivy / oak?"], ["created_at", "2015-03-22 19:30:45.827414"], ["ord", 1], ["question_type", "radio"], ["quiz_id", 1], ["updated_at", "2015-03-22 19:30:45.827414"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("body", "created_at", "ord", "question_type", "quiz_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "What portion of the population is susceptible to poison ivy / oak?"], ["created_at", "2015-03-22 19:30:45.831098"], ["ord", 2], ["question_type", "radio"], ["quiz_id", 1], ["updated_at", "2015-03-22 19:30:45.831098"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("body", "created_at", "ord", "question_type", "quiz_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["body", "How can you treat poison ivy / oak? (Check all that apply)"], ["created_at", "2015-03-22 19:30:45.833421"], ["ord", 2], ["question_type", "checkbox"], ["quiz_id", 1], ["updated_at", "2015-03-22 19:30:45.833421"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Apply hydrocortisone cream"], ["correct", "f"], ["created_at", "2015-03-22 19:30:45.845140"], ["question_id", 1], ["updated_at", "2015-03-22 19:30:45.845140"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "Wash with soapy, lukewarm water"], ["correct", "t"], ["created_at", "2015-03-22 19:30:45.848734"], ["question_id", 1], ["updated_at", "2015-03-22 19:30:45.848734"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Apply a cool compress"], ["correct", "f"], ["created_at", "2015-03-22 19:30:45.851619"], ["question_id", 1], ["updated_at", "2015-03-22 19:30:45.851619"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "99 %"], ["correct", "f"], ["created_at", "2015-03-22 19:30:45.854510"], ["question_id", 2], ["updated_at", "2015-03-22 19:30:45.854510"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "85 %"], ["correct", "t"], ["created_at", "2015-03-22 19:30:45.857004"], ["question_id", 2], ["updated_at", "2015-03-22 19:30:45.857004"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "60 %"], ["correct", "f"], ["created_at", "2015-03-22 19:30:45.858982"], ["question_id", 2], ["updated_at", "2015-03-22 19:30:45.858982"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Apply hydrocortisone cream"], ["correct", "t"], ["created_at", "2015-03-22 19:30:45.861074"], ["question_id", 3], ["updated_at", "2015-03-22 19:30:45.861074"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "Wash with soapy, lukewarm water"], ["correct", "t"], ["created_at", "2015-03-22 19:30:45.862889"], ["question_id", 3], ["updated_at", "2015-03-22 19:30:45.862889"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Apply a cool compress"], ["correct", "t"], ["created_at", "2015-03-22 19:30:45.864643"], ["question_id", 3], ["updated_at", "2015-03-22 19:30:45.864643"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "Scratch or rub the itchy skin"], ["correct", "f"], ["created_at", "2015-03-22 19:30:45.866536"], ["question_id", 3], ["updated_at", "2015-03-22 19:30:45.866536"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Puncture blisters to relieve pressure"], ["correct", "f"], ["created_at", "2015-03-22 19:30:45.868301"], ["question_id", 3], ["updated_at", "2015-03-22 19:30:45.868301"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "Consider bathing the dog"], ["correct", "t"], ["created_at", "2015-03-22 19:30:45.870054"], ["question_id", 3], ["updated_at", "2015-03-22 19:30:45.870054"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Apply an antihistamine to the skin"], ["correct", "f"], ["created_at", "2015-03-22 19:30:45.872018"], ["question_id", 3], ["updated_at", "2015-03-22 19:30:45.872018"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "Consider an antihistamine pill"], ["correct", "t"], ["created_at", "2015-03-22 19:30:45.873881"], ["question_id", 3], ["updated_at", "2015-03-22 19:30:45.873881"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Wash the clothing you were wearing"], ["correct", "t"], ["created_at", "2015-03-22 19:30:45.875652"], ["question_id", 3], ["updated_at", "2015-03-22 19:30:45.875652"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("body", "correct", "created_at", "question_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "Apply diluted bleach to the rash"], ["correct", "f"], ["created_at", "2015-03-22 19:30:45.877413"], ["question_id", 3], ["updated_at", "2015-03-22 19:30:45.877413"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mQuestion Load (1.5ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
