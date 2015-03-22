@@ -45131,3 +45131,128 @@ Unpermitted parameters: ord
   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "questions" ("body", "created_at", "question_type", "quiz_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "What is first step in treating a gaping wound?"], ["created_at", "2015-03-22 20:25:09.573624"], ["question_type", "radio"], ["quiz_id", 1], ["updated_at", "2015-03-22 20:25:09.573624"]]
   [1m[35m (0.4ms)[0m  COMMIT
 Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 4.0ms)
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2015-03-22 13:29:07 -0700
+Processing by Api::QuizzesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuiz Load (0.5ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 26ms (Views: 0.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/quizzes/1/questions" for 127.0.0.1 at 2015-03-22 13:30:20 -0700
+Processing by Api::QuestionsController#index as JSON
+  Parameters: {"quiz_id"=>"1"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:28:53 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 512ms (Views: 511.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:29:42 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 373ms (Views: 372.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:30:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 593ms (Views: 587.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:30:53 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 463ms (Views: 462.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:32:11 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 420ms (Views: 419.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:33:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 547ms (Views: 541.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:37:05 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 422ms (Views: 420.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:39:38 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 556ms (Views: 550.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:42:33 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 456ms (Views: 454.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:45:11 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 378ms (Views: 377.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:47:11 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 342ms (Views: 341.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:48:14 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 406ms (Views: 405.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:49:39 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 410ms (Views: 408.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:52:25 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 403ms (Views: 402.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-22 15:53:04 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 564ms (Views: 558.7ms | ActiveRecord: 4.5ms)

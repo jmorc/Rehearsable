@@ -1236,3 +1236,134 @@
 [03/22/15 12:52:08 -0700 Jeffreys-Air-2 (55820)] INFO : Doing deferred dependency-detection before Rack startup
 [03/22/15 12:52:25 -0700 Jeffreys-Air-2 (55820)] ERROR : Invalid license key, please contact support@newrelic.com
 [03/22/15 12:52:25 -0700 Jeffreys-Air-2 (55820)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/22/15 15:30:15 -0700 Jeffreys-Air-2 (55820)] INFO : Starting Agent shutdown
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Starting the New Relic agent in "development" environment.
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/Rehearsable
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Environment: development
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Dispatcher: webrick
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Application: development
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Installing ActiveRecord 4 instrumentation
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Installing Net instrumentation
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Installing deferred Rack instrumentation
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Installing Rack::Builder middleware instrumentation
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Installing Rails 3+ middleware instrumentation
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Installing Rails 4 Controller instrumentation
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Installing Rails 4 view instrumentation
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Installing Rails 4 Error instrumentation
+[03/22/15 15:30:20 -0700 Jeffreys-Air-2 (56709)] INFO : Finished instrumentation
+[03/22/15 15:30:21 -0700 Jeffreys-Air-2 (56709)] INFO : Doing deferred dependency-detection before Rack startup
+[03/22/15 15:30:24 -0700 Jeffreys-Air-2 (56709)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/22/15 15:30:24 -0700 Jeffreys-Air-2 (56709)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : Starting the New Relic agent in "development" environment.
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/Rehearsable
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : Environment: development
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : No known dispatcher detected.
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : Application: development
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : Installing ActiveRecord 4 instrumentation
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : Installing Net instrumentation
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : Installing deferred Rack instrumentation
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : Installing Rack::Builder middleware instrumentation
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : Installing Rails 3+ middleware instrumentation
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : Installing Rails 4 Controller instrumentation
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : Installing Rails 4 view instrumentation
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : Installing Rails 4 Error instrumentation
+[03/22/15 15:33:00 -0700 Jeffreys-MacBook-Air-2.local (56743)] INFO : Finished instrumentation
+[03/22/15 15:33:18 -0700 Jeffreys-Air-2 (56709)] INFO : Starting Agent shutdown
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Starting the New Relic agent in "development" environment.
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/Rehearsable
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Environment: development
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Dispatcher: webrick
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Application: development
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Installing ActiveRecord 4 instrumentation
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Installing Net instrumentation
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Installing deferred Rack instrumentation
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Installing Rack::Builder middleware instrumentation
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Installing Rails 3+ middleware instrumentation
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Installing Rails 4 Controller instrumentation
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Installing Rails 4 view instrumentation
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Installing Rails 4 Error instrumentation
+[03/22/15 15:33:22 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Finished instrumentation
+[03/22/15 15:33:23 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Doing deferred dependency-detection before Rack startup
+[03/22/15 15:33:25 -0700 Jeffreys-MacBook-Air-2.local (56748)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[03/22/15 15:33:25 -0700 Jeffreys-MacBook-Air-2.local (56748)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: nodename nor servname provided, or not known
+[03/22/15 15:33:25 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Will re-attempt in 60 seconds
+[03/22/15 15:34:25 -0700 Jeffreys-MacBook-Air-2.local (56748)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[03/22/15 15:34:25 -0700 Jeffreys-MacBook-Air-2.local (56748)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: nodename nor servname provided, or not known
+[03/22/15 15:34:25 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Will re-attempt in 120 seconds
+[03/22/15 15:36:25 -0700 Jeffreys-MacBook-Air-2.local (56748)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[03/22/15 15:36:25 -0700 Jeffreys-MacBook-Air-2.local (56748)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: nodename nor servname provided, or not known
+[03/22/15 15:36:25 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Will re-attempt in 180 seconds
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : Starting the New Relic agent in "development" environment.
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/Rehearsable
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : Environment: development
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : No known dispatcher detected.
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : Application: development
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : Installing ActiveRecord 4 instrumentation
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : Installing Net instrumentation
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : Installing deferred Rack instrumentation
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : Installing Rack::Builder middleware instrumentation
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : Installing Rails 3+ middleware instrumentation
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : Installing Rails 4 Controller instrumentation
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : Installing Rails 4 view instrumentation
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : Installing Rails 4 Error instrumentation
+[03/22/15 15:39:01 -0700 Jeffreys-MacBook-Air-2.local (56784)] INFO : Finished instrumentation
+[03/22/15 15:39:25 -0700 Jeffreys-MacBook-Air-2.local (56748)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[03/22/15 15:39:25 -0700 Jeffreys-MacBook-Air-2.local (56748)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: nodename nor servname provided, or not known
+[03/22/15 15:39:25 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Will re-attempt in 240 seconds
+[03/22/15 15:39:27 -0700 Jeffreys-MacBook-Air-2.local (56748)] INFO : Starting Agent shutdown
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Starting the New Relic agent in "development" environment.
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/Rehearsable
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Environment: development
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Dispatcher: webrick
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Application: development
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Installing ActiveRecord 4 instrumentation
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Installing Net instrumentation
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Installing deferred Rack instrumentation
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Installing Rack::Builder middleware instrumentation
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Installing Rails 3+ middleware instrumentation
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Installing Rails 4 Controller instrumentation
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Installing Rails 4 view instrumentation
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Installing Rails 4 Error instrumentation
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Finished instrumentation
+[03/22/15 15:39:32 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Doing deferred dependency-detection before Rack startup
+[03/22/15 15:39:38 -0700 Jeffreys-MacBook-Air-2.local (56788)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[03/22/15 15:39:38 -0700 Jeffreys-MacBook-Air-2.local (56788)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: nodename nor servname provided, or not known
+[03/22/15 15:39:38 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Will re-attempt in 60 seconds
+[03/22/15 15:40:38 -0700 Jeffreys-MacBook-Air-2.local (56788)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/22/15 15:40:38 -0700 Jeffreys-MacBook-Air-2.local (56788)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/22/15 15:52:57 -0700 Jeffreys-MacBook-Air-2.local (56788)] INFO : Starting Agent shutdown
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Starting the New Relic agent in "development" environment.
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/Rehearsable
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Environment: development
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Dispatcher: webrick
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Application: development
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Installing ActiveRecord 4 instrumentation
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Installing Net instrumentation
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Installing deferred Rack instrumentation
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Installing Rack::Builder middleware instrumentation
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Installing Rails 3+ middleware instrumentation
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Installing Rails 4 Controller instrumentation
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Installing Rails 4 view instrumentation
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Installing Rails 4 Error instrumentation
+[03/22/15 15:53:01 -0700 Jeffreys-Air-2 (56889)] INFO : Finished instrumentation
+[03/22/15 15:53:02 -0700 Jeffreys-Air-2 (56889)] INFO : Doing deferred dependency-detection before Rack startup
+[03/22/15 15:53:05 -0700 Jeffreys-Air-2 (56889)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/22/15 15:53:05 -0700 Jeffreys-Air-2 (56889)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
