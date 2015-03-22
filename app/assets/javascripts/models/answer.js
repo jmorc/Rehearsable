@@ -1,3 +1,3 @@
 Rehearsable.Models.Answer = Backbone.Model.extend({
-  urlRoot: 'api/answers'
+  urlRoot: '/tapi/answers'
 })
