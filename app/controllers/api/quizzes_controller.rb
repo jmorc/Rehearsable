@@ -1,5 +1,5 @@
 class Api::QuizzesController < ApplicationController
-  before_action :set_quiz, only: [:show :update, :destroy]
+  before_action :set_quiz, only: [:show, :update, :destroy]
   before_action :authenticate_user!
   load_and_authorize_resource
   respond_to :json
