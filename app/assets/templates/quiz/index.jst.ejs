@@ -1,1 +1,7 @@
-<h1> Backbone Quiz#Show </h1>
+<h2>Choose a quiz:</h2>
+
+<ul>
+  <% quizzes.each(function(quiz) { %>
+    <%= quiz.get("title") %>
+  <% }); %>
+</ul>

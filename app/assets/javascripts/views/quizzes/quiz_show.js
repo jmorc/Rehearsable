@@ -1,11 +1,13 @@
-Rehearsable.Views.QuizShow = Backbone.View.extend({
-  // template: JST['quiz/show'],
+Rehearsable.Views.quizShow = Backbone.View.extend({
+  template: JST['quiz/show'],
 
-  // render: function() {
-  // 	var content = this.template(this.model);
-  //   this.$el.html(content);
-  //   return this
-  // } 
+  initialize: function () {
+  	this.listenTo(this.model, "sync", this.render)
+  },
 
-
+  render: function() {
+  	var content = this.template({ quiz: this.model });
+    this.$el.html(content);
+    return this
+  } 
 })

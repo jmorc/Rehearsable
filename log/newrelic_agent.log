@@ -1451,3 +1451,45 @@
 [03/23/15 14:35:00 -0700 Jeffreys-Air-2 (58301)] INFO : Doing deferred dependency-detection before Rack startup
 [03/23/15 14:35:06 -0700 Jeffreys-Air-2 (58301)] ERROR : Invalid license key, please contact support@newrelic.com
 [03/23/15 14:35:06 -0700 Jeffreys-Air-2 (58301)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/24/15 13:48:21 -0700 Jeffreys-Air-2 (58301)] INFO : Starting Agent shutdown
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Starting the New Relic agent in "development" environment.
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/Rehearsable
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Environment: development
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Dispatcher: webrick
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Application: development
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Installing ActiveRecord 4 instrumentation
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Installing Net instrumentation
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Installing deferred Rack instrumentation
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Installing Rack::Builder middleware instrumentation
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Installing Rails 3+ middleware instrumentation
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Installing Rails 4 Controller instrumentation
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Installing Rails 4 view instrumentation
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Installing Rails 4 Error instrumentation
+[03/24/15 15:11:13 -0700 Jeffreys-Air-2 (63445)] INFO : Finished instrumentation
+[03/24/15 15:11:14 -0700 Jeffreys-Air-2 (63445)] INFO : Doing deferred dependency-detection before Rack startup
+[03/24/15 15:13:54 -0700 Jeffreys-Air-2 (63445)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/24/15 15:13:54 -0700 Jeffreys-Air-2 (63445)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/24/15 15:26:18 -0700 Jeffreys-Air-2 (63445)] INFO : Starting Agent shutdown
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Starting the New Relic agent in "development" environment.
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] WARN : No configuration file found. Working directory = /Users/jmorc/Documents/polished repos/Rehearsable
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] WARN : Looked in these locations (based on defaults): /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/config/newrelic.yml, /Users/jmorc/Documents/polished repos/Rehearsable/newrelic.yml, /Users/jmorc/.newrelic/newrelic.yml, /Users/jmorc/newrelic.yml
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Environment: development
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Dispatcher: webrick
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Application: development
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Installing ActiveRecord 4 instrumentation
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Installing Net instrumentation
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Installing deferred Rack instrumentation
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Installing Rack::Builder middleware instrumentation
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Installing Rails 3+ middleware instrumentation
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Installing Rails 4 Controller instrumentation
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Installing Rails 4 view instrumentation
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Installing Rails 4 Error instrumentation
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Finished instrumentation
+[03/24/15 15:32:06 -0700 Jeffreys-Air-2 (63677)] INFO : Doing deferred dependency-detection before Rack startup
+[03/24/15 15:32:12 -0700 Jeffreys-Air-2 (63677)] ERROR : Invalid license key, please contact support@newrelic.com
+[03/24/15 15:32:12 -0700 Jeffreys-Air-2 (63677)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
