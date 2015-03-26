@@ -5,18 +5,18 @@ class Api::QuestionsController < ApplicationController
 
   def index
     @questions = Question.all
-    render json: @questions
+    render 'questions/index'
   end
 
   def show
-    render json: @question
+    render 'questions/show'
   end
 
   def create
     @quiz = Quiz.find(params[:question][:quiz_id])
     @question = @quiz.questions.new(question_params)
     if @question.save
-      render json: @question
+      render 'questions/show'
     else
       render @question.errors.full_messages, status: :unprocessable_entity
     end
@@ -24,12 +24,12 @@ class Api::QuestionsController < ApplicationController
 
   def update
     @question.update(question_params)
-    render json: @question
+    render 'questions/show'
   end
 
   def destroy
     @question.destroy
-    render json: @question
+    render 'questions/show'
   end
 
   private

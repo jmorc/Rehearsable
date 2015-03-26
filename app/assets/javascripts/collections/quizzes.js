@@ -3,18 +3,19 @@ Rehearsable.Collections.Quizzes = Backbone.Collection.extend({
 	url: 'api/quizzes',
 
 	getOrFetch: function(id){
-    var quiz = this.get(id);
+    var quiz
     quizzes = this;
-    if (!quiz) {
-      var quiz = new Rehearsable.Models.Quiz({ id: id }) 
+    if (quiz = this.get(id)) {
+      quiz.fetch();
+    } else {
+      quiz = new Rehearsable.Models.Quiz({ id: id }) 
       quiz.fetch({ 
         success: function(){
           quizzes.add(quiz);
         }
       });
-    } else {
-      quiz.fetch();
     }
+
     return quiz;
   },
 })

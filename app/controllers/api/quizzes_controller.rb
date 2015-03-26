@@ -6,7 +6,7 @@ class Api::QuizzesController < ApplicationController
 
   def index
     @quizzes = current_user.quizzes
-    render json: @quizzes
+    render 'quizzes/index'
   end
 
   def show
@@ -18,7 +18,7 @@ class Api::QuizzesController < ApplicationController
     @user = current_user
     @quiz = current_user.quizzes.new(quiz_params)
     if @quiz.save
-      render json: @quiz
+      render 'quizzes/show'
     else 
       render @quiz.errors.full_messages, status: :unprocessable_entity
     end
@@ -27,12 +27,12 @@ class Api::QuizzesController < ApplicationController
 
   def update
     @quiz.update(quiz_params)
-    render json: @quiz
+    render 'quizzes/show'
   end
 
   def destroy
     @quiz.destroy
-    render json: @quiz
+    render 'quizzes/show'
   end
 
   private

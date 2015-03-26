@@ -9,8 +9,8 @@ Rehearsable.Models.Quiz = Backbone.Model.extend({
 
 	parse: function(payload) {
 		if (payload.questions) {
-		  this.questions().set(payload.question, { parse: true });
-		  delete payload.questions
+		  this.questions().set(payload.questions, { parse: true });
+		  delete payload.questions;
 		}
 		return payload;
 	}

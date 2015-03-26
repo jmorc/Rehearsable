@@ -1,4 +1,3 @@
 json.array!(@questions) do |question|
-  json.extract! question, :id, :name, :type
-  json.url question_url(question, format: :json)
+  json.extract! question, :id, :body, :question_type
 end

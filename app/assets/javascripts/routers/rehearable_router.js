@@ -19,8 +19,8 @@ Rehearsable.Routers.Router = Backbone.Router.extend({
   },
 
   quizShow: function (id) {
-  	console.log("quizShow called in router")
     var quiz = Rehearsable.Collections.quizzes.getOrFetch(id);
+
     var showView = new Rehearsable.Views.quizShow({
     	model: quiz 
     });
