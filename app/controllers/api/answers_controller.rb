@@ -6,24 +6,24 @@ class Api::AnswersController < ApplicationController
   def create
     @answer = Answer.new(answer_params)
     if @answer.save
-      render json: @answer
+      render 'answer/show'
     else
       render @answer.errors.full_messages, status: :unprocessable_entity
     end
   end
 
   def show
-    render json: @answer
+    render 'answer/show'
   end
   
   def update
     @answer.update(answer_params)
-    render json: @answer
+    render 'answer/show'
   end
  
   def destroy
     @answer.destroy
-    render json: @answer
+    render 'answer/show'
   end
 
   private

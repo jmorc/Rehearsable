@@ -2,6 +2,6 @@
 
 <ul>
   <% quizzes.each(function(quiz) { %>
-    <%= quiz.get("title") %>
+    <%= quiz.escape("title") %>
   <% }); %>
 </ul>
