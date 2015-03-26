@@ -10,7 +10,8 @@ class Api::QuizzesController < ApplicationController
   end
 
   def show
-    render json: @quiz
+    @questions = @quiz.questions
+    render 'quizzes/show'
   end
 
   def create
