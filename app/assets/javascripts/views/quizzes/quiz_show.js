@@ -18,6 +18,7 @@ Rehearsable.Views.quizShow = Backbone.View.extend({
       $('.questions').append(questionShow.render().$el)
 
       question.answers().each(function(answer){
+        answer.question = question;
         var answerShow = new Rehearsable.Views.answerShow({
           model: answer
         })
