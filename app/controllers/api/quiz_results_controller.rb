@@ -1,5 +1,5 @@
 class Api::QuizResultsController < ApplicationController
-  before_action :set_quiz_result, only: [:show, :edit, :update, :destroy]
+  before_action :set_quiz_result, only: [:show, :destroy]
 
   respond_to :json
 
@@ -16,10 +16,7 @@ class Api::QuizResultsController < ApplicationController
     @quiz_result = QuizResult.new
     render 'quiz_results/show'
   end
-
-  def edit
-  end
-
+  
   def create
     @quiz_result = QuizResult.new(quiz_result_params)
     @quiz_result.save

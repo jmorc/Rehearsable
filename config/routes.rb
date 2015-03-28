@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :answered_questions
+
   resources :quiz_results
 
   namespace :api, defaults: { format: :json } do
