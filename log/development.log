@@ -50202,3 +50202,229 @@ Processing by Api::QuizzesController#show as JSON
   [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
   Rendered quizzes/show.json.jbuilder (11.3ms)
 Completed 200 OK in 31ms (Views: 14.7ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 11:49:10 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 658ms (Views: 656.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 11:49:31 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 551ms (Views: 550.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 11:49:46 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 547ms (Views: 546.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 11:50:04 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 552ms (Views: 551.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 11:50:25 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 562ms (Views: 560.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 11:51:22 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 530ms (Views: 529.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 12:00:31 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 602ms (Views: 600.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2015-03-28 12:00:33 -0700
+Processing by Api::QuizzesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuiz Load (0.5ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 1]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  Rendered quizzes/show.json.jbuilder (11.1ms)
+Completed 200 OK in 28ms (Views: 16.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 12:01:10 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 543ms (Views: 541.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2015-03-28 12:01:11 -0700
+Processing by Api::QuizzesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 1]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mAnswer Load (1.1ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  Rendered quizzes/show.json.jbuilder (11.6ms)
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 12:02:14 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 532ms (Views: 531.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2015-03-28 12:02:15 -0700
+Processing by Api::QuizzesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuiz Load (0.4ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (3.5ms)[0m  [1mSELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 1]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  Rendered quizzes/show.json.jbuilder (15.8ms)
+Completed 200 OK in 34ms (Views: 18.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 12:02:30 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 551ms (Views: 550.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2015-03-28 12:02:31 -0700
+Processing by Api::QuizzesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuiz Load (0.4ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 1]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.6ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  Rendered quizzes/show.json.jbuilder (9.2ms)
+Completed 200 OK in 20ms (Views: 10.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 12:02:37 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 418ms (Views: 416.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2015-03-28 12:02:38 -0700
+Processing by Api::QuizzesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuiz Load (0.4ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 1]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  Rendered quizzes/show.json.jbuilder (8.9ms)
+Completed 200 OK in 23ms (Views: 12.1ms | ActiveRecord: 2.5ms)
+  [1m[36mQuiz Load (0.7ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2015-03-28 12:05:31 -0700
+Processing by Api::QuizzesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mQuiz Load (6.7ms)[0m  SELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1  [["quiz_id", 1]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 4]]
+  [1m[35mAnswer Load (0.8ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 3]]
+  [1m[36mAnswer Load (0.7ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 2]]
+  [1m[35mAnswer Load (1.7ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 1]]
+  Rendered quizzes/show.json.jbuilder (21.5ms)
+Completed 200 OK in 51ms (Views: 19.3ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2015-03-28 12:05:31 -0700
+Processing by Api::QuizzesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 1]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  Rendered quizzes/show.json.jbuilder (8.2ms)
+Completed 200 OK in 18ms (Views: 10.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 12:05:32 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 527ms (Views: 526.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2015-03-28 12:05:33 -0700
+Processing by Api::QuizzesController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mQuiz Load (0.4ms)[0m  SELECT "quizzes".* FROM "quizzes"  WHERE "quizzes"."user_id" = $1  [["user_id", 1]]
+  Rendered quizzes/index.json.jbuilder (4.7ms)
+Completed 200 OK in 27ms (Views: 9.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2015-03-28 12:05:33 -0700
+Processing by Api::QuizzesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 1]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  Rendered quizzes/show.json.jbuilder (10.7ms)
+Completed 200 OK in 26ms (Views: 13.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-28 12:06:41 -0700
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 538ms (Views: 537.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2015-03-28 12:06:42 -0700
+Processing by Api::QuizzesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuiz Load (0.4ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 1]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.7ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  Rendered quizzes/show.json.jbuilder (10.8ms)
+Completed 200 OK in 24ms (Views: 13.3ms | ActiveRecord: 3.1ms)
