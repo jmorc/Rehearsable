@@ -1,5 +1,8 @@
+answer id: <%=answer.id%>
+question id: <%=answer.escape("question_id")%>
+
 <label>
 <input type="radio"
-       name=""
+       name="<%=answer.question_id%>[<%=answer.id%>]"
        value="<%= answer.escape("body") %>"
 </label>   <%= answer.escape("body") %>
