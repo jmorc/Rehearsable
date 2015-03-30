@@ -35,13 +35,26 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
   submitQuizResult: function(event){
     event.preventDefault();
 
+
     var params = $(event.currentTarget).serializeJSON();
-    debugger
+    // needs a quiz
+    // this gives access to questions and answers
+
     // make new answered_questions here?
     // need useful names for inputs
     // see if the data from params can be used to make them?
-    var newQuizResult;
+    var newQuizResult = new Rehearsable.Models.QuizResult({
+    	quiz: this.quiz
+    });
 
+    var paramsLength = params.answered_questions.length
+
+    for (var i = 0; i < paramsLength; i++) {
+    	if (params.answered_questions[i] !== undefined) {
+          // Build a answered question object for question i
+    	}
+    };
+    
 
   },
 

@@ -1,8 +1,8 @@
 <label>
 <input type="checkbox"
-       name="name_checkbox[something][]"
-       value="<%= answer.escape("body")%>"
-</label>   <%= answer.escape("body") %>
+   name="answered_questions[<%= answer.escape("question_id")%>][]""
+   value="<%= answer.escape("body") %>"
+</label>  <%= answer.escape("body") %>
 
 
 
