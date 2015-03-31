@@ -7,6 +7,17 @@ Rehearsable.Models.Quiz = Backbone.Model.extend({
 		return this._questions;
 	},
 
+	question: function(id) {
+		var foundQuestion = -1;
+		this.questions().models.forEach(function(el) {
+			if ( el.id === id ) {
+				foundQuestion = el;
+			}
+		});
+
+        return foundQuestion;
+	},
+
 	parse: function(payload) {
 		if (payload.questions) {
 		  this.questions().set(payload.questions, { parse: true });

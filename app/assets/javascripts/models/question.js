@@ -7,11 +7,27 @@ Rehearsable.Models.Question = Backbone.Model.extend({
     return this._answers;
   },
 
+  correctAnswers: function() {
+    correct = []
+    this.answers().each(function(answer){
+      if (answer.get("correct")) {
+        correct.push(answer);
+      }
+    });
+
+    return correct;
+  },
+
+  isCorrect: function(answer) {
+
+  },
+
   parse: function(payload) {
-	if (payload.answers) {
-	  this.answers().set(payload.answers, { parse: true });
-	  delete payload.answers;
-	}
-	return payload;
+	  if (payload.answers) {
+	      this.answers().set(payload.answers, { parse: true });
+	      delete payload.answers;
+	  }
+
+	  return payload;
   }
 });
