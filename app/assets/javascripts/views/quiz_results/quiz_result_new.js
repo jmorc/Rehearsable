@@ -47,8 +47,9 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     for (question_code in params) {
     	var questionID = parseInt(question_code.toString().split(" ")[1], 10);
     	var this_question = this.quiz.question(questionID);
-    	var studentAnswer = params[question_code];
-        var correct
+    	var studentAnswer = params[question_code]; // this is an array of length 1 or more
+        var correct = this_question.isCorrect(studentAnswer);
+        
     };
     
 

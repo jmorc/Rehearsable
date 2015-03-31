@@ -8,7 +8,7 @@ Rehearsable.Models.Question = Backbone.Model.extend({
   },
 
   correctAnswers: function() {
-    correct = []
+    var correct = []
     this.answers().each(function(answer){
       if (answer.get("correct")) {
         correct.push(answer);
@@ -18,8 +18,15 @@ Rehearsable.Models.Question = Backbone.Model.extend({
     return correct;
   },
 
-  isCorrect: function(answer) {
+  isCorrect: function(answer_body) {
+    var correct = false;
+    this.correctAnswers().forEach(function(correct) {
+      if (correct.escape("body") === answer_body) {
+        correct = true;
+      }
+    });
 
+    return correct;
   },
 
   parse: function(payload) {
