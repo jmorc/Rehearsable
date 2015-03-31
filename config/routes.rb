@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :answer_results
-
   namespace :api, defaults: { format: :json } do
     resources :answers, except: [:new, :edit, :index]
+    resources :answer_results, except: [:new, :edit, :index, :update]
 
     resources :quiz_results, except: [:new, :edit, :update] do
       resources :answered_questions, except: [:new, :edit, :update]
@@ -19,5 +18,4 @@ Rails.application.routes.draw do
   root to: "site#root"
 
   devise_for :users, :controllers => { registrations: 'registrations' }
-
 end

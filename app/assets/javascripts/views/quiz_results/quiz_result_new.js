@@ -34,8 +34,6 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
 
   submitQuizResult: function(event){
     event.preventDefault();
-
-
     var params = $(event.currentTarget).serializeJSON();
     // needs a quiz
     // this gives access to questions and answers
@@ -47,8 +45,16 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     for (question_code in params) {
     	var questionID = parseInt(question_code.toString().split(" ")[1], 10);
     	var this_question = this.quiz.question(questionID);
+    	this_question.answers().each(function(answer) {
+    		var answer_result = new Rehearsable.Models.AnswerResult({
+    			answer_id: 1,
+    			quiz_result_id: 1,
+    			question_id: 1
+    		});
+    		answer_result.save();
+    	}) 
+
     	
-        // this_question.answers().each --> create an answer_results object
     	// var studentAnswer = params[question_code]; // this is an array of length 1 or more
      //    var correct = this_question.isCorrect(studentAnswer);
         

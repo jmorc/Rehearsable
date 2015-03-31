@@ -1,21 +1,21 @@
-class AnswerResultsController < ApplicationController
+class Api::AnswerResultsController < ApplicationController
   before_action :set_answer_result, only: [:show, :destroy]
 
   respond_to :json
 
   def show
-    render 'answer_result/show'
+    render "answer_results/show"
   end
 
   def create
     @answer_result = AnswerResult.new(answer_result_params)
     @answer_result.save
-    render 'answer_result/show'
+    render "answer_results/show"
   end
 
   def destroy
     @answer_result.destroy
-    render 'answer_result/show'
+    render "answer_results/show"
   end
 
   private
