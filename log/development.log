@@ -51733,3 +51733,35 @@ Processing by Api::QuizzesController#show as JSON
   [1m[35mAnswer Load (0.8ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 1]]
   Rendered quizzes/show.json.jbuilder (18.5ms)
 Completed 200 OK in 33ms (Views: 19.7ms | ActiveRecord: 4.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAnswerResults (20150331210043)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (33.9ms)[0m  [1mCREATE TABLE "answer_results" ("id" serial primary key, "question_id" integer NOT NULL, "quiz_result_id" integer NOT NULL, "answer_id" integer NOT NULL, "selected" boolean, "correct" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_answer_results_on_question_id" ON "answer_results"  ("question_id")
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX  "index_answer_results_on_quiz_result_id" ON "answer_results"  ("quiz_result_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_answer_results_on_answer_id" ON "answer_results"  ("answer_id")
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150331210043"]]
+  [1m[35m (1.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:08:14 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#root as HTML
+  Rendered site/root.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 700ms (Views: 695.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2015-03-31 14:08:15 -0700
+Processing by Api::QuizzesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuiz Load (0.4ms)[0m  [1mSELECT  "quizzes".* FROM "quizzes"  WHERE "quizzes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 1]]
+  [1m[35mAnswer Load (2.2ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+  Rendered quizzes/show.json.jbuilder (37.1ms)
+Completed 200 OK in 99ms (Views: 34.1ms | ActiveRecord: 14.7ms)

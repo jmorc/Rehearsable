@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :answer_results
+
   namespace :api, defaults: { format: :json } do
     resources :answers, except: [:new, :edit, :index]
 

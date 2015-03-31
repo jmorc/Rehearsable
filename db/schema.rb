@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150328020453) do
+ActiveRecord::Schema.define(version: 20150331210043) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answer_results", force: true do |t|
+    t.integer  "question_id",    null: false
+    t.integer  "quiz_result_id", null: false
+    t.integer  "answer_id",      null: false
+    t.boolean  "selected"
+    t.boolean  "correct"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "answer_results", ["answer_id"], name: "index_answer_results_on_answer_id", using: :btree
+  add_index "answer_results", ["question_id"], name: "index_answer_results_on_question_id", using: :btree
+  add_index "answer_results", ["quiz_result_id"], name: "index_answer_results_on_quiz_result_id", using: :btree
 
   create_table "answered_questions", force: true do |t|
     t.integer  "quiz_result_id", null: false
