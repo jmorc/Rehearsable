@@ -35,6 +35,11 @@ Rehearsable.Routers.Router = Backbone.Router.extend({
   },
 
   quizResultShow: function(id) {
-
+    var quizResult = new Rehearsable.Models.QuizResult({ id: id })
+    quizResult.fetch()
+    var quizResultShowView = new Rehearsable.Views.quizResultShow({
+      model: quizResult
+    });
+    this.$rootEl.html(quizResultShowView.render().$el);
   }
 })

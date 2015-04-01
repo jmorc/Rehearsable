@@ -89,7 +89,5 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     		Backbone.history.navigate(url, { trigger: true });
     	}
     });
-
-    
  }
 });
