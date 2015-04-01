@@ -5,7 +5,7 @@ Rehearsable.Collections.QuizResults = Backbone.Collection.extend({
    	return this.quiz.url() + '/quiz_results'
    },
 
-   initialize: function(options) {
+   initialize: function(model, options) {
    	this.quiz = options.quiz
    }
 

@@ -45,7 +45,6 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     	var thisQuestion = this.quiz.question(questionID);
 
     	thisQuestion.answers().each(function(answer) {
-
     		var answerResult = new Rehearsable.Models.AnswerResult({
     			answer_id: answer.id,
     			question_id: questionID
@@ -74,8 +73,7 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
 
     			answerResult.set("correct", correct);
     			answerResult.set("selected", selected);
-	
-    			answerResults.push(answerResult)
+    			answerResults.push(answerResult);
     		}); 
     	});
     }
@@ -84,12 +82,13 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     	quiz_id: this.quiz.id
     });
 
-    newQuizResult.save({}, {
-    	success: function(){
-    		debugger
+    newQuizResult.answerResults().add(answerResults);
+
+    newQuizResult.save([], {
+    	success: function(response) {
+    		response.saveAnswerResults();
     	}
     });
-
  },
 
 

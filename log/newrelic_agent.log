@@ -1580,3 +1580,261 @@ DETAIL:  Failing row contains (3, 1, null, 4, null, null, 2015-03-31 22:58:05.03
 [03/31/15 17:07:44 -0700 Jeffreys-Air-2 (82024)] INFO : Doing deferred dependency-detection before Rack startup
 [03/31/15 17:08:24 -0700 Jeffreys-Air-2 (82024)] ERROR : Invalid license key, please contact support@newrelic.com
 [03/31/15 17:08:24 -0700 Jeffreys-Air-2 (82024)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (71, 3, null, null, f, f, 2015-04-01 02:27:25.232847, 2015-04-01 02:27:25.232847).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (72, 3, null, null, f, f, 2015-04-01 02:27:25.26644, 2015-04-01 02:27:25.26644).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (73, 3, null, null, f, f, 2015-04-01 02:27:25.353159, 2015-04-01 02:27:25.353159).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (74, 3, null, null, f, f, 2015-04-01 02:27:25.382266, 2015-04-01 02:27:25.382266).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (75, 3, null, null, f, f, 2015-04-01 02:27:25.41093, 2015-04-01 02:27:25.41093).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (76, 3, null, null, f, f, 2015-04-01 02:27:25.441738, 2015-04-01 02:27:25.441738).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (77, 3, null, null, f, f, 2015-04-01 02:27:25.528748, 2015-04-01 02:27:25.528748).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (78, 3, null, null, f, f, 2015-04-01 02:27:25.559485, 2015-04-01 02:27:25.559485).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (79, 3, null, null, f, f, 2015-04-01 02:27:25.590539, 2015-04-01 02:27:25.590539).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (80, 3, null, null, t, t, 2015-04-01 02:27:25.674852, 2015-04-01 02:27:25.674852).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (81, 3, null, null, f, f, 2015-04-01 02:27:25.706859, 2015-04-01 02:27:25.706859).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (82, 3, null, null, f, f, 2015-04-01 02:27:25.738209, 2015-04-01 02:27:25.738209).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (83, 3, null, null, f, f, 2015-04-01 02:27:25.814328, 2015-04-01 02:27:25.814328).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (84, 2, null, null, f, f, 2015-04-01 02:27:25.846081, 2015-04-01 02:27:25.846081).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (85, 2, null, null, t, t, 2015-04-01 02:27:25.878195, 2015-04-01 02:27:25.878195).
+
+[03/31/15 19:27:25 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (86, 2, null, null, f, f, 2015-04-01 02:27:25.955503, 2015-04-01 02:27:25.955503).
+
+[03/31/15 19:27:26 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (87, 1, null, null, f, f, 2015-04-01 02:27:25.984132, 2015-04-01 02:27:25.984132).
+
+[03/31/15 19:27:26 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (88, 1, null, null, f, f, 2015-04-01 02:27:26.011671, 2015-04-01 02:27:26.011671).
+
+[03/31/15 19:27:26 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (89, 1, null, null, t, t, 2015-04-01 02:27:26.040694, 2015-04-01 02:27:26.040694).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (90, 3, null, null, f, f, 2015-04-01 03:16:34.248791, 2015-04-01 03:16:34.248791).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (91, 3, null, null, f, f, 2015-04-01 03:16:34.2844, 2015-04-01 03:16:34.2844).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (92, 3, null, null, f, f, 2015-04-01 03:16:34.405584, 2015-04-01 03:16:34.405584).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (93, 3, null, null, f, f, 2015-04-01 03:16:34.435395, 2015-04-01 03:16:34.435395).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (94, 3, null, null, f, f, 2015-04-01 03:16:34.464641, 2015-04-01 03:16:34.464641).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (95, 3, null, null, t, t, 2015-04-01 03:16:34.543416, 2015-04-01 03:16:34.543416).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (96, 3, null, null, f, f, 2015-04-01 03:16:34.571501, 2015-04-01 03:16:34.571501).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (97, 3, null, null, f, f, 2015-04-01 03:16:34.6032, 2015-04-01 03:16:34.6032).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (98, 3, null, null, f, f, 2015-04-01 03:16:34.68394, 2015-04-01 03:16:34.68394).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (99, 3, null, null, f, f, 2015-04-01 03:16:34.716061, 2015-04-01 03:16:34.716061).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (100, 2, null, null, t, t, 2015-04-01 03:16:34.74335, 2015-04-01 03:16:34.74335).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (101, 2, null, null, f, f, 2015-04-01 03:16:34.770086, 2015-04-01 03:16:34.770086).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (102, 2, null, null, f, f, 2015-04-01 03:16:34.846684, 2015-04-01 03:16:34.846684).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (103, 1, null, null, f, f, 2015-04-01 03:16:34.872098, 2015-04-01 03:16:34.872098).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (104, 1, null, null, t, t, 2015-04-01 03:16:34.899676, 2015-04-01 03:16:34.899676).
+
+[03/31/15 20:16:34 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (105, 1, null, null, f, f, 2015-04-01 03:16:34.973101, 2015-04-01 03:16:34.973101).
+
+[03/31/15 20:20:21 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (106, 3, null, null, f, f, 2015-04-01 03:20:21.811888, 2015-04-01 03:20:21.811888).
+
+[03/31/15 20:20:21 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (107, 3, null, null, f, f, 2015-04-01 03:20:21.920844, 2015-04-01 03:20:21.920844).
+
+[03/31/15 20:20:22 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (108, 3, null, null, f, f, 2015-04-01 03:20:21.997178, 2015-04-01 03:20:21.997178).
+
+[03/31/15 20:20:22 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (109, 3, null, null, f, f, 2015-04-01 03:20:22.022458, 2015-04-01 03:20:22.022458).
+
+[03/31/15 20:20:22 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (110, 3, null, null, f, f, 2015-04-01 03:20:22.045854, 2015-04-01 03:20:22.045854).
+
+[03/31/15 20:20:22 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (111, 3, null, null, f, f, 2015-04-01 03:20:22.118443, 2015-04-01 03:20:22.118443).
+
+[03/31/15 20:20:22 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (112, 3, null, null, f, f, 2015-04-01 03:20:22.143998, 2015-04-01 03:20:22.143998).
+
+[03/31/15 20:20:22 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (113, 2, null, null, f, f, 2015-04-01 03:20:22.167084, 2015-04-01 03:20:22.167084).
+
+[03/31/15 20:20:22 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (114, 3, null, null, f, f, 2015-04-01 03:20:22.242317, 2015-04-01 03:20:22.242317).
+
+[03/31/15 20:20:22 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (115, 2, null, null, t, t, 2015-04-01 03:20:22.263618, 2015-04-01 03:20:22.263618).
+
+[03/31/15 20:20:22 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (116, 1, null, null, t, t, 2015-04-01 03:20:22.284954, 2015-04-01 03:20:22.284954).
+
+[03/31/15 20:21:09 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (117, 3, null, null, f, f, 2015-04-01 03:21:09.586683, 2015-04-01 03:21:09.586683).
+
+[03/31/15 20:21:09 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (118, 3, null, null, f, f, 2015-04-01 03:21:09.709555, 2015-04-01 03:21:09.709555).
+
+[03/31/15 20:21:09 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (119, 3, null, null, f, f, 2015-04-01 03:21:09.746897, 2015-04-01 03:21:09.746897).
+
+[03/31/15 20:21:09 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (120, 3, null, null, t, t, 2015-04-01 03:21:09.771396, 2015-04-01 03:21:09.771396).
+
+[03/31/15 20:21:09 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (121, 3, null, null, f, f, 2015-04-01 03:21:09.842871, 2015-04-01 03:21:09.842871).
+
+[03/31/15 20:21:09 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (122, 3, null, null, f, f, 2015-04-01 03:21:09.86535, 2015-04-01 03:21:09.86535).
+
+[03/31/15 20:21:09 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (123, 3, null, null, f, f, 2015-04-01 03:21:09.887136, 2015-04-01 03:21:09.887136).
+
+[03/31/15 20:21:09 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (124, 3, null, null, f, f, 2015-04-01 03:21:09.90851, 2015-04-01 03:21:09.90851).
+
+[03/31/15 20:21:09 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (125, 3, null, null, f, f, 2015-04-01 03:21:09.984537, 2015-04-01 03:21:09.984537).
+
+[03/31/15 20:21:10 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (126, 2, null, null, t, t, 2015-04-01 03:21:10.006704, 2015-04-01 03:21:10.006704).
+
+[03/31/15 20:21:10 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (127, 1, null, null, f, f, 2015-04-01 03:21:10.028822, 2015-04-01 03:21:10.028822).
+
+[03/31/15 20:21:10 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (128, 2, null, null, f, f, 2015-04-01 03:21:10.100307, 2015-04-01 03:21:10.100307).
+
+[03/31/15 20:21:10 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "quiz_result_id" violates not-null constraint
+DETAIL:  Failing row contains (129, 1, null, null, t, t, 2015-04-01 03:21:10.123317, 2015-04-01 03:21:10.123317).
+
+[03/31/15 20:21:58 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (130, 3, 22, null, f, f, 2015-04-01 03:21:58.651403, 2015-04-01 03:21:58.651403).
+
+[03/31/15 20:22:04 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (131, 3, 22, null, f, f, 2015-04-01 03:22:04.509244, 2015-04-01 03:22:04.509244).
+
+[03/31/15 20:22:04 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (132, 3, 22, null, f, f, 2015-04-01 03:22:04.559342, 2015-04-01 03:22:04.559342).
+
+[03/31/15 20:22:04 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (133, 3, 22, null, f, f, 2015-04-01 03:22:04.696623, 2015-04-01 03:22:04.696623).
+
+[03/31/15 20:22:04 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (134, 3, 22, null, f, f, 2015-04-01 03:22:04.720971, 2015-04-01 03:22:04.720971).
+
+[03/31/15 20:22:04 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (135, 3, 22, null, f, f, 2015-04-01 03:22:04.743714, 2015-04-01 03:22:04.743714).
+
+[03/31/15 20:22:04 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (136, 3, 22, null, f, f, 2015-04-01 03:22:04.817421, 2015-04-01 03:22:04.817421).
+
+[03/31/15 20:22:04 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (137, 3, 22, null, t, t, 2015-04-01 03:22:04.840099, 2015-04-01 03:22:04.840099).
+
+[03/31/15 20:22:04 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (138, 3, 22, null, f, f, 2015-04-01 03:22:04.862166, 2015-04-01 03:22:04.862166).
+
+[03/31/15 20:22:04 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (139, 1, 22, null, f, f, 2015-04-01 03:22:04.935437, 2015-04-01 03:22:04.935437).
+
+[03/31/15 20:22:04 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (140, 2, 22, null, f, f, 2015-04-01 03:22:04.957383, 2015-04-01 03:22:04.957383).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (141, 3, 23, null, f, f, 2015-04-01 03:22:13.328611, 2015-04-01 03:22:13.328611).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (142, 3, 23, null, f, f, 2015-04-01 03:22:13.425471, 2015-04-01 03:22:13.425471).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (143, 3, 23, null, f, f, 2015-04-01 03:22:13.45831, 2015-04-01 03:22:13.45831).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (144, 3, 23, null, f, f, 2015-04-01 03:22:13.487426, 2015-04-01 03:22:13.487426).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (145, 3, 23, null, t, t, 2015-04-01 03:22:13.515563, 2015-04-01 03:22:13.515563).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (146, 3, 23, null, f, f, 2015-04-01 03:22:13.601817, 2015-04-01 03:22:13.601817).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (147, 3, 23, null, f, f, 2015-04-01 03:22:13.633023, 2015-04-01 03:22:13.633023).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (148, 3, 23, null, f, f, 2015-04-01 03:22:13.665154, 2015-04-01 03:22:13.665154).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (149, 3, 23, null, f, f, 2015-04-01 03:22:13.746782, 2015-04-01 03:22:13.746782).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (150, 3, 23, null, f, f, 2015-04-01 03:22:13.777704, 2015-04-01 03:22:13.777704).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (151, 2, 23, null, f, f, 2015-04-01 03:22:13.808485, 2015-04-01 03:22:13.808485).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (152, 2, 23, null, t, t, 2015-04-01 03:22:13.888403, 2015-04-01 03:22:13.888403).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (153, 2, 23, null, f, f, 2015-04-01 03:22:13.917306, 2015-04-01 03:22:13.917306).
+
+[03/31/15 20:22:13 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (154, 1, 23, null, f, f, 2015-04-01 03:22:13.944491, 2015-04-01 03:22:13.944491).
+
+[03/31/15 20:22:14 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (155, 1, 23, null, t, t, 2015-04-01 03:22:13.972469, 2015-04-01 03:22:13.972469).
+
+[03/31/15 20:22:14 -0700 Jeffreys-Air-2 (82024)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  null value in column "answer_id" violates not-null constraint
+DETAIL:  Failing row contains (156, 1, 23, null, f, f, 2015-04-01 03:22:14.049053, 2015-04-01 03:22:14.049053).
+
