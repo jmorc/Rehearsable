@@ -8,11 +8,8 @@ Rehearsable.Models.QuizResult = Backbone.Model.extend({
 	},
 
   saveAnswerResults: function () {
-  	
   	this.answerResults().each(function(answerResult) {
-  		answerResult.save({ quiz_result_id: this.id }, {
-  			success: console.log("answer result saved!")
-  		});
+  		answerResult.save({ quiz_result_id: this.id });
   	}, this);
   }
 });

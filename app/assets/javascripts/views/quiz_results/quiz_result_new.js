@@ -36,8 +36,6 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     event.preventDefault();
     var params = $(event.currentTarget).serializeJSON();
     var answerResults = [];
-    // needs a quiz
-    // this gives access to questions and answers
 
     for (questionCode in params) {
     	var studentAnswers = params[questionCode];
@@ -87,9 +85,11 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     newQuizResult.save([], {
     	success: function(response) {
     		response.saveAnswerResults();
+    		var url = "quiz_result/" + response.id.toString();
+    		Backbone.history.navigate(url, { trigger: true });
     	}
     });
- },
 
-
+    
+ }
 });
