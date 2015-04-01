@@ -35,34 +35,62 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
   submitQuizResult: function(event){
     event.preventDefault();
     var params = $(event.currentTarget).serializeJSON();
+    var answerResults = [];
     // needs a quiz
     // this gives access to questions and answers
 
-    var newQuizResult = new Rehearsable.Models.QuizResult({
-    	quiz: this.quiz
+    for (questionCode in params) {
+    	var studentAnswers = params[questionCode];
+    	var questionID = parseInt(questionCode.toString().split(" ")[1], 10);
+    	var thisQuestion = this.quiz.question(questionID);
+
+    	thisQuestion.answers().each(function(answer) {
+
+    		var answerResult = new Rehearsable.Models.AnswerResult({
+    			answer_id: answer.id,
+    			question_id: questionID
+    		});
+
+    		if (typeof studentAnswers === "string") {
+    			studentAnswers = [studentAnswers];
+    		}
+
+    		studentAnswers.forEach(function(studentAnswer) {
+    			if (studentAnswer === answer.escape("body") &&
+    				answer.escape('correct')) {
+    			  selected = true;
+    			  correct = true;	
+    			} else if (studentAnswer === answer.escape("body") &&
+    				       !answer.escape('correct')) {
+    			  selected = true;
+    			  correct = false;
+    			} else if (answer.escape('correct')) {
+    			  selected = false;
+    			  correct = false;
+    			} else {
+    			  selected = false;
+    			  correct = true;
+    		    }
+
+    			answerResult.set("correct", correct);
+    			answerResult.set("selected", selected);
+	
+    			answerResults.push(answerResult)
+    		}); 
+    	});
+    }
+    
+    var newQuizResult = new Rehearsable.Models.QuizResult({ 
+    	quiz_id: this.quiz.id
     });
 
-    for (question_code in params) {
-    	var questionID = parseInt(question_code.toString().split(" ")[1], 10);
-    	var this_question = this.quiz.question(questionID);
-    	this_question.answers().each(function(answer) {
-    		var answer_result = new Rehearsable.Models.AnswerResult({
-    			answer_id: 1,
-    			quiz_result_id: 1,
-    			question_id: 1
-    		});
-    		answer_result.save();
-    	}) 
+    newQuizResult.save({}, {
+    	success: function(){
+    		debugger
+    	}
+    });
 
-    	
-    	// var studentAnswer = params[question_code]; // this is an array of length 1 or more
-     //    var correct = this_question.isCorrect(studentAnswer);
-        
-    };
-    
-    // save newQuizResult, with all the answerResults
-    // render the newQuizResult show
-  },
+ },
 
 
 });

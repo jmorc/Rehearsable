@@ -18,9 +18,12 @@ class Api::QuizResultsController < ApplicationController
   end
   
   def create
-    @quiz_result = QuizResult.new(quiz_result_params)
-    @quiz_result.save
-    render 'quiz_results/show'
+    @quiz_result = current_user.quiz_results.new(quiz_result_params)
+    if @quiz_result.save
+      render 'quiz_results/show'
+    else
+      render @quiz_result.errors.full_messages, status: :unprocessable_entity
+    end
   end
 
   def destroy
