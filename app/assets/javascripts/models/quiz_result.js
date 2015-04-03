@@ -46,30 +46,4 @@ Rehearsable.Models.QuizResult = Backbone.Model.extend({
 
     return payload;
   }
-
-  // quiz: function() {
-  //   // should equal a new quiz if there is no quiz_id
-  //   if (typeof this._quiz !== "undefined") {
-  //     console.log(this._quiz);
-  //     if (typeof this._quiz.get("title") !== "undefined") {
-  //       return this._quiz;
-  //     }
-  //   }
-
-  //   var id = this.get("quiz_id")
-
-  //   if (typeof id === "undefined") {
-  //     this._quiz = new Rehearsable.Models.Quiz()
-  //   } else {
-  //     this._quiz = new Rehearsable.Models.Quiz({ id: id })
-  //     this._quiz.fetch({
-  //       success: function(response){
-  //         response.trigger("sync");
-  //       }
-  //     })
-  //   }
-
-  //   return this._quiz;
-  // }
-
 });

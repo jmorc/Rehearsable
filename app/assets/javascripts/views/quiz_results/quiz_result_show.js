@@ -6,14 +6,30 @@ Rehearsable.Views.quizResultShow = Backbone.View.extend({
 	},
 
 	render: function() {
+        var questions = this.model.questions();
+        var answerResults = this.model.answerResults();
+
 		var content = this.template({ 
 			quizResult: this.model,
 			quiz: this.model.quiz(),
-			questions: this.model.questions(),
-			answerResults: this.model.answerResults()
 		});
-
 		this.$el.html(content);
+
+      questions.each(function(question){
+        var questionShow = new Rehearsable.Views.questionShow({
+      	  model: question
+        })
+        $('.questions').append(questionShow.render().$el)
+
+      // question.answers().each(function(answer){
+      //   answer.question = question;
+      //   var answerShow = new Rehearsable.Views.answerShow({
+      //     model: answer
+      //   })
+      //   $('.questions').append(answerShow.render().$el)
+      // })
+    });
+
 		return this;
 	}
 })
