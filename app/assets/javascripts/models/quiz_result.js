@@ -7,6 +7,12 @@ Rehearsable.Models.QuizResult = Backbone.Model.extend({
 		return this._answerResults;
 	},
 
+  questions: function () {
+    this._questions = this._questions ||
+      new Rehearsable.Collections.Questions([], { quiz: this });
+    return this._questions;
+  },
+
   saveAnswerResults: function () {
   	this.answerResults().each(function(answerResult) {
   		answerResult.save({ quiz_result_id: this.id });
@@ -24,6 +30,12 @@ Rehearsable.Models.QuizResult = Backbone.Model.extend({
       console.log('parsing quiz')
       this.quiz().set(payload.quiz, { parse: true });
       delete payload.quiz;
+    }
+
+    if (payload.questions) {
+      console.log('parsing questions')
+      this.questions().set(payload.questions, { parse: true });
+      delete payload.questions;
     }
 
     if (payload.answer_results) {

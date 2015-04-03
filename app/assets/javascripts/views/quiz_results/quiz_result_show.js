@@ -15,7 +15,7 @@ Rehearsable.Views.quizResultShow = Backbone.View.extend({
   //       	}
   //       });
   //       var questions = quiz.questions();
-
+debugger
 		var content = this.template({ 
 			quiz_result: this.model,
 		});
