@@ -3,21 +3,14 @@ Rehearsable.Views.quizResultShow = Backbone.View.extend({
 
 	initialize: function() {
 		this.listenTo(this.model, "sync", this.render)
-		// this.listenTo(this.model.quiz(), "sync change all", this.render)
-	    // this.listenTo(this.model._quiz, "sync change all", this.render)
 	},
 
 	render: function() {
-		// var quiz = this.model.quiz();
-  //       quiz.fetch({
-  //       	success: function(response) {
-  //       		console.log(response)
-  //       	}
-  //       });
-  //       var questions = quiz.questions();
-debugger
 		var content = this.template({ 
-			quiz_result: this.model,
+			quizResult: this.model,
+			quiz: this.model.quiz(),
+			questions: this.model.questions(),
+			answerResults: this.model.answerResults()
 		});
 
 		this.$el.html(content);
