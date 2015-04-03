@@ -1,3 +1,19 @@
+<% if (answerResult.escape("correct") === "true") { %>
+  <% var answerResultClass = "correct-answer"; %>
+<% } else { %> 
+  <% var answerResultClass = "incorrect-answer"; %>
+<% } %>
+
+<% if (answerResult.escape("selected") === "true") { %>
+  <% var selected = "checked"; %>
+<% } else { %> 
+  <% var selected = ""; %>
+<% } %>
+
+
+<div class=<%= answerResultClass %>>
 <label>
-<input type="<%=answerResult.escape("question_type")%>" checked disabled>
+<input type="<%=answerResult.escape("question_type")%>" 
+       <%= selected %> disabled>
 </label>  <%= answerResult.escape("body") %>
+</div>
