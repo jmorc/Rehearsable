@@ -1,11 +1,11 @@
 Rehearsable.Collections.AnswerResults = Backbone.Collection.extend({
-    model: Rehearsable.Models.AnswerResults,
+    model: Rehearsable.Models.AnswerResult,
 
     initialize: function(models, options) {
-    	this.quiz_result = options.quiz_result
+    	this.quizResult = options.quizResult
     },
 
 	url: function() {
-		return this.quiz_result.url + "/answer_results"
+		return this.quizResult.url() + "/answer_results"
 	}
 })

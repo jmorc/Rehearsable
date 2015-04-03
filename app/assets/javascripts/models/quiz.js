@@ -20,6 +20,7 @@ Rehearsable.Models.Quiz = Backbone.Model.extend({
 
 	parse: function(payload) {
 		if (payload.questions) {
+			console.log('parsing questions')
 		  this.questions().set(payload.questions, { parse: true });
 		  delete payload.questions;
 		}

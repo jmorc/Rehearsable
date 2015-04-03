@@ -9,6 +9,10 @@ class Api::QuizResultsController < ApplicationController
   end
 
   def show
+    @quiz = @quiz_result.quiz
+    @answer_results = @quiz_result.answer_results
+    @questions = @quiz.questions
+
     render 'quiz_results/show'
   end
 

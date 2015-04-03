@@ -77,7 +77,7 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     }
     
     var newQuizResult = new Rehearsable.Models.QuizResult({ 
-    	quiz_id: this.quiz.id
+    	quiz: this.quiz
     });
 
     newQuizResult.answerResults().add(answerResults);
