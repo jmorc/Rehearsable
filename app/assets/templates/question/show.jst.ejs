@@ -1,1 +1,2 @@
-<p><%= question.escape("body") %></p>
+<div id="<%='question' + question.id.toString() %>"
+ class="<%=question.escape('question_type')%>"><%= question.escape("body") %></div>
