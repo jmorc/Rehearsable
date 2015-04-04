@@ -68,16 +68,16 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
             studentSelected = true; 
   // if it is a correct answer, and the student selected it
   // the student gets it right.
-            if (answer.escape('correct')) {
-    			    selected = true;
-    			    correct = true;	
+            if (answer.escape('correct') === 'true') {
+    			    var selected = true;
+    			    var correct = true;	
     			  } else {
   // if it is an incorrect answer, and the student selected it
   // the student gets it wrong
-    			    selected = true;
-    			    correct = false;
+    			    var selected = true;
+    			    var correct = false;
     			  }
-
+            debugger
             answerResult.set("correct", correct);
             answerResult.set("selected", selected);
             answerResults.push(answerResult);
@@ -87,16 +87,16 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
         if (!studentSelected) {
   // if the student didn't select it, and the answer is correct
   // the student gets it wrong
-          if (answer.escape('correct')) {
-              selected = false;
-              correct = false; 
+          if (answer.escape('correct') === 'true') {
+              var selected = false;
+              var correct = false; 
             } else {
   // if the student didn't select it, and the answer is wrong,
   // the student gets it right.
-              selected = false;
-              correct = true;
+              var selected = false;
+              var correct = true;
             }
-
+            debugger
           answerResult.set("correct", correct);
           answerResult.set("selected", selected);
           answerResults.push(answerResult);
