@@ -26,6 +26,7 @@ Rehearsable.Models.QuizResult = Backbone.Model.extend({
   },
 
   parse: function(payload) {
+    
     if (payload.quiz) {
       console.log('parsing quiz')
       this.quiz().set(payload.quiz, { parse: true });

@@ -29,7 +29,6 @@ Rehearsable.Views.quizResultShow = Backbone.View.extend({
             model: answerResult
           });
 
-
           var questionSelector = '#question' + answerResult.escape('question_id');
           $(questionSelector).append(answerResultShow.render().$el)
       });

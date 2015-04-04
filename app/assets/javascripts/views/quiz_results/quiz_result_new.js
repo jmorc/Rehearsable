@@ -38,11 +38,18 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     var answerResults = [];
 
     for (questionCode in params) {
+      var answerCount = 0;
     	var studentAnswers = params[questionCode];
     	var questionID = parseInt(questionCode.toString().split(" ")[1], 10);
     	var thisQuestion = this.quiz.question(questionID);
 
+      console.log("Grading question, id: " + questionID.toString())
+
     	thisQuestion.answers().each(function(answer) {
+        answerCount += 1
+        console.log("Checking answer number " + answerCount.toString())
+        console.log("Total number of answerResults " + answerResults.length.toString())
+        // loop through all 10 checkbox answers
     		var answerResult = new Rehearsable.Models.AnswerResult({
     			answer_id: answer.id,
     			question_id: questionID
@@ -52,39 +59,61 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     			studentAnswers = [studentAnswers];
     		}
 
+  //loop through all the answers selected by student
+        var studentSelected = false;
+
     		studentAnswers.forEach(function(studentAnswer) {
-    			if (studentAnswer === answer.escape("body") &&
-    				answer.escape('correct')) {
-    			  selected = true;
-    			  correct = true;	
-    			} else if (studentAnswer === answer.escape("body") &&
-    				       !answer.escape('correct')) {
-    			  selected = true;
-    			  correct = false;
-    			} else if (answer.escape('correct')) {
-    			  selected = false;
-    			  correct = false;
-    			} else {
-    			  selected = false;
-    			  correct = true;
-    		    }
+          
+    			if (studentAnswer === answer.escape("body")) {
+            studentSelected = true; 
+  // if it is a correct answer, and the student selected it
+  // the student gets it right.
+            if (answer.escape('correct')) {
+    			    selected = true;
+    			    correct = true;	
+    			  } else {
+  // if it is an incorrect answer, and the student selected it
+  // the student gets it wrong
+    			    selected = true;
+    			    correct = false;
+    			  }
 
-    			answerResult.set("correct", correct);
-    			answerResult.set("selected", selected);
-    			answerResults.push(answerResult);
-    		}); 
-    	});
-    }
-    
+            answerResult.set("correct", correct);
+            answerResult.set("selected", selected);
+            answerResults.push(answerResult);
+          }
+        });
+          
+        if (!studentSelected) {
+  // if the student didn't select it, and the answer is correct
+  // the student gets it wrong
+          if (answer.escape('correct')) {
+              selected = false;
+              correct = false; 
+            } else {
+  // if the student didn't select it, and the answer is wrong,
+  // the student gets it right.
+              selected = false;
+              correct = true;
+            }
+
+          answerResult.set("correct", correct);
+          answerResult.set("selected", selected);
+          answerResults.push(answerResult);
+    		} 
+      }); // end loop through all answers
+    } // end loop through questions
+
     var newQuizResult = new Rehearsable.Models.QuizResult({ 
-    	quiz: this.quiz
+    	quiz_id: this.quiz.id
     });
-
-    newQuizResult.answerResults().add(answerResults);
 
     newQuizResult.save([], {
     	success: function(response) {
-    		response.saveAnswerResults();
+        answerResults.forEach(function(answerResult){
+          answerResult.save({"quiz_result_id": this.id})
+        }, response)
+
     		var url = "quiz_result/" + response.id.toString();
     		Backbone.history.navigate(url, { trigger: true });
     	}
