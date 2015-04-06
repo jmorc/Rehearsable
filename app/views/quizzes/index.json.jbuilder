@@ -1,3 +1,3 @@
 json.array!(@quizzes) do |quiz|
-  json.(quiz, :title, :description)
+  json.(quiz, :id, :title, :description)
 end

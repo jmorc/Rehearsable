@@ -2,6 +2,8 @@
 
 <ul>
   <% quizzes.each(function(quiz) { %>
-    <%= quiz.escape("title") %>
+    <% var url = '#quiz/' + quiz.id %>
+    <li><a href="<%=url%>"><%= quiz.escape("title") %></a> 
+        <button>Edit</button> <button>Delete</button> </li>
   <% }); %>
 </ul>
