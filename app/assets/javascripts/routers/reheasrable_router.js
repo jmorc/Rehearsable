@@ -7,6 +7,7 @@ Rehearsable.Routers.Router = Backbone.Router.extend({
 		"": "quizIndex",
 		"quiz/new": "quizNew",
 		"quiz/:id": "quizShow",
+    "quiz/:id/edit" : "quizEdit",
     "quiz/:id/quiz_result/new": "quizResultNew",
     "quiz_result/:id": "quizResultShow"
 	},
@@ -18,6 +19,10 @@ Rehearsable.Routers.Router = Backbone.Router.extend({
     });
 
     this.$rootEl.html(indexView.render().$el);
+  },
+
+  quizEdit: function(id) {
+    console.log("quiz edit called")
   },
 
   quizShow: function (id) {

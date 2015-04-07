@@ -1,12 +1,20 @@
 <h2>Choose a quiz:</h2>
+<% var instructor = user.get('instructor') %>
 
 <ul>
   <% quizzes.each(function(quiz) { %>
-    <% var url = '#quiz/' + quiz.id %>
+    <% var url = '#quiz/' + quiz.id + "/quiz_result/new" %>
     <li><a href="<%=url%>"><%= quiz.escape("title") %></a>
-        <% if (user.get('instructor')) { %> 
-          <%= '<button>Edit</button> <button>Delete</button>' %>
+        <% if (instructor) { %> 
+          <% var edit_url = '#quiz/' + quiz.id + "/edit" %>
+          <% var delete_url = '#quiz/' + quiz.id + "/delete" %>
+ 		<a href="<%= edit_url %>"> | Edit</a>
+ 		<a href="<%= delete_url %>"> | Delete</a>
         <% } %>
     </li>
   <% }); %>
 </ul>
+
+<% if (instructor) { %> 
+    <%= '<button>Add a new quiz</button>' %>
+<% } %>
