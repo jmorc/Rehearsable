@@ -4,7 +4,8 @@ Rehearsable.Views.quizShow = Backbone.View.extend({
   },
 
   events: {
-    "click #editQuizButton" : "editQuizInfo"
+    "click #editQuizButton" : "editQuizInfo",
+    "submit form#submitQuizEdits" : "submitQuizEdits"
   },
 
   initialize: function (options) {
@@ -36,8 +37,18 @@ Rehearsable.Views.quizShow = Backbone.View.extend({
     return this
   },
 
-  editQuizInfo: function(event) {
+  editQuizInfo: function() {
     this.open = true;
+    this.render();
+  },
+
+  submitQuizEdits: function(event) {
+    event.preventDefault();
+    this.open = false;
+    var params = $(event.currentTarget).serializeJSON();
+    
+    this.model.set(params['quiz']);
+    this.model.save();
     this.render();
   } 
 });
