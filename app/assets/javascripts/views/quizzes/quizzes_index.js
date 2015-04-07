@@ -3,10 +3,16 @@ Rehearsable.Views.quizIndex = Backbone.View.extend({
   
   initialize: function(){
     this.listenTo(this.collection, "sync", this.render)
+    this.user = new Rehearsable.Models.User();
+    this.user.fetch();
+    this.listenTo(this.user, "sync", this.render)
   },
 
-  render: function() {
-    var content = this.template({ quizzes: this.collection });
+  render: function() { 
+    var content = this.template({ 
+    	quizzes: this.collection,
+    	user: this.user 
+    });
   	this.$el.html(content);
   	return this;
   }

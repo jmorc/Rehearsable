@@ -5,7 +5,7 @@ class Api::QuizzesController < ApplicationController
   respond_to :json
 
   def index
-    @quizzes = current_user.quizzes
+    @quizzes = Quiz.all
     render 'quizzes/index'
   end
 
