@@ -1,2 +1,6 @@
 <div id="<%='question' + question.id.toString() %>"
- class="<%=question.escape('question_type')%>"><%= question.escape("body") %></div>
+     class="<%=question.escape('question_type')%>">
+
+    <%= question.escape("body") %>
+    <button class="btn btn-default questionEdit">Edit Question</button>
+</div>

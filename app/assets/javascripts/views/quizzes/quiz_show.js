@@ -17,7 +17,7 @@ Rehearsable.Views.quizShow = Backbone.View.extend({
   render: function() {
   	var content = this.template()({ quiz: this.model });
     this.$el.html(content);
-    debugger
+    
     this.model.questions().each(function(question){
       var questionShow = new Rehearsable.Views.questionShow({
       	model: question
@@ -33,7 +33,7 @@ Rehearsable.Views.quizShow = Backbone.View.extend({
       })
     });
 
-    return this
+    return this;
   },
 
   editQuizInfo: function() {
