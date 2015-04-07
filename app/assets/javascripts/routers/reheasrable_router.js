@@ -8,6 +8,7 @@ Rehearsable.Routers.Router = Backbone.Router.extend({
 		"quiz/new": "quizNew",
 		"quiz/:id": "quizShow",
     "quiz/:id/edit" : "quizEdit",
+    "quiz/:id/delete" : "quizDelete",
     "quiz/:id/quiz_result/new": "quizResultNew",
     "quiz_result/:id": "quizResultShow"
 	},
@@ -22,7 +23,17 @@ Rehearsable.Routers.Router = Backbone.Router.extend({
   },
 
   quizEdit: function(id) {
-    console.log("quiz edit called")
+    var quiz = Rehearsable.Collections.quizzes.getOrFetch(id);
+  },
+
+  quizNew: function(id) {
+    var quiz = Rehearsable.Collections.quizzes.getOrFetch(id);
+    var editView = new Rehearsable.Views.quizNew();
+    this.$rootEl.html(editView.render().$el);
+  },
+
+  quizDelete: function(id) {
+    var quiz = Rehearsable.Collections.quizzes.getOrFetch(id);
   },
 
   quizShow: function (id) {
