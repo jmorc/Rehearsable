@@ -1,0 +1,16 @@
+<form>
+  <label>Title:<br>
+  <input type=text name="quiz[title]" value="<%= quiz.escape("title")%>">
+  </label><br>
+
+  <label>Description:<br>
+  <textarea name="quiz[description]"><%=quiz.escape("description")%></textarea>
+  </label><br>
+
+  <input type="submit" value="Save changes to quiz">
+</form>
+
+  <ul class="questions"></ul>
+
+
+<div class="questions-new"></div>

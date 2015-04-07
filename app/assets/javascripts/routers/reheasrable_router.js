@@ -24,6 +24,10 @@ Rehearsable.Routers.Router = Backbone.Router.extend({
 
   quizEdit: function(id) {
     var quiz = Rehearsable.Collections.quizzes.getOrFetch(id);
+    var editView = new Rehearsable.Views.quizEdit({
+      model: quiz
+    })
+    this.$rootEl.html(editView.render().$el);
   },
 
   quizNew: function(id) {

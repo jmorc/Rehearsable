@@ -19,8 +19,8 @@ Rehearsable.Views.quizNew = Backbone.View.extend({
 
 		newQuiz.save([], {
 			success: function(response){
-			  var url = '#quiz/' + response.id + '/edit/'
-			  Backbone.history.navigate(url, { trigger: true })
+			  var url = '#quiz/' + response.id;
+			  Backbone.history.navigate(url, { trigger: true });
 		    }
 		});
 	}

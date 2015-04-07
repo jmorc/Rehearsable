@@ -1,13 +1,20 @@
 Rehearsable.Views.quizShow = Backbone.View.extend({
-  template: JST['quiz/show'],
+  template: function() {
+    return this.open ? JST['quiz/edit'] : JST['quiz/show'];
+  },
 
-  initialize: function () {
-  	this.listenTo(this.model, "sync add", this.render)
-  	this.listenTo(this.model.questions(), "sync", this.render)
+  events: {
+    "click #editQuizButton" : "editQuizInfo"
+  },
+
+  initialize: function (options) {
+  	this.listenTo(this.model, "sync add", this.render);
+  	this.listenTo(this.model.questions(), "sync", this.render);
+    this.open = options.open || false;
   },
 
   render: function() {
-  	var content = this.template({ quiz: this.model });
+  	var content = this.template()({ quiz: this.model });
     this.$el.html(content);
     
 
@@ -27,5 +34,10 @@ Rehearsable.Views.quizShow = Backbone.View.extend({
     });
 
     return this
+  },
+
+  editQuizInfo: function(event) {
+    this.open = true;
+    this.render();
   } 
 });
