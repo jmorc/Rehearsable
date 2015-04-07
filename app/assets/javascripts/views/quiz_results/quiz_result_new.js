@@ -77,7 +77,6 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     			    var selected = true;
     			    var correct = false;
     			  }
-            debugger
             answerResult.set("correct", correct);
             answerResult.set("selected", selected);
             answerResults.push(answerResult);
@@ -96,7 +95,6 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
               var selected = false;
               var correct = true;
             }
-            debugger
           answerResult.set("correct", correct);
           answerResult.set("selected", selected);
           answerResults.push(answerResult);
