@@ -9,8 +9,8 @@ Rehearsable.Views.quizShow = Backbone.View.extend({
   },
 
   initialize: function (options) {
-  	this.listenTo(this.model, "sync add", this.render);
-  	this.listenTo(this.model.questions(), "sync", this.render);
+  	this.listenTo(this.model, "sync", this.render);
+  	this.listenTo(this.model.questions(), "sync add remove", this.render);
     this.open = options.open || false;
   },
 

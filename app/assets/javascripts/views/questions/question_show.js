@@ -5,7 +5,8 @@ Rehearsable.Views.questionShow = Backbone.View.extend({
 
   events: {
   	"click .questionEdit" : "openQuestionEdit",
-  	"submit form.submitQuestion" : "submitQuestionEdit"
+  	"submit form.submitQuestion" : "submitQuestionEdit",
+    "click .questionDelete" : "deleteQuestion"
   },
 
   render: function() {
@@ -29,5 +30,10 @@ Rehearsable.Views.questionShow = Backbone.View.extend({
 	  var params = $(event.currentTarget).serializeJSON();
 	  this.model.set(params['question']);
 	  this.render(); 
+  },
+
+  deleteQuestion: function() {
+    debugger
+    this.model.destroy()
   }
 });
