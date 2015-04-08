@@ -5,7 +5,7 @@ Rehearsable.Views.questionShow = Backbone.View.extend({
 
   events: {
   	"click .questionEdit" : "openQuestionEdit",
-  	"submit form.submitEdit" : "submitQuestionEdit"
+  	"submit form.submitQuestion" : "submitQuestionEdit"
   },
 
   render: function() {

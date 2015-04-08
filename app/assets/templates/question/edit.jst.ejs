@@ -1,6 +1,6 @@
 <div id="<%='question' + question.id.toString() %>"
     class="<%=question.escape('question_type')%>">
-    <form class="submitEdit">
+    <form class="submitQuestion">
       <input type=text name="question[body]" 
              value="<%= question.escape("body") %>">
       <input type="submit" class="btn btn-default">

@@ -1,22 +1,44 @@
 Rehearsable.Views.answerShow = Backbone.View.extend({
-	template: function(answer) {
+	template: function() {
+      return this.open ? JST['answer/edit'] : JST['answer/show'];
+    },
 
+    events: {
+     "click .editAnswer" : "openAnswer",
+     "submit form.submitAnswer" : "closeAnswer"
+    },
+
+	render: function(){
 		if (this.model.question.escape('question_type') === 'radio') {
 			var type = 'radio';
-			// this._template = JST['answer/show_radio'];
-		} 
-
-		if (this.model.question.escape('question_type') === 'checkbox') {
-			// this._template = JST['answer/show_checkbox'];
+		} else {
 			var type = 'checkbox';
 		}
 
-		return JST['answer/show']({ answer: answer, type: type });
-	},
-
-	render: function(){
-		var content = this.template(this.model);
+		var content = this.template()({ 
+			answer: this.model,
+			type: type
+		});
+		
         this.$el.html(content);
 		return this;
+	},
+
+	initialize: function(options) {
+		this.open = options.open || false;
+	},
+
+	openAnswer: function() {
+		this.open = true;
+		this.render();
+	},
+
+	closeAnswer: function(event) {
+		event.preventDefault;
+		this.open = false;
+		var params = $(event.currentTarget).serializeJSON();
+		this.model.set(params['answer']);
+		this.model.save();
+		this.render();
 	}
 })
