@@ -33,7 +33,6 @@ Rehearsable.Views.questionShow = Backbone.View.extend({
   },
 
   deleteQuestion: function() {
-    debugger
-    this.model.destroy()
+    this.model.destroy();
   }
 });

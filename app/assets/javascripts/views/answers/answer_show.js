@@ -5,7 +5,8 @@ Rehearsable.Views.answerShow = Backbone.View.extend({
 
     events: {
      "click .editAnswer" : "openAnswer",
-     "submit form.submitAnswer" : "closeAnswer"
+     "submit form.submitAnswer" : "closeAnswer",
+     "click .deleteAnswer" : "deleteAnswer"
     },
 
 	render: function(){
@@ -40,5 +41,11 @@ Rehearsable.Views.answerShow = Backbone.View.extend({
 		this.model.set(params['answer']);
 		this.model.save();
 		this.render();
+	},
+
+	deleteAnswer: function() {
+		var question = this.model.question;
+		this.model.destroy();
+		question.fetch();
 	}
 })
