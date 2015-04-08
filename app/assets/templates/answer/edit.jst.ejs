@@ -7,5 +7,18 @@
     <input type="text" 
   		   name="answer[body]"
            value="<%= answer.escape("body") %>">
+    <label>
+    <input type="radio"
+           name="answer[correct]"
+           value="true">
+    Correct
+    </label>
+
+    <label>
+    <input type="radio"
+           name="answer[correct]"
+           value="false">
+    Incorrect
+    </label>
     <input type="submit" class="btn btn-default">
 </form>

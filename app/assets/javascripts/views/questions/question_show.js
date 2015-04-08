@@ -24,10 +24,10 @@ Rehearsable.Views.questionShow = Backbone.View.extend({
   },
 
   submitQuestionEdit: function(event) {
-	event.preventDefault();
-	this.open = false;
-	var params = $(event.currentTarget).serializeJSON();
-	this.model.set(params['question']);
-	this.render(); 
+	  event.preventDefault();
+	  this.open = false;
+	  var params = $(event.currentTarget).serializeJSON();
+	  this.model.set(params['question']);
+	  this.render(); 
   }
 });
