@@ -44,6 +44,8 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     	var thisQuestion = this.quiz.question(questionID);
 
       console.log("Grading question, id: " + questionID.toString())
+      
+      debugger
 
     	thisQuestion.answers().each(function(answer) {
         answerCount += 1

@@ -1,0 +1,11 @@
+<% if (type === 'checkbox') { %>
+  <% var name = answer.escape("question_id").toString() %>
+<% } else { %>
+  <% var name = answer.escape("question_id").toString() + "[]" %>
+<% } %>
+
+<label>
+<input type="<%=type%>"
+   name="<%= "Question " + name %>"
+   value="<%=answer.escape("body") %>"
+</label>   <%= answer.escape("body") %>

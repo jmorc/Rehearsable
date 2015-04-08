@@ -1,14 +1,17 @@
 Rehearsable.Views.answerShow = Backbone.View.extend({
 	template: function(answer) {
+
 		if (this.model.question.escape('question_type') === 'radio') {
-			this._template = JST['answer/show_radio'];
-		}
+			var type = 'radio';
+			// this._template = JST['answer/show_radio'];
+		} 
 
 		if (this.model.question.escape('question_type') === 'checkbox') {
-			this._template = JST['answer/show_checkbox'];
+			// this._template = JST['answer/show_checkbox'];
+			var type = 'checkbox';
 		}
 
-		return this._template({ answer: answer });
+		return JST['answer/show']({ answer: answer, type: type });
 	},
 
 	render: function(){
