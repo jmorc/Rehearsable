@@ -1,7 +1,7 @@
-<div id="<%='question' + question.id.toString() %>"
+<li id="<%='question' + question.id.toString() %>"
      class="<%=question.escape('question_type')%>">
 
     <%= question.escape("body") %>
     <button class="btn btn-default questionEdit">Edit question</button>
     <button class="btn btn-default questionDelete">Delete question</button>
-</div>
+</li>
