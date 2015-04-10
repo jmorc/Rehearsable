@@ -24,10 +24,9 @@ Rehearsable.Views.quizShow = Backbone.View.extend({
     this.model.questions().each(function(question){
       var questionShow = new Rehearsable.Views.questionShow({
       	model: question
-      })
-
+      });
+      
       questionShow.editable = true;
-
       $('.questions').append(questionShow.render().$el)
 
       question.answers().each(function(answer){
@@ -35,6 +34,8 @@ Rehearsable.Views.quizShow = Backbone.View.extend({
         var answerShow = new Rehearsable.Views.answerShow({
           model: answer
         })
+
+        answerShow.editable = true;
         $('.questions').append(answerShow.render().$el);
       })
     });

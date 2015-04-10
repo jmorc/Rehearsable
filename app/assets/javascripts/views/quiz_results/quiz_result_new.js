@@ -16,10 +16,10 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
 
     this.quiz.questions().each(function(question){
       var questionShow = new Rehearsable.Views.questionShow({
-      	model: question,
-        editable: false
-      })
-      
+      	model: question
+      });
+      questionShow.editable = false;
+
       $('.questions').append(questionShow.render().$el)
 
       question.answers().each(function(answer){
@@ -27,6 +27,8 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
         var answerShow = new Rehearsable.Views.answerShow({
           model: answer
         })
+       
+        answerShow.editable = false;
         $('.questions').append(answerShow.render().$el)
       })
     });
@@ -45,14 +47,8 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     	var questionID = parseInt(questionCode.toString().split(" ")[1], 10);
     	var thisQuestion = this.quiz.question(questionID);
 
-      console.log("Grading question, id: " + questionID.toString())
-      
-      debugger
-
     	thisQuestion.answers().each(function(answer) {
         answerCount += 1
-        console.log("Checking answer number " + answerCount.toString())
-        console.log("Total number of answerResults " + answerResults.length.toString())
         // loop through all 10 checkbox answers
     		var answerResult = new Rehearsable.Models.AnswerResult({
     			answer_id: answer.id,

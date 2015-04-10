@@ -18,7 +18,8 @@ Rehearsable.Views.answerShow = Backbone.View.extend({
 
 		var content = this.template()({ 
 			answer: this.model,
-			type: type
+			type: type,
+			editable: this.editable
 		});
 		
         this.$el.html(content);
