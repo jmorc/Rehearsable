@@ -52,14 +52,12 @@ Rehearsable.Views.quizShow = Backbone.View.extend({
     this.model.set(params['quiz']);
     this.model.save();
     this.model.fetch();
-    
     this.render();
   },
 
   newQuestion: function() {
     var newQuestionView = new Rehearsable.Views.questionNew();
     $('.newQuestionForm').html(newQuestionView.render().$el);
-    console.log('called render')
   },
 
   submitNewQuestion: function(event){
@@ -71,5 +69,4 @@ Rehearsable.Views.quizShow = Backbone.View.extend({
     question.save();
     this.model.questions().add(question);
   }
-
 });

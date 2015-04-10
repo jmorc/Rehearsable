@@ -6,7 +6,8 @@ Rehearsable.Views.questionShow = Backbone.View.extend({
   events: {
   	"click .questionEdit" : "openQuestionEdit",
   	"submit form.submitQuestion" : "submitQuestionEdit",
-    "click .questionDelete" : "deleteQuestion"
+    "click .questionDelete" : "deleteQuestion",
+    "click .answerAdd" : "addAnswer"
   },
 
   render: function() {
@@ -16,6 +17,7 @@ Rehearsable.Views.questionShow = Backbone.View.extend({
   },
 
   intitialize: function(options){
+    this.listenTo(this.model.answers(), "sync add remove", this.render);
   	this.open = options.open || false;
   },
 
@@ -34,5 +36,10 @@ Rehearsable.Views.questionShow = Backbone.View.extend({
 
   deleteQuestion: function() {
     this.model.destroy();
-  }
+  },
+
+  addAnswer: function() {
+    var newAnswerView = new Rehearsable.Views.answerNew({ question: this.model });
+    $('.newAnswerForm').html(newAnswerView.render().$el);
+  },
 });
