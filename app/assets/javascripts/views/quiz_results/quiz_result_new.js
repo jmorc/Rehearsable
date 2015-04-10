@@ -5,6 +5,55 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
   	'submit form': 'submitQuizResult'
   },
 
+  gradeQuestion: function(question, studentAnswers) {
+    var answerResults = [];
+    question.answers().each(function(answer) {
+      var answerResult = new Rehearsable.Models.AnswerResult({
+        answer_id: answer.id,
+        question_id: question.id
+      });
+
+      if (typeof studentAnswers === "string") {
+        studentAnswers = [studentAnswers];
+      }
+
+      var studentSelected = false;
+      studentAnswers.forEach(function(studentAnswer) {
+        if (studentAnswer === answer.escape("body")) {
+          studentSelected = true; 
+
+          if (answer.escape('correct') === 'true') {
+            var selected = true;
+            var correct = true; 
+          } else {
+            var selected = true;
+            var correct = false;
+          }
+
+          answerResult.set("correct", correct);
+          answerResult.set("selected", selected);
+          answerResults.push(answerResult);
+        }
+
+        if (!studentSelected) {
+          if (answer.escape('correct') === 'true') {
+            var selected = false;
+            var correct = false; 
+          } else {
+            var selected = false;
+            var correct = true;
+          }
+
+          answerResult.set("correct", correct);
+          answerResult.set("selected", selected);
+          answerResults.push(answerResult);
+        } 
+      }); // end loop through all student answers
+    });
+    
+    return answerResults;
+  },
+
   initialize: function(options) {
   	this.quiz = options.quiz;
   	this.listenTo(this.quiz, "sync", this.render)
@@ -39,68 +88,16 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
   submitQuizResult: function(event){
     event.preventDefault();
     var params = $(event.currentTarget).serializeJSON();
-    var answerResults = [];
+    var allAnswerResults = [];
 
     for (questionCode in params) {
-      var answerCount = 0;
     	var studentAnswers = params[questionCode];
     	var questionID = parseInt(questionCode.toString().split(" ")[1], 10);
-    	var thisQuestion = this.quiz.question(questionID);
-
-    	thisQuestion.answers().each(function(answer) {
-        answerCount += 1
-        // loop through all 10 checkbox answers
-    		var answerResult = new Rehearsable.Models.AnswerResult({
-    			answer_id: answer.id,
-    			question_id: questionID
-    		});
-
-    		if (typeof studentAnswers === "string") {
-    			studentAnswers = [studentAnswers];
-    		}
-
-  //loop through all the answers selected by student
-        var studentSelected = false;
-
-    		studentAnswers.forEach(function(studentAnswer) {
-          
-    			if (studentAnswer === answer.escape("body")) {
-            studentSelected = true; 
-  // if it is a correct answer, and the student selected it
-  // the student gets it right.
-            if (answer.escape('correct') === 'true') {
-    			    var selected = true;
-    			    var correct = true;	
-    			  } else {
-  // if it is an incorrect answer, and the student selected it
-  // the student gets it wrong
-    			    var selected = true;
-    			    var correct = false;
-    			  }
-            answerResult.set("correct", correct);
-            answerResult.set("selected", selected);
-            answerResults.push(answerResult);
-          }
-        });
-          
-        if (!studentSelected) {
-  // if the student didn't select it, and the answer is correct
-  // the student gets it wrong
-          if (answer.escape('correct') === 'true') {
-              var selected = false;
-              var correct = false; 
-            } else {
-  // if the student didn't select it, and the answer is wrong,
-  // the student gets it right.
-              var selected = false;
-              var correct = true;
-            }
-          answerResult.set("correct", correct);
-          answerResult.set("selected", selected);
-          answerResults.push(answerResult);
-    		} 
-      }); // end loop through all answers
-    } // end loop through questions
+    	var question = this.quiz.question(questionID);
+      var answerResults = this.gradeQuestion(question, studentAnswers);
+      
+      allAnswerResults = allAnswerResults.concat(answerResults);
+    } 
 
     var newQuizResult = new Rehearsable.Models.QuizResult({ 
     	quiz_id: this.quiz.id
@@ -108,7 +105,7 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
 
     newQuizResult.save([], {
     	success: function(response) {
-        answerResults.forEach(function(answerResult){
+        allAnswerResults.forEach(function(answerResult){
           answerResult.save({"quiz_result_id": this.id})
         }, response)
 
