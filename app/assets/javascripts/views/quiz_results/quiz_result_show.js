@@ -6,8 +6,6 @@ Rehearsable.Views.quizResultShow = Backbone.View.extend({
 	},
 
 	render: function() {
-      
-      
 	  var content = this.template({ 
 		  quizResult: this.model,
 		  quiz: this.model.quiz(),
@@ -18,34 +16,19 @@ Rehearsable.Views.quizResultShow = Backbone.View.extend({
 	  var questions = this.model.questions();
       questions.each(function(question){
         var questionShow = new Rehearsable.Views.questionShow({
-      	  model: question
+      	  model: question,
         })
         $('.questions').append(questionShow.render().$el)
       });
 
-      var answerResults = this.model.answerResults();
-      answerResults.each(function(answerResult){
-          var answerResultShow = new Rehearsable.Views.answerResultShow({
-            model: answerResult
-          });
-
-          var questionSelector = '#question' + answerResult.escape('question_id');
-          $(questionSelector).append(answerResultShow.render().$el)
-      });
-
-
-
-
-        // answerResults.each(function(answerResult){
-      	 //  if (answerResult.attributes.question_id === this.id) {
-        //     var answerResultShow = new Rehearsable.Views.answerResultShow({
-        //       model: answerResult
-        //     })
-
-        //     $('.questions').append(answerResultShow.render().$el)
-        //   }
-        // }, question)
-   
+    var answerResults = this.model.answerResults();
+    answerResults.each(function(answerResult){
+        var answerResultShow = new Rehearsable.Views.answerResultShow({
+          model: answerResult
+        });
+        var questionSelector = '#question' + answerResult.escape('question_id');
+        $(questionSelector).append(answerResultShow.render().$el)
+    });
 
 		return this;
 	}

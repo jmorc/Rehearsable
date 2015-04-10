@@ -17,9 +17,9 @@ Rehearsable.Views.answerNew = Backbone.View.extend({
 
 	submitNewAnswer: function(event) {
       	event.preventDefault();
-
       	var params = $(event.currentTarget).serializeJSON();
       	var answer = new Rehearsable.Models.Answer();
+      	
       	params.answer.question_id = this.question.id;
       	answer.set(params['answer']);
       	answer.save();
