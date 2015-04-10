@@ -2014,3 +2014,4 @@ DETAIL:  Failing row contains (269, 3, null, 16, f, f, 2015-04-03 21:37:20.62573
 [04/10/15 15:29:39 -0700 Jeffreys-Air-2 (18667)] INFO : Doing deferred dependency-detection before Rack startup
 [04/10/15 15:29:44 -0700 Jeffreys-Air-2 (18667)] ERROR : Invalid license key, please contact support@newrelic.com
 [04/10/15 15:29:44 -0700 Jeffreys-Air-2 (18667)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[04/10/15 16:18:34 -0700 Jeffreys-Air-2 (18667)] INFO : Starting Agent shutdown
