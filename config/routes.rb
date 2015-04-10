@@ -14,7 +14,11 @@ Rails.application.routes.draw do
     resources :questions, except: [:new, :edit, :index]
   end 
 
-  root to: "site#root"
+  authenticated :user do
+    root to: "site#root", as: :authenticated_root
+  end
+
+  root to: redirect('users/sign_in')
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 end
