@@ -5,52 +5,51 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
   	'submit form': 'submitQuizResult'
   },
 
-  gradeQuestion: function(question, studentAnswers) {
-    var answerResults = [];
-    question.answers().each(function(answer) {
-      var answerResult = new Rehearsable.Models.AnswerResult({
-        answer_id: answer.id,
-        question_id: question.id
-      });
+  createAnswerResult: function(answer, studentAnswers) {
+    var answerResult = new Rehearsable.Models.AnswerResult({
+      answer_id: answer.id,
+      question_id: answer.get('question_id')
+    });
 
-      if (typeof studentAnswers === "string") {
-        studentAnswers = [studentAnswers];
+    var studentSelected = false;
+    studentAnswers.forEach(function(studentAnswer) {
+      if (studentAnswer === answer.escape("body")) {
+        studentSelected = true; 
+        if (answer.escape('correct') === 'true') {
+          var selected = correct = true;
+        } else {
+          var selected = true;
+          var correct = false;
+        }
       }
 
-      var studentSelected = false;
-      studentAnswers.forEach(function(studentAnswer) {
-        if (studentAnswer === answer.escape("body")) {
-          studentSelected = true; 
-
-          if (answer.escape('correct') === 'true') {
-            var selected = true;
-            var correct = true; 
-          } else {
-            var selected = true;
-            var correct = false;
-          }
-
-          answerResult.set("correct", correct);
-          answerResult.set("selected", selected);
-          answerResults.push(answerResult);
+      if (!studentSelected) {
+        if (answer.escape('correct') === 'true') {
+          var selected = correct = false;
+        } else {
+          var selected = false;
+          var correct = true;
         }
+      }
 
-        if (!studentSelected) {
-          if (answer.escape('correct') === 'true') {
-            var selected = false;
-            var correct = false; 
-          } else {
-            var selected = false;
-            var correct = true;
-          }
-
-          answerResult.set("correct", correct);
-          answerResult.set("selected", selected);
-          answerResults.push(answerResult);
-        } 
-      }); // end loop through all student answers
-    });
+      answerResult.set({ correct: correct, selected: selected }); 
+    }); 
     
+    return answerResult;
+  },
+
+  gradeQuestion: function(question, studentAnswers) {
+    var answerResults = [];
+
+    if (typeof studentAnswers === "string") {
+      studentAnswers = [studentAnswers];
+    }
+    
+    question.answers().each(function(answer) {
+      var answerResult = this.createAnswerResult(answer, studentAnswers);
+      answerResults.push(answerResult);
+    }, this);
+
     return answerResults;
   },
 
@@ -90,12 +89,14 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
     var params = $(event.currentTarget).serializeJSON();
     var allAnswerResults = [];
 
+    // loop through all quiz questions, grading each question to add 
+    // a new set of answerResults to the allAnswerResults array.
     for (questionCode in params) {
     	var studentAnswers = params[questionCode];
     	var questionID = parseInt(questionCode.toString().split(" ")[1], 10);
     	var question = this.quiz.question(questionID);
       var answerResults = this.gradeQuestion(question, studentAnswers);
-      
+
       allAnswerResults = allAnswerResults.concat(answerResults);
     } 
 
@@ -105,7 +106,8 @@ Rehearsable.Views.quizResultNew = Backbone.View.extend({
 
     newQuizResult.save([], {
     	success: function(response) {
-        allAnswerResults.forEach(function(answerResult){
+        // on save of quizResult, save all answerResults
+        allAnswerResults.forEach(function(answerResult) {
           answerResult.save({"quiz_result_id": this.id})
         }, response)
 
