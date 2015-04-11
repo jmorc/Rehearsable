@@ -35,20 +35,31 @@ poison1.answers.create(body: "Apply a cool compress",
 					   correct: false,
 					   note: "Ok, but don't do this first!")
 
-poison2.answers.create(body: "99 %", correct: false)
-poison2.answers.create(body: "85 %", correct: true)
-poison2.answers.create(body: "60 %", correct: false)
+poison2.answers.create(body: "99 %", 
+					   correct: false,
+					   note: "That's too high!!")
+poison2.answers.create(body: "85 %", 
+					   correct: true,
+					   note: "True but an individual's sensitivity can change with time.")
+poison2.answers.create(body: "60 %", 
+					   correct: false,
+					   note: "That's too low!!")
 
-poison3.answers.create(body: "Apply hydrocortisone cream", correct: true)
-poison3.answers.create(body: "Wash with soapy, lukewarm water", correct: true)
-poison3.answers.create(body: "Apply a cool compress", correct: true)
-poison3.answers.create(body: "Scratch or rub the itchy skin", correct: false)
-poison3.answers.create(body: "Puncture blisters to relieve pressure", correct: false)
-poison3.answers.create(body: "Consider bathing the dog", correct: true)
-poison3.answers.create(body: "Apply an antihistamine to the skin", correct: false)
-poison3.answers.create(body: "Consider an antihistamine pill", correct: true)
-poison3.answers.create(body: "Wash the clothing you were wearing", correct: true)
-poison3.answers.create(body: "Apply diluted bleach to the rash", correct: false)
+poison3.answers.create(body: "Apply hydrocortisone cream", 
+					   correct: true,
+					   note: "This can help.")
+poison3.answers.create(body: "Wash with soapy, lukewarm water", 
+					   correct: true,
+					   note: "This is the most important thing to do first!")
+poison3.answers.create(body: "Scratch or rub the itchy skin", 
+					   correct: false,
+					   note: "Not a good idea! It can spread the toxic oils.")
+poison3.answers.create(body: "Puncture blisters to relieve pressure", 
+					   correct: false,
+					   note: "This can delay healing.")
+poison3.answers.create(body: "Apply diluted bleach to the rash", 
+					   correct: false,
+					   note: "This home remedy is not shown to be effective.")
 
 jackson = instructor1.quizzes.create(title: "MJ: King of Pop",
 	      description: "You wanna be startin' somethin', You got to be startin' somethin'")
