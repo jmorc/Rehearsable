@@ -14,14 +14,14 @@ instructor1.save!
 student1 = User.create(email: "student1@gmail.com", 
 	                      instructor: false, password: "student1")
 
-wildMed = instructor1.quizzes.create(title: "Wilderness Med: Poionous plants",
+wild_med = instructor1.quizzes.create(title: "Wilderness Med: Poionous plants",
 	      description: "Test your knowledge on first aid for poison ivy")
 
-poison1 = wildMed.questions.create(body: "What is first step in treating poison ivy / oak?",
+poison1 = wild_med.questions.create(body: "What is first step in treating poison ivy / oak?",
 	                              question_type: "radio", ord: 1)
-poison2 = wildMed.questions.create(body: "What portion of the population is susceptible to poison ivy / oak?",
+poison2 = wild_med.questions.create(body: "What portion of the population is susceptible to poison ivy / oak?",
 	                              question_type: "radio", ord: 2)
-poison3 = wildMed.questions.create(body: "How can you treat poison ivy / oak? (Check all that apply)",
+poison3 = wild_med.questions.create(body: "How can you treat poison ivy / oak? (Check all that apply)",
 	                              question_type: "checkbox", ord: 3)
 
 poison1.answers.create(body: "Apply hydrocortisone cream", 
