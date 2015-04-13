@@ -8,22 +8,34 @@
 </head>
 <body>
 
-  <div id="user_nav">
-  	<% if user_signed_in? %>
-  	  Logged in as <strong><%= current_user.email%></strong>. | 
-      <% role = current_user.instructor ? "Instructor" : "Student" %>
-      Role: <%= role %> |  
-  	  <%= link_to 'Edit profile', edit_user_registration_url %> | 
-  	  <%= link_to 'Logout', destroy_user_session_url, method: :delete %>
-  	<% else %>
-  	  <%= link_to 'Sign up', new_user_registration_url %> | 
-  	  <%= link_to 'Login', new_user_session_url %> 
-  	<% end %>
-  </div>
+  <%= nav_bar responsive: true do %>
+      <% if user_signed_in? %>
+      
+        <% role = current_user.instructor ? "Instructor" : "Student" %>
+        <% logged_in_text = "Logged in as " + current_user.email %>
+        <% role_text = "Role: " + role %>
 
-<div class="container">
-  <%= yield %>
-</div>
+        <%= menu_group pull: :left do %>
+          <%= menu_text logged_in_text %>
+          <%= menu_text role_text %>
+        <% end %>
+
+        <%= menu_group pull: :right do %>
+          <%= menu_item "Edit profile", edit_user_registration_url %>
+          <%= menu_item "Log out", destroy_user_session_url, method: :delete %>
+        <% end %>
+      <% else %>
+
+          <%= menu_group pull: :right do %>
+            <%= menu_item 'Sign up', new_user_registration_url %>
+            <%= menu_item 'Log In', new_user_session_url %>
+          <% end %>
+      <% end %>
+  <% end %>
+
+  <div class="container">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
