@@ -109,9 +109,48 @@ jackson_q3.answers.create(body: "the worldwide number one disco hit",
 						  correct: false,
 						  note: "Billie Jean is considered post-disco.")
 
+bbq = instructor1.quizzes.create(title: "Barbecue", 
+						  description: "Test your knowledge of this fine treat.")
 
+bbq_q1 = bbq.questions.create(body: "Carolina BBQ...(select all that apply)",
+				     		  question_type: "checkbox",
+				     		  ord: 2)
 
+bbq_q1.answers.create(body: "is probably the oldest from of American BBQ" ,
+					  correct: true, 
+					  note: "NC BBQ was influenced by the original settlers in the region." )
 
+bbq_q1.answers.create(body: "usually consists of chopped beef" ,
+					  correct: false, 
+					  note: "It is usually pork, served pulled, shredded, or chopped, but sometimes sliced")
+
+bbq_q1.answers.create(body: "uses a thin sauce made of vinegar and spices." ,
+					  correct: true, 
+					  note: "In Western North Carolina, tomato may be added too.")
+
+bbq_q2 = bbq.questions.create(body: "Which regions tend to use more beef as well as pork?",
+				     		  question_type: "radio",
+				     		  ord: 1)
+
+bbq_q2.answers.create(body: "Carolina and Memphis" ,
+					  correct: true, 
+					  note: "These areas represent older BBQ culture and focus on pork." )
+
+bbq_q2.answers.create(body: "Texas and Kansas City",
+					  correct: false, 
+					  note: "These regions represent a later evolution of style and use more beef.")
+
+bbq_q3 = bbq.questions.create(body: "California doesn't have much of a BBQ tradition.",
+				     		  question_type: "radio",
+				     		  ord: 1)
+
+bbq_q3.answers.create(body: "True" ,
+					  correct: false, 
+					  note: "Pit BBQ was performed by Native Americans, including California tribes." )
+
+bbq_q3.answers.create(body: "False",
+					  correct: true, 
+					  note: "Spanish and Mexican settlers also had outdoor cooking traditions for BBQ beef.")
 
 
 
