@@ -14,8 +14,8 @@ instructor1.save!
 student1 = User.create(email: "student1@gmail.com", 
 	                      instructor: false, password: "student1")
 
-wild_med = instructor1.quizzes.create(title: "Wilderness Med: Poionous plants",
-	      description: "Test your knowledge on first aid for poison ivy")
+wild_med = instructor1.quizzes.create(title: "Poionous plants",
+	      description: "Test your knowledge on first aid for poison ivy/oak")
 
 poison1 = wild_med.questions.create(body: "What is first step in treating poison ivy / oak?",
 	                              question_type: "radio", ord: 1)
@@ -101,7 +101,7 @@ jackson_q3.answers.create(body: "not my lover",
 						  correct: true,
 						  note: "This is emphasized in the chorous of the song.")
 
-jackson_q3.answers.create(body: "like a beauty queen from a music scene.", 
+jackson_q3.answers.create(body: "like a beauty queen from a movie scene.", 
 						  correct: true,
 						  note: "This is part of the opening lyric.")
 

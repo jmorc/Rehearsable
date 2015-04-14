@@ -1,15 +1,17 @@
-<li id="<%='question' + question.id.toString() %>"
-     class="<%=question.escape('question_type')%>">
-
-    <%= question.escape("body") %>
-
-    <% if (editable) { %>
+<div id="<%='question' + question.id.toString() %>">
+  <div class="question-container">
+    <li class="<%=question.escape('question_type')%>">
+        <%= question.escape("body") %>
     
-	<button class="btn btn-default questionEdit">Edit question</button>
-	<button class="btn btn-default questionDelete">Delete question</button>
-	<button class="btn btn-default answerAdd">Add answer option</button>
-
-	<% } %>
-   
-</li>
+        <% if (editable) { %>
+        
+    	<button class="btn btn-default questionEdit">Edit question</button>
+    	<button class="btn btn-default questionDelete">Delete question</button>
+    	<button class="btn btn-default answerAdd">Add answer option</button>
+    
+    	<% } %>
+       
+    </li>
+  </div>
+</div>
 <div class="newAnswerForm"></div>
