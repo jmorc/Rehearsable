@@ -1,7 +1,9 @@
 <% if (answerResult.escape("correct") === "true") { %>
-  <% var answerResultClass = "correct-answer"; %>
-<% } else { %> 
-  <% var answerResultClass = "incorrect-answer"; %>
+  <% var answerResultClass = "correct"; %>
+  <% var answerStatement = "Correct. "; %>
+<% } else { %>
+  <% var answerResultClass = "incorrect"; %>
+  <% var answerStatement = "Incorrect. "; %>
 <% } %>
 
 <% if (answerResult.escape("selected") === "true") { %>
@@ -12,9 +14,11 @@
 
 
 
-  <label class=<%= answerResultClass %>>
-  <input type="<%=answerResult.escape("question_type")%>" 
-         <%= selected %> disabled>
-  </label>  <%= answerResult.escape("body") + " " + answerResultClass %>
-  <br><%= answerResult.escape("note") %>
+ <label>
+ <input type="<%=answerResult.escape("question_type")%>" 
+        <%= selected %> disabled>
+ </label>  <%= answerResult.escape("body") %>
+ <div class=<%= answerResultClass %>> 
+   <%= answerStatement + answerResult.escape("note") %>
+ <div>
 
